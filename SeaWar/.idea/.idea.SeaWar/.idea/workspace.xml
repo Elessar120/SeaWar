@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="57948be8-0927-4994-a554-03ff991ccd6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OilTanker/OilTankerMovment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OilTanker/OilTankerMovment.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/OilTanker/OilTankerMovment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IMovementSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameData.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MiddleMapDetector.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineCollideManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SpawnManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Submarine.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/IFightSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Unit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/SubmarineFightSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/SubmarineData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/SubmarineFightSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interface/IMovementSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/Submarine.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Refinery.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/OilTanker/OilTankerMovment.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="1nvkw4CZd3Voqph4zwu9SPctwCa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57948be8-0927-4994-a554-03ff991ccd6a" name="Default Changelist" comment="" />
+      <created>1612278196619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612278196619</updated>
+      <workItem from="1612278233052" duration="1415000" />
+      <workItem from="1612365983217" duration="1641000" />
+      <workItem from="1612520931884" duration="1051000" />
+      <workItem from="1612632342265" duration="1787000" />
+      <workItem from="1612643958408" duration="696000" />
+      <workItem from="1612703749178" duration="1246000" />
+      <workItem from="1612707407539" duration="410000" />
+      <workItem from="1612709832124" duration="369000" />
+      <workItem from="1612710567932" duration="6112000" />
+      <workItem from="1612727010191" duration="5838000" />
+      <workItem from="1612782437043" duration="3595000" />
+      <workItem from="1612787371223" duration="105000" />
+      <workItem from="1612787574966" duration="4169000" />
+      <workItem from="1612795833083" duration="3376000" />
+      <workItem from="1612880981669" duration="623000" />
+      <workItem from="1612891094313" duration="2713000" />
+      <workItem from="1612904394512" duration="2264000" />
+      <workItem from="1612985975923" duration="16283000" />
+      <workItem from="1613046389974" duration="7522000" />
+      <workItem from="1613058401131" duration="822000" />
+      <workItem from="1613063831973" duration="289000" />
+      <workItem from="1613064202612" duration="19364000" />
+      <workItem from="1613139236564" duration="1558000" />
+      <workItem from="1613144144088" duration="2022000" />
+      <workItem from="1613150664540" duration="2289000" />
+      <workItem from="1613158747959" duration="1827000" />
+      <workItem from="1613163994941" duration="1131000" />
+      <workItem from="1613242985093" duration="619000" />
+      <workItem from="1613249977419" duration="3130000" />
+      <workItem from="1613305814311" duration="4870000" />
+      <workItem from="1613311565189" duration="4647000" />
+      <workItem from="1613325554784" duration="8397000" />
+      <workItem from="1613395889536" duration="5916000" />
+      <workItem from="1613815338947" duration="628000" />
+      <workItem from="1613826078888" duration="1289000" />
+      <workItem from="1613910837264" duration="613000" />
+      <workItem from="1613916276258" duration="1103000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
