@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameData : ScriptableObject
+public class GameData : MonoBehaviour
 {
   #region singletone
   private static GameData instance;
@@ -22,10 +22,12 @@ public class GameData : ScriptableObject
   
 
   #endregion
-                                                                                                                                       
-  public float storedOil;
-  public float productionRate;
-  private void Awake()
+
+  public Unit refinery;
+  public Unit oilTanker;
+  public Unit submarine;
+  
+ private void Awake()
   {
     instance = this;
   }

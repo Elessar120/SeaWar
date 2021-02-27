@@ -28,36 +28,66 @@ public class UIManager : MonoBehaviour
 
 
    #endregion
+
+   public Button[] gamePlayButtons;
    public Button oilTankerButton;
+   public Button submarineButton;
    [SerializeField] public float totalOilAmount;
    [SerializeField] public float totalGoldAmount;
    public Text oilAmountText;
    public Text goldAmountText;
+   public Action onCheckButtonIsInteractableAction;
    private void Awake()
    {
       oilTankerButton.interactable = false;
-      if (OilTankerMovment.OnExitOilTanker != null)
-      {
-         OilTankerMovment.OnExitOilTanker += SetNewGoldAmountText;
-
-      }
+      submarineButton.interactable = false;
       instance = this;
+   }
+
+   private void Start()
+   {
+      OilTankerMovment.onExitMapAction += SetNewGoldAmount;
+      OilTankerMovment.onExitMapAction += SetNewGoldAmountText;
+      goldAmountText.text = "Gold: " + totalGoldAmount;
    }
 
    private void Update()
    {
-      SetNewOilAmountText();
    }
 
-   private void SetNewOilAmountText()
+   public void SetNewOilAmount()
+   {
+      totalOilAmount += GameData.Instance.refinery.productionRate;
+      //SetNewOilAmountText();
+   }
+   public void SetNewOilAmountText()
    {
       oilAmountText.text = "Oil: " + totalOilAmount.ToString();
    }
 
-   private void SetNewGoldAmountText()
+   public void SetNewGoldAmount()
+   {
+      totalGoldAmount += GameData.Instance.oilTanker.earnedMoney;
+      onCheckButtonIsInteractableAction();
+      //SetNewGoldAmountText();
+   }
+
+   public void SetNewGoldAmountText()
    {
       goldAmountText.text = "Gold: " + totalGoldAmount.ToString();
-      OilTankerMovment.OnExitOilTanker -= SetNewGoldAmountText;
+
    }
-  
+   
+   /*public void DeleteAction ()
+   {
+      OilTankerMovment.onoil -= UIManager.Instance.SetNewGoldAmountText;
+   }
+
+   public void AddAction()
+   {
+     
+         OilTankerMovment.onExitOilTanker += SetNewGoldAmountText;
+      
+   }*/
+
 }

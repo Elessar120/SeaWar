@@ -33,7 +33,8 @@ public class OilTankerMovment : MonoBehaviour,IMovementSystem
    private bool isGoingToMiddleMap;
    private int layerMask;
    private string animationName;
-   public static Action OnExitOilTanker;
+
+   public static Action onExitMapAction;
    /*private void SetNewGoldAmountText()
    {
       UIManager.Instance.goldAmountText.text = "Gold: " + UIManager.Instance.totalGoldAmount.ToString();
@@ -57,7 +58,7 @@ public class OilTankerMovment : MonoBehaviour,IMovementSystem
       fireRate = oilTankerData.fireRate;
       sightRange = oilTankerData.sightRange;
       rotationSpeed = oilTankerData.rotationSpeed;
-      costWithMoney = oilTankerData.costWithMoney;
+      costWithMoney = oilTankerData.costWithGold;
       costWithOil = oilTankerData.costWithOil;
       upgradeCardsNeed = oilTankerData.upgradeCardsNeed;
       upgradeGoldsNeed = oilTankerData.upgradeGoldsNeed;
@@ -109,8 +110,10 @@ public class OilTankerMovment : MonoBehaviour,IMovementSystem
       }
       if (other.gameObject.layer == LayerMask.NameToLayer("ExitPoint"))
       {
-         OnExitOilTanker();
+        // UIManager.Instance.SetNewGoldAmount();
+         onExitMapAction();
          Destroy(gameObject);
+         
       }
 
    }

@@ -28,7 +28,7 @@ public class Refinery : MonoBehaviour
     #endregion
     public Unit refineryData;
     public Unit oilTankerData;
-    [SerializeField] float storedOil;
+    [SerializeField] float storedOil;// just for watch each refinery production separately
     private void Start()
     {
         #region setUnitData
@@ -42,7 +42,7 @@ public class Refinery : MonoBehaviour
         fireRate = refineryData.fireRate;
         sightRange = refineryData.sightRange;
         rotationSpeed = refineryData.rotationSpeed;
-        costWithMoney = refineryData.costWithMoney;
+        costWithMoney = refineryData.costWithGold;
         costWithOil = refineryData.costWithOil;
         upgradeCardsNeed = refineryData.upgradeCardsNeed;
         upgradeGoldsNeed = refineryData.upgradeGoldsNeed;
@@ -52,20 +52,23 @@ public class Refinery : MonoBehaviour
 
         #endregion
         InvokeRepeating("AddOilAmount",1f,1f);
-    }
+    }   
     private void AddOilAmount ()
     {
         storedOil += productionRate;
-        UIManager.Instance.totalOilAmount += productionRate;
-        
-        if (UIManager.Instance.totalOilAmount > oilTankerData.costWithOil)
+        UIManager.Instance.SetNewOilAmount(); 
+        UIManager.Instance.SetNewOilAmountText();
+        if (UIManager.Instance.totalOilAmount >= oilTankerData.costWithOil)
         {
             UIManager.Instance.oilTankerButton.interactable = true;
+            
         }
         else
-        {
+        {    
             UIManager.Instance.oilTankerButton.interactable = false;
         }
+       
+       
     }
 
     private void TakeDamage(float damage)

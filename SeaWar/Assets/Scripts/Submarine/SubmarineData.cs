@@ -62,7 +62,7 @@ public class SubmarineData : MonoBehaviour
         fireRate = newUnit.fireRate;
         sightRange = newUnit.sightRange;
         rotationSpeed = newUnit.rotationSpeed;
-        costWithMoney = newUnit.costWithMoney;
+        costWithMoney = newUnit.costWithGold;
         costWithOil = newUnit.costWithOil;
         upgradeCardsNeed = newUnit.upgradeCardsNeed;
         upgradeGoldsNeed = newUnit.upgradeGoldsNeed;

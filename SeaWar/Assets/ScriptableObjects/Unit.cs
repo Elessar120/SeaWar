@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 [CreateAssetMenu (fileName = "New Unit" , menuName = "Units")]
 public class Unit : ScriptableObject
 {
@@ -14,13 +16,14 @@ public class Unit : ScriptableObject
  public float fireRate;
  public float sightRange;
  public float rotationSpeed;
- public float costWithMoney;
+ public float costWithGold;
  public float costWithOil;
  public float upgradeCardsNeed;
  public float upgradeGoldsNeed;
  public float supportDamageRate;
  public float productionRate;
  public float earnedMoney;
+ public GameObject spawnButton;
  public enum MovmentType
  {
      UnderWater, Air, WaterSurface

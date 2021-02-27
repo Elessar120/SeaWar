@@ -21,13 +21,14 @@ MonoBehaviour:
   fireRate: -74696.02
   sightRange: 3
   rotationSpeed: 180
-  costWithMoney: 240
+  costWithGold: 260
   costWithOil: 0
   upgradeCardsNeed: 2
   upgradeGoldsNeed: 20
   supportDamageRate: 0
   productionRate: 0
   earnedMoney: 0
+  spawnButton: {fileID: 0}
   AttackTargets:
   - Lench
   - BattleShip

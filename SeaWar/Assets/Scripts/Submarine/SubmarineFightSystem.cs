@@ -50,7 +50,7 @@ public class SubmarineFightSystem : MonoBehaviour,IFightSystem
         fireRate = submarineData.fireRate;
         sightRange = submarineData.sightRange;
         rotationSpeed = submarineData.rotationSpeed;
-        costWithMoney = submarineData.costWithMoney;
+        costWithMoney = submarineData.costWithGold;
         costWithOil = submarineData.costWithOil;
         upgradeCardsNeed = submarineData.upgradeCardsNeed;
         upgradeGoldsNeed = submarineData.upgradeGoldsNeed;
