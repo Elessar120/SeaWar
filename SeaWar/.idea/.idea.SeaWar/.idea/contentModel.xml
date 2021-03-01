@@ -10,6 +10,9 @@
           <e p="Unit.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="Camera" t="Include">
+            <e p="ScrollAndPinch.cs" t="Include" />
+          </e>
           <e p="GameData.cs" t="Include" />
           <e p="Interface" t="Include">
             <e p="IFightSystem.cs" t="Include" />

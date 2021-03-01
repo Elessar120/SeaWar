@@ -46,6 +46,8 @@ public class UIManager : MonoBehaviour
 
    private void Start()
    {
+      Refinery.onOilProductionAction += SetNewOilAmount;
+      Refinery.onOilProductionAction += SetNewOilAmountText;
       OilTankerMovment.onExitMapAction += SetNewGoldAmount;
       OilTankerMovment.onExitMapAction += SetNewGoldAmountText;
       goldAmountText.text = "Gold: " + totalGoldAmount;

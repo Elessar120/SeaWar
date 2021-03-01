@@ -29,6 +29,7 @@ public class Refinery : MonoBehaviour
     public Unit refineryData;
     public Unit oilTankerData;
     [SerializeField] float storedOil;// just for watch each refinery production separately
+    public static Action onOilProductionAction;
     private void Start()
     {
         #region setUnitData
@@ -56,8 +57,7 @@ public class Refinery : MonoBehaviour
     private void AddOilAmount ()
     {
         storedOil += productionRate;
-        UIManager.Instance.SetNewOilAmount(); 
-        UIManager.Instance.SetNewOilAmountText();
+        onOilProductionAction();
         if (UIManager.Instance.totalOilAmount >= oilTankerData.costWithOil)
         {
             UIManager.Instance.oilTankerButton.interactable = true;
