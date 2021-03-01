@@ -39,7 +39,7 @@ class ScrollAndPinch : MonoBehaviour
         }
 
         //Pinch
-        if (Input.touchCount >= 2)
+        /*if (Input.touchCount >= 2)
         {
             var pos1  = PlanePosition(Input.GetTouch(0).position);
             var pos2  = PlanePosition(Input.GetTouch(1).position);
@@ -59,7 +59,7 @@ class ScrollAndPinch : MonoBehaviour
 
             if (Rotate && pos2b != pos2)
                 Camera.transform.RotateAround(pos1, Plane.normal, Vector3.SignedAngle(pos2 - pos1, pos2b - pos1b, Plane.normal));
-        }
+        }*/
 
     }
 
