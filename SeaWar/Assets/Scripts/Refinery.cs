@@ -26,12 +26,14 @@ public class Refinery : MonoBehaviour
     private float productionRate;
     private float earnedMoney;
     #endregion
+   
     public Unit refineryData;
     public Unit oilTankerData;
     [SerializeField] float storedOil;// just for watch each refinery production separately
     public static Action onOilProductionAction;
     private void Start()
     {
+        
         #region setUnitData
 
         unitName = refineryData.unitName;

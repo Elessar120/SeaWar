@@ -10,6 +10,14 @@
           <e p="Unit.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="AMVCC" t="Include">
+            <e p="SeaWarApplication.cs" t="Include" />
+            <e p="SeaWarController.cs" t="Include" />
+            <e p="SeaWarElement.cs" t="Include" />
+            <e p="SeaWarModel.cs" t="Include" />
+            <e p="SeaWarRefineryModel.cs" t="Include" />
+            <e p="SeaWarView.cs" t="Include" />
+          </e>
           <e p="Camera" t="Include">
             <e p="ScrollAndPinch.cs" t="Include" />
           </e>

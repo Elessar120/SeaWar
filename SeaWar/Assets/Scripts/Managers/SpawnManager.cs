@@ -24,6 +24,11 @@ public class SpawnManager : MonoBehaviour
     
     #endregion
 
+    private enum PlayersColor
+    {
+        Blue,Red
+    }
+
     public Transform[] spawnPoint;
     private Button[] gamePlayButtons;
     private void Start()
@@ -34,16 +39,12 @@ public class SpawnManager : MonoBehaviour
 
     public void SetProperties(Unit newUnit)
     {
-        /*unitName = newUnit.unitName;
-        level = newUnit.level;
-        movmentSpeed = newUnit.movmentSpeed;
-        damage = newUnit.damage;
-        health = newUnit.health;
-        fireRate = newUnit.fireRate;
-        sightRange = newUnit.sightRange;
-        rotationSpeed = newUnit.rotationSpeed;
-        upgradeCardsNeed = newUnit.upgradeCardsNeed;
-        upgradeGoldsNeed = newUnit.upgradeGoldsNeed;*/
+        //todo
+        #region SetPlayersColor
+
+        
+
+            #endregion
         costWithGold = newUnit.costWithGold;
         costWithOil = newUnit.costWithOil;
         
@@ -112,8 +113,4 @@ public class SpawnManager : MonoBehaviour
         }
 
     }
-    
-        
-       
-    
 }

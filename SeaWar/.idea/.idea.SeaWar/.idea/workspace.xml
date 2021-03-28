@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57948be8-0927-4994-a554-03ff991ccd6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarApplication.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarApplication.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarElement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarElement.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Oil Tanker.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Oil Tanker.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Refinery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Refinery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +30,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OilTanker/OilTankerMovment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IMovementSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -33,12 +51,17 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/SubmarineData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/SubmarineFightSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameData.cs" />
-      <option value="$PROJECT_DIR$/Assets/ScriptableObjects/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/OilTanker/OilTankerMovment.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Refinery.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Refinery.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/ScriptableObjects/Unit.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarElement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarApplication.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nvkw4CZd3Voqph4zwu9SPctwCa" />
@@ -133,6 +156,16 @@
       <workItem from="1614597472330" duration="1607000" />
       <workItem from="1614601204890" duration="768000" />
       <workItem from="1614605820748" duration="949000" />
+      <workItem from="1615053396601" duration="615000" />
+      <workItem from="1615234357487" duration="99000" />
+      <workItem from="1615318421460" duration="2416000" />
+      <workItem from="1615376329416" duration="1781000" />
+      <workItem from="1615386686850" duration="288000" />
+      <workItem from="1615670432009" duration="607000" />
+      <workItem from="1616240236519" duration="422000" />
+      <workItem from="1616337936002" duration="2603000" />
+      <workItem from="1616415056747" duration="1034000" />
+      <workItem from="1616932085113" duration="834000" />
     </task>
     <servers />
   </component>
