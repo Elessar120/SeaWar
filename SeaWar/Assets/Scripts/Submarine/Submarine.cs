@@ -17,10 +17,10 @@ public class Submarine : MonoBehaviour,IMovementSystem
       private Animator rotationAnimator;
       private GameObject middleMap;
       private Vector3 startPosition;
-      [SerializeField] private float smooth = .1f;
+      [SerializeField] private float smooth = 180f;
       private float rotationAngle;
       private Quaternion target;
-      [SerializeField] private float speed = .1f;
+      [SerializeField] private float speed = 1.2f;
       private void Awake()
       {
 

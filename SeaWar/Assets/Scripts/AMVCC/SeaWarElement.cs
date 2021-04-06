@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeaWarElement : MonoBehaviour
+namespace AMVCC
 {
-    public SeaWarApplication Application
+    public class SeaWarElement : MonoBehaviour
     {
-        get
+        public SeaWarApplication Application
         {
-            return GameObject.FindObjectOfType<SeaWarApplication>();
+            get
+            {
+                return GameObject.FindObjectOfType<SeaWarApplication>();
+            }
         }
+
     }
-    
+
 }

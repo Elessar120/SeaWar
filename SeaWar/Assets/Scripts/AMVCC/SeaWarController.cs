@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SeaWarController : SeaWarElement
+public class SeaWarController : AMVCC.SeaWarElement
 {
         
 }

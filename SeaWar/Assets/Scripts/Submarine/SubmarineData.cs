@@ -50,7 +50,15 @@ public class SubmarineData : MonoBehaviour
     #endregion
 
     #region Constructor
-
+    private bool wasInMiddleFirstTime;
+    private bool isGoingToMiddleMap;
+    private Animator rotationAnimator;
+    private GameObject middleMap;
+    private Vector3 startPosition;
+    [SerializeField] private float smooth = .1f;
+    private float rotationAngle;
+    private Quaternion target;
+    [SerializeField] private float speed = .1f;
     public SubmarineData(Unit newUnit)
     {
         unitName = newUnit.unitName;
