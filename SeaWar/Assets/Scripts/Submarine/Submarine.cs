@@ -14,7 +14,7 @@ public class Submarine : MonoBehaviour,IMovementSystem
       private playerTeam team;*/
       private bool wasInMiddleFirstTime;
       private bool isGoingToMiddleMap;
-      private Animator rotationAnimator;
+      public Animator rotationAnimator;
       private GameObject middleMap;
       private Vector3 startPosition;
       [SerializeField] private float smooth = 180f;
@@ -67,8 +67,7 @@ public class Submarine : MonoBehaviour,IMovementSystem
       {
             if (other.CompareTag("MiddleMap"))
             {
-                  Debug.Log("submarine");
-                  Debug.Log("middle map");
+                 
                   rotationAnimator.SetBool("isInRotateMod", true);
                   if (!wasInMiddleFirstTime)
                   {
@@ -76,12 +75,10 @@ public class Submarine : MonoBehaviour,IMovementSystem
                         
                   }
                   isGoingToMiddleMap = false;
-                  Debug.Log(wasInMiddleFirstTime);
             }
 
             if (other.CompareTag("StartPoint") && wasInMiddleFirstTime)
             {
-                  Debug.Log("startpoint");
                   rotationAnimator.SetBool("isInRotateMod", true);
                   isGoingToMiddleMap = true;
 
@@ -91,9 +88,5 @@ public class Submarine : MonoBehaviour,IMovementSystem
         
       }
 
-      public void UncheckRotationAnimatorTrigger()
-      {
-            rotationAnimator.SetBool("isInRotateMod", false);
-            Debug.Log("event");
-      }
+      
 }

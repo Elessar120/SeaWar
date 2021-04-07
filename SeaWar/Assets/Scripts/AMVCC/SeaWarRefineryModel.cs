@@ -9,7 +9,9 @@ namespace AMVCC
     {
         public Unit refineryData;
         public Unit oilTankerData;
-        [SerializeField] float storedOil;// just for watch each refinery production separately
-        public static Action onOilProductionAction;
+        public float storedOil;// just for watch each refinery production separately
+        public Action onOilProductionAction;
+        public float health;
+        public float productionRate;
     }
 }

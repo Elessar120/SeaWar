@@ -16,5 +16,14 @@ namespace AMVCC
          
             
         }
+        private void Update()
+        {
+           Application.controller.submarineController.Move();
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Application.controller.submarineController.CheckSubmarineIsInMiddleOrStartPoint(other);
+        }
     }
 }

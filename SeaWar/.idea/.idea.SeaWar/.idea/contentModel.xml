@@ -15,10 +15,13 @@
             <e p="SeaWarController.cs" t="Include" />
             <e p="SeaWarElement.cs" t="Include" />
             <e p="SeaWarModel.cs" t="Include" />
+            <e p="SeaWarOilTankerController.cs" t="Include" />
             <e p="SeaWarOilTankerModel.cs" t="Include" />
             <e p="SeaWarOilTankerView.cs" t="Include" />
+            <e p="SeaWarRefineryController.cs" t="Include" />
             <e p="SeaWarRefineryModel.cs" t="Include" />
             <e p="SeaWarRefineryView.cs" t="Include" />
+            <e p="SeaWarSubmarineController.cs" t="Include" />
             <e p="SeaWarSubmarineModel.cs" t="Include" />
             <e p="SeaWarSubmarineView.cs" t="Include" />
             <e p="SeaWarUIView.cs" t="Include" />

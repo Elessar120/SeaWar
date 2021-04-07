@@ -61,6 +61,14 @@ namespace AMVCC
             model.oilTankerModel.oilTankerIsGoingToMiddleMap = true;
 
             #endregion
+
+            #region set Refinery Model Data
+
+
+            model.refineryModel.health = model.refineryModel.refineryData.health;
+            model.refineryModel.productionRate = model.refineryModel.refineryData.productionRate;
+
+            #endregion
         }
     }
 

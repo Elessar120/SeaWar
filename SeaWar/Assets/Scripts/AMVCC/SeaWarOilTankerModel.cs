@@ -21,27 +21,9 @@ namespace AMVCC
 
         public static Action onExitMapAction;
 
-        private void Awake()
-        {
-            oilTankerRotationAnimator = GetComponent<Animator>();
+      
 
-        }
-
-        private void Start()
-        {
-            layerMask = LayerMask.GetMask ("MiddleMap");
-            if (transform.position.x > 0)
-            {
-                outPoint = rightOutPoint;
-                animationName = "rotatingRight";
-            }
-            else if (transform.position.x < 0)
-            {
-                outPoint = leftOutPoint;
-                animationName = "rotatingLeft";
-            }
-            oilTankerIsGoingToMiddleMap = true;
-        }
+  
     }
     
     

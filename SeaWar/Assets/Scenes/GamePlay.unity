@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wasInMiddleFirstTime: 0
-  isGoingToMiddleMap: 0
-  rotationAnimator: {fileID: 0}
+  submarineIsGoingToMiddleMap: 0
+  submarineRotationAnimator: {fileID: 0}
   middleMap: {fileID: 1218510507}
   startPosition: {x: 0, y: 0, z: 0}
   smooth: 180
@@ -1102,10 +1102,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4b2b70245c4411abb2c2162359d6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outPoint: {fileID: 0}
   middleMap: {fileID: 1218510507}
   rightOutPoint: {fileID: 1540333650}
   leftOutPoint: {fileID: 2071035384}
   oilTankerData: {fileID: 11400000, guid: efcf71c3f680c704088df66bde789297, type: 2}
+  oilTankerRotationAnimator: {fileID: 0}
+  oilTankerIsGoingToMiddleMap: 0
+  layerMask: 0
+  animationName: 
 --- !u!1 &762985381
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,6 +2024,8 @@ MonoBehaviour:
   refineryData: {fileID: 11400000, guid: b533553c3dc02744783f2501d8ea3ab4, type: 2}
   oilTankerData: {fileID: 11400000, guid: efcf71c3f680c704088df66bde789297, type: 2}
   storedOil: 0
+  health: 0
+  productionRate: 0
 --- !u!1 &1472041435
 GameObject:
   m_ObjectHideFlags: 0
