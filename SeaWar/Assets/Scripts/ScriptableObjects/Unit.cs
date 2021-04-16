@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Unit : ScriptableObject
 {
  public string unitName;
- public GameObject model;
+ public GameObject prefab;
  public int level;
  public float movmentSpeed;
  public float damage;

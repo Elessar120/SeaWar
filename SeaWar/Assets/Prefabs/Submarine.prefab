@@ -73,7 +73,8 @@ GameObject:
   - component: {fileID: 3495052444423633805}
   - component: {fileID: 5957849604045482037}
   - component: {fileID: 4107181914374044096}
-  - component: {fileID: 8749269208893169541}
+  - component: {fileID: 2815721557206420571}
+  - component: {fileID: 7509250710209054227}
   m_Layer: 0
   m_Name: Radar
   m_TagString: Untagged
@@ -124,7 +125,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8749269208893169541
+--- !u!114 &2815721557206420571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,10 +134,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 2966629836906905011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1a162eca07ed944aa80fe9dff7c206, type: 3}
+  m_Script: {fileID: 11500000, guid: b94fc11c9e51470aa10366aa95575356, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  submarineData: {fileID: 11400000, guid: 364e105bae99f914283e7130c461a015, type: 2}
+--- !u!114 &7509250710209054227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2966629836906905011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fd389d964b40b68b6a2cffaa0a85ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6593104252585514600
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,10 +161,10 @@ GameObject:
   - component: {fileID: 6593104252585514597}
   - component: {fileID: 6593104252585514598}
   - component: {fileID: 6593104252585514599}
-  - component: {fileID: -5261366620209335706}
   - component: {fileID: -8709487757218700573}
   - component: {fileID: 2885801597333204218}
-  - component: {fileID: 1590587351078769969}
+  - component: {fileID: 8070272709962164812}
+  - component: {fileID: -3067785924903151093}
   m_Layer: 0
   m_Name: Submarine
   m_TagString: Unit
@@ -231,26 +243,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6593104252585514600}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.0001
   m_Height: 0.0001
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-5261366620209335706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6593104252585514600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5bd5437bad0ec64e90a50982b995a0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smooth: 180
-  speed: 1.2
 --- !u!54 &-8709487757218700573
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -286,7 +284,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1590587351078769969
+--- !u!114 &8070272709962164812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,7 +293,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 6593104252585514600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1a162eca07ed944aa80fe9dff7c206, type: 3}
+  m_Script: {fileID: 11500000, guid: d0bb30bb6f6e4fa89196fbce8a53f302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  submarineData: {fileID: 0}
+--- !u!114 &-3067785924903151093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593104252585514600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3fb19c13074567ac1963a667445491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

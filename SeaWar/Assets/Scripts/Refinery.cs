@@ -2,10 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using AMVCC;
+using AMVCC.Views;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Refinery : MonoBehaviour
+public class Refinery : SeaWarElement
 {
         #region unit Properties
     
@@ -37,7 +39,7 @@ public class Refinery : MonoBehaviour
         #region setUnitData
 
         unitName = refineryData.unitName;
-        model = refineryData.model;
+        model = refineryData.prefab;
         level = refineryData.level;
         movmentSpeed = refineryData.movmentSpeed;
         damage = refineryData.damage;
@@ -60,14 +62,14 @@ public class Refinery : MonoBehaviour
     {
         storedOil += productionRate;
         onOilProductionAction();
-        if (UIManager.Instance.totalOilAmount >= oilTankerData.costWithOil)
+        if (SeaWarUIView.Instance.totalOilAmount >= oilTankerData.costWithOil)
         {
-            UIManager.Instance.oilTankerButton.interactable = true;
+            SeaWarUIView.Instance.oilTankerButton.interactable = true;
             
         }
         else
         {    
-            UIManager.Instance.oilTankerButton.interactable = false;
+            SeaWarUIView.Instance.oilTankerButton.interactable = false;
         }
        
        

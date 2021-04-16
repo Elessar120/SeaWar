@@ -42,7 +42,7 @@ public class SubmarineFightSystem : MonoBehaviour,IFightSystem
         #region setUnitData
 
         unitName = submarineData.unitName;
-        model = submarineData.model;
+        model = submarineData.prefab;
         level = submarineData.level;
         movmentSpeed = submarineData.movmentSpeed;
         damage = submarineData.damage;
@@ -84,8 +84,7 @@ public class SubmarineFightSystem : MonoBehaviour,IFightSystem
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.transform.name);
-        Debug.Log(hunting);
+       
         if (other.gameObject.layer == shootableMask)
         {
             hunting = true;

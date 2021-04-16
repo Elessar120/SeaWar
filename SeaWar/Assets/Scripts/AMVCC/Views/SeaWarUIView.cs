@@ -1,18 +1,24 @@
-﻿using System;
+﻿using UnityEngine.UI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
-public class UIManager : MonoBehaviour
+using AMVCC;
+using AMVCC.Models;
+using AMVCC.Views;
+using AMVCC.Controllers;
+namespace AMVCC.Views
 {
-   #region Singletone
+    public class SeaWarUIView : SeaWarElement
+    {
+       
+       #region Singletone
 
    
 
-   private static UIManager instance;
+   private static SeaWarUIView instance;
 
-   public static UIManager Instance
+   public static SeaWarUIView Instance
    {
       get
       {
@@ -31,9 +37,9 @@ public class UIManager : MonoBehaviour
 
    public Button[] gamePlayButtons;
    public Button oilTankerButton;
-   public Button submarineButton;
-   [SerializeField] public float totalOilAmount;
-   [SerializeField] public float totalGoldAmount;
+   public Button submarineButton; 
+   public float totalOilAmount; 
+   public float totalGoldAmount;
    public Text oilAmountText;
    public Text goldAmountText;
    public Action onCheckButtonIsInteractableAction;
@@ -46,10 +52,10 @@ public class UIManager : MonoBehaviour
 
    private void Start()
    {
-      Refinery.onOilProductionAction += SetNewOilAmount;
-      Refinery.onOilProductionAction += SetNewOilAmountText;
-      OilTankerMovment.onExitMapAction += SetNewGoldAmount;
-      OilTankerMovment.onExitMapAction += SetNewGoldAmountText;
+      Application.model.refineryModel.onOilProductionAction += SetNewOilAmount;
+      Application.model.refineryModel.onOilProductionAction += SetNewOilAmountText;
+      Application.model.oilTankerModel.onExitMapAction += SetNewGoldAmount;
+      Application.model.oilTankerModel.onExitMapAction += SetNewGoldAmountText;
       goldAmountText.text = "Gold: " + totalGoldAmount;
    }
 
@@ -59,7 +65,7 @@ public class UIManager : MonoBehaviour
 
    public void SetNewOilAmount()
    {
-      totalOilAmount += GameData.Instance.refinery.productionRate;
+      totalOilAmount += Application.model.refineryModel.productionRate;
       //SetNewOilAmountText();
    }
    public void SetNewOilAmountText()
@@ -69,7 +75,7 @@ public class UIManager : MonoBehaviour
 
    public void SetNewGoldAmount()
    {
-      totalGoldAmount += GameData.Instance.oilTanker.earnedMoney;
+      totalGoldAmount += Application.model.oilTankerModel.oilTankerData.earnedMoney;
       onCheckButtonIsInteractableAction();
       //SetNewGoldAmountText();
    }
@@ -93,3 +99,5 @@ public class UIManager : MonoBehaviour
    }*/
 
 }
+
+    }

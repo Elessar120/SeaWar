@@ -62,7 +62,7 @@ public class SubmarineData : MonoBehaviour
     public SubmarineData(Unit newUnit)
     {
         unitName = newUnit.unitName;
-        model = newUnit.model;
+        model = newUnit.prefab;
         level = newUnit.level;
         movmentSpeed = newUnit.movmentSpeed;
         damage = newUnit.damage;

@@ -10,24 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fcbb73636c4482a877766f44931fad5, type: 3}
-  m_Name: Motorboat
+  m_Name: submarine
   m_EditorClassIdentifier: 
-  unitName: 
-  model: {fileID: 919132149155446097, guid: ef9273807be20bb4b8e9bd432558afe1, type: 3}
+  unitName: Submarine
+  prefab: {fileID: 6593104252585514600, guid: 8cb3e8ee78ed9d0448eb964b53a56079, type: 3}
   level: 1
-  movmentSpeed: 2.4
+  movmentSpeed: 1.2
   damage: 50
-  health: 350
-  fireRate: 1
-  sightRange: 2
-  rotationSpeed: 0
-  costWithGold: 0
-  costWithOil: 1000
+  health: 260
+  fireRate: 0
+  sightRange: 3
+  rotationSpeed: 180
+  costWithGold: 260
+  costWithOil: 0
   upgradeCardsNeed: 2
-  upgradeGoldsNeed: 0
+  upgradeGoldsNeed: 20
   supportDamageRate: 0
   productionRate: 0
   earnedMoney: 0
   spawnButton: {fileID: 0}
   AttackTargets:
-  - Refinery
+  - Lench
+  - BattleShip
+  - OilTanker
+  - Submarine
+  - SmallBattleship
+  - MotorBoat

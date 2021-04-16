@@ -1,4 +1,4 @@
-﻿using System;
+﻿      using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -57,14 +57,20 @@ public class Submarine : MonoBehaviour,IMovementSystem
             }
             // }
       }
-  
+
+      public void UncheckRotationAnimatorTrigger()
+      {
+            rotationAnimator.SetBool("isInRotateMod", false);
+      }
+
 
       private void Update()
       {
             Move();
       }
       private void OnTriggerEnter(Collider other)
-      {
+      { 
+            Debug.Log("collide!");
             if (other.CompareTag("MiddleMap"))
             {
                  
@@ -79,6 +85,8 @@ public class Submarine : MonoBehaviour,IMovementSystem
 
             if (other.CompareTag("StartPoint") && wasInMiddleFirstTime)
             {
+                  Debug.Log("isinstartpoint");
+
                   rotationAnimator.SetBool("isInRotateMod", true);
                   isGoingToMiddleMap = true;
 

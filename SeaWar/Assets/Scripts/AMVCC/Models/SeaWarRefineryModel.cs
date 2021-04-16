@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using AMVCC.Controllers;
 
-namespace AMVCC
+namespace AMVCC.Models
 {
     public class SeaWarRefineryModel : SeaWarElement
     {
@@ -13,5 +11,12 @@ namespace AMVCC
         public Action onOilProductionAction;
         public float health;
         public float productionRate;
+
+        private void Start()
+        {
+            health = refineryData.health;
+            productionRate = refineryData.productionRate;
+        }
     }
+    
 }

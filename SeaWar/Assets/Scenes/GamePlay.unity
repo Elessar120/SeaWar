@@ -919,7 +919,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1713239632}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &607695548
 MonoBehaviour:
@@ -933,6 +933,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca11e26217ba41cc9ece46416f014cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  refineryController: {fileID: 0}
+  submarineMoveController: {fileID: 0}
+  submarineFightController: {fileID: 0}
+  oilTankerController: {fileID: 0}
+  spawnManager: {fileID: 0}
+  uiView: {fileID: 0}
 --- !u!1 &743340586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1102,10 +1108,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4b2b70245c4411abb2c2162359d6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outPoint: {fileID: 0}
+  outPoint: {fileID: 2071035384}
   middleMap: {fileID: 1218510507}
   rightOutPoint: {fileID: 1540333650}
   leftOutPoint: {fileID: 2071035384}
+  movmentSpeed: 0
   oilTankerData: {fileID: 11400000, guid: efcf71c3f680c704088df66bde789297, type: 2}
   oilTankerRotationAnimator: {fileID: 0}
   oilTankerIsGoingToMiddleMap: 0
@@ -1366,7 +1373,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822333290}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -16, y: 0, z: -6}
+  m_LocalPosition: {x: -16, y: 0.5, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 743340587}
@@ -1959,8 +1966,9 @@ Transform:
   - {fileID: 1894674649}
   - {fileID: 400615299}
   - {fileID: 833086527}
+  - {fileID: 1472041439}
   m_Father: {fileID: 1713239632}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1325343178
 MonoBehaviour:
@@ -1975,7 +1983,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refineryView: {fileID: 0}
-  submarineView: {fileID: 0}
+  submarineMoveView: {fileID: 0}
+  submarineFightView: {fileID: 0}
   oilTankerView: {fileID: 0}
   uiView: {fileID: 0}
 --- !u!1 &1403821618
@@ -2119,8 +2128,8 @@ RectTransform:
   - {fileID: 577557726}
   - {fileID: 2031936917}
   - {fileID: 1093196789}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1325343177}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2338,7 +2347,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Refineries2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3135977903917091343, guid: 806fc022ef53fe74fb50632c8f8fc49f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3135977903194012482, guid: 806fc022ef53fe74fb50632c8f8fc49f, type: 3}
+    - {fileID: 3135977902736401780, guid: 806fc022ef53fe74fb50632c8f8fc49f, type: 3}
+    - {fileID: 3135977902892091430, guid: 806fc022ef53fe74fb50632c8f8fc49f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 806fc022ef53fe74fb50632c8f8fc49f, type: 3}
 --- !u!4 &1560377814 stripped
 Transform:
@@ -2689,8 +2706,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2124586813}
-  - {fileID: 607695547}
   - {fileID: 1325343177}
+  - {fileID: 607695547}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3437,11 +3454,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1037353558}
     m_Modifications:
-    - target: {fileID: 3135977902736401673, guid: 806fc022ef53fe74fb50632c8f8fc49f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3135977903917091342, guid: 806fc022ef53fe74fb50632c8f8fc49f,
         type: 3}
       propertyPath: m_LocalPosition.x

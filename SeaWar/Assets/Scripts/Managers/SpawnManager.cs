@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using AMVCC.Views;
 using UnityEngine;
 using UnityEngine.UI;
 public class SpawnManager : MonoBehaviour
@@ -9,7 +10,7 @@ public class SpawnManager : MonoBehaviour
 
     
     private string unitName;
-    private GameObject model;
+    private GameObject prefab;
     private int level;
     private float movmentSpeed;
     private float damage;
@@ -33,8 +34,8 @@ public class SpawnManager : MonoBehaviour
     private Button[] gamePlayButtons;
     private void Start()
     {
-        gamePlayButtons = UIManager.Instance.gamePlayButtons;
-        UIManager.Instance.onCheckButtonIsInteractableAction += SetButtonInteractableState;
+        gamePlayButtons = SeaWarUIView.Instance.gamePlayButtons;
+        SeaWarUIView.Instance.onCheckButtonIsInteractableAction += SetButtonInteractableState;
     }
 
     public void SetProperties(Unit newUnit)
@@ -48,23 +49,23 @@ public class SpawnManager : MonoBehaviour
         costWithGold = newUnit.costWithGold;
         costWithOil = newUnit.costWithOil;
         
-        model = newUnit.model;
+        prefab = newUnit.prefab;
         if (newUnit.costWithOil > 0)    
         {
-            if (UIManager.Instance.totalOilAmount >= costWithOil)
+            if (SeaWarUIView.Instance.totalOilAmount >= costWithOil)
             {
-                UIManager.Instance.totalOilAmount -= costWithOil;
-                UIManager.Instance.SetNewOilAmountText();
+                SeaWarUIView.Instance.totalOilAmount -= costWithOil;
+                SeaWarUIView.Instance.SetNewOilAmountText();
                 Spawner();
 
             }
         }
         else if (newUnit.costWithGold > 0)
         {
-            if (UIManager.Instance.totalGoldAmount >= costWithGold)
+            if (SeaWarUIView.Instance.totalGoldAmount >= costWithGold)
             {
-                UIManager.Instance.totalGoldAmount -= costWithGold;
-                UIManager.Instance.SetNewGoldAmountText();
+                SeaWarUIView.Instance.totalGoldAmount -= costWithGold;
+                SeaWarUIView.Instance.SetNewGoldAmountText();
                 Spawner();
             }
             else
@@ -72,13 +73,13 @@ public class SpawnManager : MonoBehaviour
                 //UIManager   
             }
         }
-        UIManager.Instance.onCheckButtonIsInteractableAction();
+        SeaWarUIView.Instance.onCheckButtonIsInteractableAction();
 
         //UIManager.Instance.totalOilAmount -= newUnit.costWithMoney;
     }
     public void Spawner()
     {
-        Instantiate(model, spawnPoint[0].position, spawnPoint[0].rotation);
+        Instantiate(prefab, spawnPoint[0].position, spawnPoint[0].rotation);
         
     }
 
@@ -86,7 +87,7 @@ public class SpawnManager : MonoBehaviour
     {
         foreach (Button button in gamePlayButtons)
         {
-                if (UIManager.Instance.totalOilAmount >= costWithOil)
+                if (SeaWarUIView.Instance.totalOilAmount >= costWithOil)
                 {
                     button.interactable = true;
 
@@ -100,7 +101,7 @@ public class SpawnManager : MonoBehaviour
         
         foreach (Button button in gamePlayButtons)
         {
-                if (UIManager.Instance.totalGoldAmount >= costWithGold)
+                if (SeaWarUIView.Instance.totalGoldAmount >= costWithGold)
                 {
                     button.interactable = true;
 

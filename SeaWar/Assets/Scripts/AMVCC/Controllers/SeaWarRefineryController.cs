@@ -1,21 +1,29 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-namespace AMVCC
+namespace AMVCC.Controllers
 {
     public class SeaWarRefineryController : SeaWarElement
     {
+    
+        private void Start()
+        {
+            
+            InvokeRepeating("AddOilAmount",1f,1f);
+
+        }
+
         private void AddOilAmount ()
         {
-            Application.model.refineryModel.storedOil += Application.model.refineryModel.refineryData.productionRate;
             Application.model.refineryModel.onOilProductionAction();
-            if (UIManager.Instance.totalOilAmount >=Application.model.refineryModel.oilTankerData.costWithOil)
+            if (Application.view.uiView.totalOilAmount >=Application.model.refineryModel.oilTankerData.costWithOil)
             {
-                UIManager.Instance.oilTankerButton.interactable = true;
+                Application.view.uiView.oilTankerButton.interactable = true;
                   
             }
             else
             {    
-                UIManager.Instance.oilTankerButton.interactable = false;
+                Application.view.uiView.oilTankerButton.interactable = false;
             }
              
              

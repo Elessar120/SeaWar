@@ -50,7 +50,7 @@ public class OilTankerMovment : MonoBehaviour,IMovementSystem
       #region setUnitData
 
       unitName = oilTankerData.unitName;
-      model = oilTankerData.model;
+      model = oilTankerData.prefab;
       level = oilTankerData.level;
       movmentSpeed = oilTankerData.movmentSpeed;
       damage = oilTankerData.damage;
