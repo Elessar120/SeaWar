@@ -2,110 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57948be8-0927-4994-a554-03ff991ccd6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarApplication.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarApplication.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarElement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarOilTankerController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarOilTankerController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarRefineryController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarRefineryController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineFightController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineFightController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineMoveController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarOilTankerModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarOilTankerModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarRefineryModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarRefineryModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSubmarineModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSubmarineModel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarOilTankerView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarOilTankerView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarRefineryView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarRefineryView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineFightView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineFightView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineMoveView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineMoveView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarUIView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarUIView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Motorboat.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Motorboat.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/OilTanker.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/OilTanker.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Refinery.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Refinery.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Unit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Unit.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/submarine.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/submarine.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/OilTankerRotateLeft.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/OilTankerRotateLeft.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Refineries.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Refineries.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Submarine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Submarine.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/oilTanker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/oilTanker.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Motorboat.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Motorboat.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/OilTanker.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/OilTanker.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Refinery.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Refinery.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Unit.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Unit.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/submarine.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/submarine.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarApplication.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarApplication.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarElement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarElement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarModel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarOilTankerController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarOilTankerController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarOilTankerModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarOilTankerModel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarOilTankerView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarOilTankerView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarRefineryController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarRefineryController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarRefineryModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarRefineryModel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarRefineryView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarRefineryView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarSubmarineController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarSubmarineController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineMoveController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarSubmarineModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarSubmarineModel.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarSubmarineView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarSubmarineView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarUIView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarUIView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarView.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarOilTankerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarOilTankerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarRefineryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarRefineryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineFightController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineFightController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineMoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineMoveController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarOilTankerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarOilTankerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSubmarineModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSubmarineModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarOilTankerView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarOilTankerView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarRefineryView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarRefineryView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineFightView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineFightView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineMoveView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineMoveView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarElement.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OilTanker/OilTankerMovment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/OilTanker/OilTankerMovment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Refinery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Refinery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Submarine/Submarine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Submarine/Submarine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Submarine/SubmarineData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Submarine/SubmarineData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Submarine/SubmarineFightSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Submarine/SubmarineFightSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/submarine.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/submarine.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,31 +58,31 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarApplication.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/SeaWarRefineryView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/gjguihioj.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineFightView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarApplication.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineFightController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSubmarineModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineMoveView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/Submarine.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/SubmarineData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Submarine/SubmarineFightSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/OilTanker/OilTankerMovment.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarRefineryView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarRefineryModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineMoveController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarOilTankerView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarOilTankerModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarOilTankerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/UIView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/UIView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Refinery.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarUIView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Refinery.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarRefineryController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineFightController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineFightView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSubmarineModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineMoveView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineMoveController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarRefineryView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarOilTankerModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarOilTankerView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarOilTankerController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nvkw4CZd3Voqph4zwu9SPctwCa" />
@@ -204,10 +114,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5988">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="5988" />
+      <option name="pid" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -308,7 +218,9 @@
       <workItem from="1618496004153" duration="3674000" />
       <workItem from="1618500691834" duration="1736000" />
       <workItem from="1618514301681" duration="624000" />
-      <workItem from="1618569846407" duration="6906000" />
+      <workItem from="1618569846407" duration="9404000" />
+      <workItem from="1618584950855" duration="386000" />
+      <workItem from="1618654565029" duration="12458000" />
     </task>
     <servers />
   </component>

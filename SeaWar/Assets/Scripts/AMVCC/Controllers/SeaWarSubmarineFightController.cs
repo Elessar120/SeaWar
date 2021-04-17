@@ -1,9 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace AMVCC.Controllers
 {
     public class SeaWarSubmarineFightController : SeaWarElement
     {
+        private void Update()
+        {
+            DelayBetweenAttacks();
+
+        }
+
         public void DelayBetweenAttacks()
         {
             if (Application.model.submarineModel.hunting)
@@ -15,6 +22,15 @@ namespace AMVCC.Controllers
                     Application.model.submarineModel.fireRate = Application.model.submarineModel.submarineData.fireRate;
                 }
             }
+        }
+        private void OnTriggerEnter(Collider other)
+        {
+            ActivateAttackModeWhenEnemyIsInRange(other);
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            DeActivateAttackMode(other);
         }
         public void Attack(float damage)
         {
@@ -44,6 +60,11 @@ namespace AMVCC.Controllers
         public void DeActivateAttackMode(Collider other)
         {
             Application.model.submarineModel.hunting = false;
+        }
+
+        private void OnDestroy()
+        {
+            
         }
     }
 }

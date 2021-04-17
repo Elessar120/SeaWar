@@ -1,9 +1,22 @@
-﻿using UnityEngine;
+﻿using System;
+using AMVCC.Views;
+using UnityEngine;
 
 namespace AMVCC.Controllers
 {
     public class SeaWarSubmarineMoveController : SeaWarElement
     {
+        private void OnTriggerEnter(Collider other)
+        {
+            CheckSubmarineIsInMiddleOrStartPoint(other);
+        }
+
+        private void Update()
+        {
+            Move();
+
+        }
+
         public void Move()
         {
             /*Debug.Log(SubmarineFightSystem.hunting);
@@ -28,29 +41,28 @@ namespace AMVCC.Controllers
 
             }
             // }*/
-            if (!Application.model.oilTankerModel.oilTankerRotationAnimator.GetBool("isInRotateMod"));
+            if (!gameObject.GetComponent<SeaWarSubmarineMoveView>().submarineRotationAnimator
+                .GetBool("isInRotateMod")) 
             {
-                if (Application.model.submarineModel.submarineIsGoingToMiddleMap)
+                Debug.Log(gameObject.GetComponent<SeaWarSubmarineMoveView>().submarineRotationAnimator.GetBool("isInRotateMod"));
+                if (gameObject.GetComponent<SeaWarSubmarineMoveView>().submarineIsGoingToMiddleMap)
                 {
-                    transform.position = Vector3.MoveTowards(transform.position,new Vector3(Application.model.oilTankerModel.middleMap.transform.position.x,transform.position.y,transform.position.z),Time.deltaTime * Application.model.oilTankerModel.oilTankerData.movmentSpeed);
+                    transform.position = Vector3.MoveTowards(transform.position,new Vector3(Application.model.submarineModel.middleMap.transform.position.x,gameObject.transform.position.y,gameObject.transform.position.z),Time.deltaTime * Application.model.submarineModel.submarineData.movmentSpeed);
                 }
                 else
                 {
-                    transform.position = Vector3.MoveTowards(transform.position,Application.model.oilTankerModel.outPoint.position, Time.deltaTime * Application.model.oilTankerModel.oilTankerData.movmentSpeed);
+                    transform.position = Vector3.MoveTowards(transform.position,Application.model.submarineModel.startPosition.transform.position, Time.deltaTime * Application.model.submarineModel.submarineData.movmentSpeed);
                 }
 
             }
         }
         public void UncheckRotationAnimatorTrigger()
         {
-            Application.model.submarineModel.submarineRotationAnimator.SetBool("isInRotateMod", false);
+            gameObject.GetComponent<SeaWarSubmarineMoveView>().submarineRotationAnimator.SetBool("isInRotateMod", false);
             Debug.Log("event");
         }
 
-        private void SetSubmarineTurnAnimationState()
-        {
-            Application.model.submarineModel.submarineRotationAnimator.SetBool("isInRotateMod", true);
-        }
+      
 
         public void CheckSubmarineIsInMiddleOrStartPoint(Collider other)
         {
@@ -58,35 +70,40 @@ namespace AMVCC.Controllers
             if (other.CompareTag("MiddleMap"))
             {
                 Debug.Log("isinmiddlemap");
-                SetSubmarineTurnAnimationState();
-                SetWasInsMiddleFirstTimeState();
+                SetSubmarineTurnAnimationStateToTrue();
+                SetWasInMiddleFirstTimeState();
                 SetIsGoingToMiddleMapStateToFalse();
             }
 
-            if (other.CompareTag("StartPoint") && Application.model.submarineModel.wasInMiddleFirstTime)
+            if (other.CompareTag("StartPoint") && gameObject.GetComponent<SeaWarSubmarineMoveView>().wasInMiddleFirstTime)
             {
                 Debug.Log("isinstartpoint");
-                SetSubmarineTurnAnimationState();
+                SetSubmarineTurnAnimationStateToTrue();
                 SetIsGoingToMiddleMapStateToTrue();
 
             }
         }
-
+        
+        private void SetSubmarineTurnAnimationStateToTrue()
+        {
+            gameObject.GetComponent<SeaWarSubmarineMoveView>().submarineRotationAnimator.SetBool("isInRotateMod", true);
+        }
+        
         private void SetIsGoingToMiddleMapStateToTrue()
         {
-            Application.model.submarineModel.submarineIsGoingToMiddleMap = true;
+            gameObject.GetComponent<SeaWarSubmarineMoveView>().submarineIsGoingToMiddleMap = true;
         }
 
         private void SetIsGoingToMiddleMapStateToFalse()
         {
-            Application.model.submarineModel.submarineIsGoingToMiddleMap = false;
+            gameObject.GetComponent<SeaWarSubmarineMoveView>().submarineIsGoingToMiddleMap = false;
         }
 
-        private void SetWasInsMiddleFirstTimeState()
+        private void SetWasInMiddleFirstTimeState()
         {
-            if (!Application.model.submarineModel.wasInMiddleFirstTime)
+            if (!gameObject.GetComponent<SeaWarSubmarineMoveView>().wasInMiddleFirstTime)
             {
-                Application.model.submarineModel.wasInMiddleFirstTime = true;
+                gameObject.GetComponent<SeaWarSubmarineMoveView>().wasInMiddleFirstTime = true;
                         
             }
             

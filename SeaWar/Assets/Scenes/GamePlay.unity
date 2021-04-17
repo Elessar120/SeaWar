@@ -168,7 +168,7 @@ MonoBehaviour:
   submarineIsGoingToMiddleMap: 0
   submarineRotationAnimator: {fileID: 0}
   middleMap: {fileID: 1218510507}
-  startPosition: {x: 0, y: 0, z: 0}
+  startPosition: {fileID: 822333290}
   smooth: 180
   rotationAngle: 0
   speed: 1.2
@@ -938,7 +938,6 @@ MonoBehaviour:
   submarineFightController: {fileID: 0}
   oilTankerController: {fileID: 0}
   spawnManager: {fileID: 0}
-  uiView: {fileID: 0}
 --- !u!1 &743340586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,12 +1922,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1322237598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c45595d964b86ad45bdfdae13e6d0177, type: 3}
+  m_Script: {fileID: 11500000, guid: 0125cde2664c45faa38ead8b4239bf2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gamePlayButtons:
   - {fileID: 1867907106}
   - {fileID: 762985383}
+  - {fileID: 2098109300}
   oilTankerButton: {fileID: 1867907106}
   submarineButton: {fileID: 762985383}
   totalOilAmount: 0
@@ -2725,7 +2725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 2124586814}
   view: {fileID: 1325343178}
-  controller: {fileID: 607695548}
+  controller: {fileID: 0}
 --- !u!1 &1845185155
 GameObject:
   m_ObjectHideFlags: 0

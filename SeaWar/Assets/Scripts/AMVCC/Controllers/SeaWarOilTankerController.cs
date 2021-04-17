@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using AMVCC.Views;
+using UnityEngine;
 
 namespace AMVCC.Controllers
 {
@@ -6,7 +7,7 @@ namespace AMVCC.Controllers
     {
         private void Update()
         {
-            Debug.Log("update");
+            //Debug.Log("update");
             Move();
 
         }
@@ -18,12 +19,12 @@ namespace AMVCC.Controllers
 
         public void Move()
         {
-            if (!Application.model.oilTankerModel.oilTankerRotationAnimator
-                .GetBool(Application.model.oilTankerModel.animationName))
+            if (!gameObject.GetComponent<SeaWarOilTankerView>().oilTankerRotationAnimator
+                .GetBool(gameObject.GetComponent<SeaWarOilTankerView>().animationName))
             {
-                if (Application.model.oilTankerModel.oilTankerIsGoingToMiddleMap)
+                if (gameObject.GetComponent<SeaWarOilTankerView>().oilTankerIsGoingToMiddleMap)
                 {
-                    Debug.Log("if");
+                    //Debug.Log("if");
                     transform.position = Vector3.MoveTowards(transform.position,
                         new Vector3(Application.model.oilTankerModel.middleMap.transform.position.x,
                             transform.position.y, transform.position.z),
@@ -35,7 +36,7 @@ namespace AMVCC.Controllers
                 else
                 {
                     transform.position = Vector3.MoveTowards(transform.position,
-                        Application.model.oilTankerModel.outPoint.position,
+                        gameObject.GetComponent<SeaWarOilTankerView>().outPoint.position,
                         Time.deltaTime * Application.model.oilTankerModel.oilTankerData.movmentSpeed);
                 }
 
@@ -62,21 +63,21 @@ namespace AMVCC.Controllers
 
         public void SetOilTankerTurnAnimationStateToFalse()
         {
-            Application.model.oilTankerModel.oilTankerRotationAnimator.SetBool(
-                Application.model.oilTankerModel.animationName, false);
+            gameObject.GetComponent<SeaWarOilTankerView>().oilTankerRotationAnimator.SetBool(
+                gameObject.GetComponent<SeaWarOilTankerView>().animationName, false);
             SetIsGoingToMiddleMapStateToFalse();
         }
 
         private void SetOilTankerTurnAnimationStateToTrue()
         {
-            Application.model.oilTankerModel.oilTankerRotationAnimator.SetBool(
-                Application.model.oilTankerModel.animationName, true);
+            gameObject.GetComponent<SeaWarOilTankerView>().oilTankerRotationAnimator.SetBool(
+                gameObject.GetComponent<SeaWarOilTankerView>().animationName, true);
 
         }
 
         private void SetIsGoingToMiddleMapStateToFalse()
         {
-            Application.model.oilTankerModel.oilTankerIsGoingToMiddleMap = false;
+            gameObject.GetComponent<SeaWarOilTankerView>().oilTankerIsGoingToMiddleMap = false;
 
             /*}
             public void UncheckRotationAnimatorTrigger()

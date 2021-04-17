@@ -1,4 +1,5 @@
 ﻿using System;
+using AMVCC.Views;
 using UnityEngine;
 
 namespace AMVCC.Controllers
@@ -16,14 +17,17 @@ namespace AMVCC.Controllers
         private void AddOilAmount ()
         {
             Application.model.refineryModel.onOilProductionAction();
-            if (Application.view.uiView.totalOilAmount >=Application.model.refineryModel.oilTankerData.costWithOil)
+            if (SeaWarUIView.Instance.totalOilAmount >= Application.model.oilTankerModel.oilTankerData.costWithOil)
             {
-                Application.view.uiView.oilTankerButton.interactable = true;
+//                Debug.Log("we have money!");
+                SeaWarUIView.Instance.oilTankerButton.interactable = true;
                   
             }
             else
             {    
-                Application.view.uiView.oilTankerButton.interactable = false;
+               // Debug.Log("we don't have money!");
+
+                SeaWarUIView.Instance.oilTankerButton.interactable = false;
             }
              
              

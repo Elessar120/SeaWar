@@ -2,6 +2,8 @@
 {
     public class SeaWarRefineryView : SeaWarElement
     {
+        public float health;
+        public float storedOil;
         private void Awake()
         {
             

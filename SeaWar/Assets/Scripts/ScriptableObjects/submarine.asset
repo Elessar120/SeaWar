@@ -15,7 +15,7 @@ MonoBehaviour:
   unitName: Submarine
   prefab: {fileID: 6593104252585514600, guid: 8cb3e8ee78ed9d0448eb964b53a56079, type: 3}
   level: 1
-  movmentSpeed: 1.2
+  movmentSpeed: 5
   damage: 50
   health: 260
   fireRate: 0

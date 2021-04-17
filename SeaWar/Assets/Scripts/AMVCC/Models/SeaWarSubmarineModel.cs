@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace AMVCC.Models
 {
@@ -6,11 +7,9 @@ namespace AMVCC.Models
     {
         #region navigationSystemData
 
-        public bool wasInMiddleFirstTime;
-        public bool submarineIsGoingToMiddleMap;
-        public Animator submarineRotationAnimator;
+       
         public GameObject middleMap;
-        public Vector3 startPosition;
+        public GameObject startPosition;
         [SerializeField] private float smooth = .1f;
         public float rotationAngle;
         private Quaternion target;
@@ -32,6 +31,22 @@ namespace AMVCC.Models
         
         public Unit submarineData;
 
-        
+        private void Awake()
+        {
+            rotationAngle = submarineData.rotationSpeed;
+            speed = submarineData.movmentSpeed;
+
+        }
+
+        private void Start()
+        {
+          
+            
+            Application.model.submarineModel.damage = Application.model.submarineModel.submarineData.damage;
+            Application.model.submarineModel.health =Application.model.submarineModel.submarineData.health;
+            Application.model.submarineModel.fireRate =Application.model.submarineModel.submarineData.fireRate;
+            Application.model.submarineModel.shootableMask = LayerMask.GetMask (Application.model.submarineModel.submarineData.AttackTargets);
+
+        }
     }
 }

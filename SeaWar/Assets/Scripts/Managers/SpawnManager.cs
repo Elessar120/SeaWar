@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using AMVCC;
 using AMVCC.Views;
 using UnityEngine;
 using UnityEngine.UI;
-public class SpawnManager : MonoBehaviour
+public class SpawnManager : SeaWarElement
 {
     #region unit Properties
 

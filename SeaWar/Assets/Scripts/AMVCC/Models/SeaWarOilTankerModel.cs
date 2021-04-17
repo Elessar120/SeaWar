@@ -5,7 +5,6 @@ namespace AMVCC.Models
 {
     public class SeaWarOilTankerModel : SeaWarElement
     {
-        public Transform outPoint;
         
         public GameObject middleMap;
         public Transform rightOutPoint;
@@ -13,10 +12,7 @@ namespace AMVCC.Models
         public float movmentSpeed;
 
         public Unit oilTankerData;
-        public Animator oilTankerRotationAnimator;
-        public bool oilTankerIsGoingToMiddleMap;
         public int layerMask;
-        public string animationName;
 
         public Action onExitMapAction;
 
@@ -29,17 +25,7 @@ namespace AMVCC.Models
         private void Start()
         {
             layerMask = LayerMask.GetMask ("MiddleMap");
-            if (transform.position.x > 0)
-            {
-                outPoint = Application.model.oilTankerModel.rightOutPoint;
-                animationName = "rotatingRight";
-            }
-            else if (transform.position.x < 0)
-            {
-                outPoint = Application.model.oilTankerModel.leftOutPoint;
-                animationName = "rotatingLeft";
-            }
-            oilTankerIsGoingToMiddleMap = true;
+           
 
         }
       
