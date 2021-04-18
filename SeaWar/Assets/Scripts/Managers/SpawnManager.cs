@@ -57,7 +57,7 @@ public class SpawnManager : SeaWarElement
             {
                 SeaWarUIView.Instance.totalOilAmount -= costWithOil;
                 SeaWarUIView.Instance.SetNewOilAmountText();
-                Spawner();
+                //Spawner();
 
             }
         }
@@ -67,7 +67,7 @@ public class SpawnManager : SeaWarElement
             {
                 SeaWarUIView.Instance.totalGoldAmount -= costWithGold;
                 SeaWarUIView.Instance.SetNewGoldAmountText();
-                Spawner();
+                //Spawner();
             }
             else
             {

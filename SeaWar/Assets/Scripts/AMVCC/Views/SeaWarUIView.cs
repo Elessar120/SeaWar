@@ -85,7 +85,12 @@ namespace AMVCC.Views
       goldAmountText.text = "Gold: " + totalGoldAmount.ToString();
 
    }
-   
+
+   public void ShowRoadsToSelect()
+   {
+      
+   }
+
    /*public void DeleteAction ()
    {
       OilTankerMovment.onoil -= UIManager.Instance.SetNewGoldAmountText;
