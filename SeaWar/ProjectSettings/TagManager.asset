@@ -14,6 +14,18 @@ TagManager:
   - BattleShip
   - SmallBattleShip
   - Lench
+  - RoadBlue1
+  - RoadBlue2
+  - RoadBlue3
+  - RoadRed1
+  - RoadRed2
+  - RefineryBlue1
+  - RefineryBlue2
+  - RefineryBlue3
+  - RefineryRed1
+  - RefineryRed2
+  - RefineryRed3
+  - RoadRed3
   layers:
   - Default
   - TransparentFX
@@ -34,7 +46,7 @@ TagManager:
   - StartPoint
   - ExitPoint
   - Refinery
-  - 
+  - Road
   - 
   - 
   - 

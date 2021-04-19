@@ -86,9 +86,19 @@ namespace AMVCC.Views
 
    }
 
-   public void ShowRoadsToSelect()
+   public void EnableRoads()
    {
+      Application.model.uiModel.arrowForBlue1.gameObject.SetActive(true);
+      Application.model.uiModel.arrowForBlue2.gameObject.SetActive(true);
+      Application.model.uiModel.arrowForBlue3.gameObject.SetActive(true);
       
+   }
+
+   public void DisableRoads()
+   {
+      Application.model.uiModel.arrowForBlue1.gameObject.SetActive(false);
+      Application.model.uiModel.arrowForBlue2.gameObject.SetActive(false);
+      Application.model.uiModel.arrowForBlue3.gameObject.SetActive(false);
    }
 
    /*public void DeleteAction ()

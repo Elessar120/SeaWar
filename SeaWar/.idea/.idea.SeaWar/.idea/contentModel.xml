@@ -20,11 +20,16 @@
               <e p="SeaWarRefineryController.cs" t="Include" />
               <e p="SeaWarSubmarineFightController.cs" t="Include" />
               <e p="SeaWarSubmarineMoveController.cs" t="Include" />
+              <e p="SpawnController.cs" t="Include" />
+              <e p="UserInputController.cs" t="Include" />
             </e>
             <e p="Models" t="Include">
               <e p="SeaWarOilTankerModel.cs" t="Include" />
               <e p="SeaWarRefineryModel.cs" t="Include" />
+              <e p="SeaWarSpawnModel.cs" t="Include" />
               <e p="SeaWarSubmarineModel.cs" t="Include" />
+              <e p="SeaWarUIModel.cs" t="Include" />
+              <e p="UserInputModel.cs" t="Include" />
             </e>
             <e p="Views" t="Include">
               <e p="SeaWarOilTankerView.cs" t="Include" />
@@ -44,7 +49,6 @@
           </e>
           <e p="Managers" t="Include">
             <e p="GameManager.cs" t="Include" />
-            <e p="SpawnManager.cs" t="Include" />
           </e>
           <e p="OilTanker" t="Include">
             <e p="OilTankerMovment.cs" t="Include" />

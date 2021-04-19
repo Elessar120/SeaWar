@@ -8,5 +8,5 @@ public class SeaWarController : AMVCC.SeaWarElement
         public SeaWarSubmarineMoveController submarineMoveController;
         public SeaWarSubmarineFightController submarineFightController;
         public SeaWarOilTankerController oilTankerController;
-        public SpawnManager spawnManager;
+        public SpawnController spawnController;
 }

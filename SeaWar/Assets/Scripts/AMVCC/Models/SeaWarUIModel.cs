@@ -1,0 +1,13 @@
+﻿using System.Collections.Generic;
+using UnityEngine;
+
+namespace AMVCC.Models
+{
+    public class SeaWarUIModel : SeaWarElement
+    {
+        public GameObject arrowForBlue1;
+        public GameObject arrowForBlue2;
+        public GameObject arrowForBlue3;
+
+    }
+}
