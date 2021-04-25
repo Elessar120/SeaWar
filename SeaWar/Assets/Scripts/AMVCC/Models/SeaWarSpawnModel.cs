@@ -8,6 +8,10 @@ namespace AMVCC.Models
     {
         public GameObject spawnPointsForBlue1;
         public GameObject spawnPointsForBlue2;
-        public GameObject spawnPointsForBlue3;
+        public GameObject spawnPointsForBlue3; 
+        public GameObject spawnPointsForRed1;
+        public GameObject spawnPointsForRed2;
+        public GameObject spawnPointsForRed3;
+        
     }
 }

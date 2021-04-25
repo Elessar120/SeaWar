@@ -4,9 +4,14 @@ namespace AMVCC.Views
 {
     public class SeaWarSubmarineFightView : SeaWarElement
     {
-        private bool haunting;
-        private float health;
-        private float damage;
+        public bool haunting;
+        public float health;
+        public string myTag;
+        public bool isAttackTime;
+        public float fireRate;
+        public Collider enemyCollider;
+        public bool isChasing;
+        
         private void Awake()
         {
             haunting = false;
@@ -15,7 +20,10 @@ namespace AMVCC.Views
 
         private void Start()
         {
-            
+            isAttackTime = true;
+            myTag = gameObject.tag;
+            health = Application.model.submarineModel.health;
+
         }
 
         private void Update()

@@ -26,7 +26,7 @@ MonoBehaviour:
   upgradeCardsNeed: 4
   upgradeGoldsNeed: 0
   supportDamageRate: 0
-  productionRate: 1000
+  productionRate: 5000
   earnedMoney: 0
   spawnButton: {fileID: 0}
   AttackTargets: []

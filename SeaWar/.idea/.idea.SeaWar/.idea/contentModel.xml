@@ -16,6 +16,18 @@
               <e p="SeaWarView.cs" t="Include" />
             </e>
             <e p="Controllers" t="Include">
+              <e p="FSM" t="Include">
+                <e p="Submarine" t="Include">
+                  <e p="Submarine States" t="Include">
+                    <e p="SubmarineBaseState.cs" t="Include" />
+                    <e p="SubmarineChasingAndAttackingState.cs" t="Include" />
+                    <e p="SubmarineMovingBackState.cs" t="Include" />
+                    <e p="SubmarineMovingForwardState.cs" t="Include" />
+                    <e p="SubmarineTurningState.cs" t="Include" />
+                  </e>
+                  <e p="SubmarineController.cs" t="Include" />
+                </e>
+              </e>
               <e p="SeaWarOilTankerController.cs" t="Include" />
               <e p="SeaWarRefineryController.cs" t="Include" />
               <e p="SeaWarSubmarineFightController.cs" t="Include" />
@@ -35,7 +47,7 @@
               <e p="SeaWarOilTankerView.cs" t="Include" />
               <e p="SeaWarRefineryView.cs" t="Include" />
               <e p="SeaWarSubmarineFightView.cs" t="Include" />
-              <e p="SeaWarSubmarineMoveView.cs" t="Include" />
+              <e p="SeaWarSubmarineView.cs" t="Include" />
               <e p="SeaWarUIView.cs" t="Include" />
             </e>
           </e>

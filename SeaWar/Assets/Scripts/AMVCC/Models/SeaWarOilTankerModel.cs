@@ -12,7 +12,7 @@ namespace AMVCC.Models
         public float movmentSpeed;
 
         public Unit oilTankerData;
-        public int layerMask;
+        public int middleMaplayerMask;
 
         public Action onExitMapAction;
 
@@ -24,7 +24,7 @@ namespace AMVCC.Models
 
         private void Start()
         {
-            layerMask = LayerMask.GetMask ("MiddleMap");
+            middleMaplayerMask = LayerMask.GetMask ("MiddleMap");
            
 
         }

@@ -9,7 +9,6 @@ namespace AMVCC.Models
 
        
         public GameObject middleMap;
-        public GameObject startPosition;
         [SerializeField] private float smooth = .1f;
         public float rotationAngle;
         private Quaternion target;

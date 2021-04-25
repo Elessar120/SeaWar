@@ -1,4 +1,5 @@
 ﻿using System;
+using AMVCC.Views;
 using UnityEngine;
 
 namespace AMVCC.Controllers
@@ -7,60 +8,132 @@ namespace AMVCC.Controllers
     {
         private void Update()
         {
-            DelayBetweenAttacks();
+            //DelayBetweenAttacks();
 
         }
 
-        public void DelayBetweenAttacks()
+        
+        private void OnTriggerEnter(Collider other)
         {
-            if (Application.model.submarineModel.hunting)
+            GetComponent<SeaWarSubmarineFightView>().enemyCollider = other;
+            ActivateAttackModeWhenEnemyIsInRange(other);
+        }
+        
+        public void ActivateAttackModeWhenEnemyIsInRange(Collider other)
+        {
+            Debug.Log(Application.model.submarineModel.shootableMask);
+            
+            if (!other.CompareTag(GetComponent<SeaWarSubmarineFightView>().myTag))
             {
-                Application.model.submarineModel.fireRate -= Time.time;
-                if (Application.model.submarineModel.fireRate < 0)
+                GetComponent<SeaWarSubmarineFightView>().haunting = true;
+            }
+        }
+
+        private void OnTriggerStay(Collider other)
+        {
+            if (!other.CompareTag(GetComponent<SeaWarSubmarineFightView>().myTag))
+            {
+                if (other.name == "Submarin" || other.name == "OilTanker" || other.name == "BattleShip" || other.name == "SmallBattleship" || other.name == "MotorBoat")
                 {
-                    Attack(Application.model.submarineModel.submarineData.damage);
-                    Application.model.submarineModel.fireRate = Application.model.submarineModel.submarineData.fireRate;
+                    if (other == GetComponent<SeaWarSubmarineFightView>().enemyCollider)
+                    {
+                        GetComponent<SeaWarSubmarineFightView>().haunting = true;
+                        Chase();
+                        DelayBetweenAttacks(other);
+
+                    }
+
                 }
             }
         }
-        private void OnTriggerEnter(Collider other)
+
+        private void Chase()
         {
-            ActivateAttackModeWhenEnemyIsInRange(other);
+            GetComponent<SeaWarSubmarineFightView>().isChasing = true;
+            if (!gameObject.GetComponent<SeaWarSubmarineView>().submarineRotationAnimator
+                .GetBool("isInRotateMod"))
+            {
+                //Debug.Log(gameObject.GetComponent<SeaWarSubmarineMoveView>().submarineRotationAnimator.GetBool("isInRotateMod"));
+                if (GetComponent<SeaWarSubmarineFightView>().haunting)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position,
+                        new Vector3(GetComponent<SeaWarSubmarineFightView>().enemyCollider.transform.position.x,
+                            gameObject.transform.position.y, gameObject.transform.position.z),
+                        Time.deltaTime * Application.model.submarineModel.submarineData.movmentSpeed);
+
+                }
+
+                else
+                {
+                    transform.position = Vector3.MoveTowards(transform.position,
+                        GetComponent<SeaWarSubmarineView>().startPosition,
+                        Time.deltaTime * Application.model.submarineModel.submarineData.movmentSpeed);
+                }
+
+            }
         }
 
+        public void DelayBetweenAttacks(Collider enemyCollider)
+        {
+            if (GetComponent<SeaWarSubmarineFightView>().haunting)
+            {
+                SeaWarSubmarineFightView instance = GetComponent<SeaWarSubmarineFightView>();
+                if (instance.isAttackTime)
+                {
+                    Attack(Application.model.submarineModel.submarineData.damage, enemyCollider); 
+                    instance.isAttackTime = false;
+                }
+                
+                instance.fireRate -= Time.time;
+                
+                if (instance.fireRate < 0)
+                {
+                    instance.fireRate = Application.model.submarineModel.submarineData.fireRate;
+                    instance.isAttackTime = true;
+                }
+            }
+        }
         private void OnTriggerExit(Collider other)
         {
-            DeActivateAttackMode(other);
+            if (other == GetComponent<SeaWarSubmarineFightView>().enemyCollider)
+            {
+                DeActivateAttackMode(other);
+                GetComponent<SeaWarSubmarineFightView>().isChasing = false;
+
+            }
+            
         }
-        public void Attack(float damage)
+        public void DeActivateAttackMode(Collider other)
         {
-        
+            GetComponent<SeaWarSubmarineFightView>().haunting = false;
+        }
+        public void Attack(float damage, Collider enemyCollider)
+        {
+            enemyCollider.GetComponent<SeaWarSubmarineFightController>().TakeDamage(damage);
         }
         public void TakeDamage(float damage)
         {
-            if (Application.model.submarineModel.health > 0)
+            SeaWarSubmarineFightView instance = GetComponent<SeaWarSubmarineFightView>();
+            
+            if (instance.health > 0)
             {
-                Application.model.submarineModel.health -= damage;
+                instance.health -= damage;
             
             }
             else
             {
-                Application.model.submarineModel.health = 0;
+                instance.health = 0;
+                GetComponent<SeaWarSubmarineFightView>().isChasing = false;
                 Destroy(gameObject);
+                GetComponent<SeaWarSubmarineFightView>().haunting = false;
+
             }
+            
         }
 
-        public void ActivateAttackModeWhenEnemyIsInRange(Collider other)
-        {
-            if (other.gameObject.layer == Application.model.submarineModel.shootableMask)
-            {
-                Application.model.submarineModel.hunting = true;
-            }
-        }
-        public void DeActivateAttackMode(Collider other)
-        {
-            Application.model.submarineModel.hunting = false;
-        }
+       
+        
+       
 
         private void OnDestroy()
         {

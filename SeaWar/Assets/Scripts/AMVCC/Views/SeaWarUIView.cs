@@ -35,6 +35,7 @@ namespace AMVCC.Views
 
    #endregion
 
+   public bool isRoadsEnabled;
    public Button[] gamePlayButtons;
    public Button oilTankerButton;
    public Button submarineButton; 
@@ -91,7 +92,11 @@ namespace AMVCC.Views
       Application.model.uiModel.arrowForBlue1.gameObject.SetActive(true);
       Application.model.uiModel.arrowForBlue2.gameObject.SetActive(true);
       Application.model.uiModel.arrowForBlue3.gameObject.SetActive(true);
-      
+      Application.model.uiModel.arrowForRed1.gameObject.SetActive(true);
+      Application.model.uiModel.arrowForRed2.gameObject.SetActive(true);
+      Application.model.uiModel.arrowForRed3.gameObject.SetActive(true);
+      SetIsRoadsEnabledToTrue();
+
    }
 
    public void DisableRoads()
@@ -99,8 +104,24 @@ namespace AMVCC.Views
       Application.model.uiModel.arrowForBlue1.gameObject.SetActive(false);
       Application.model.uiModel.arrowForBlue2.gameObject.SetActive(false);
       Application.model.uiModel.arrowForBlue3.gameObject.SetActive(false);
+      Application.model.uiModel.arrowForRed1.gameObject.SetActive(false);
+      Application.model.uiModel.arrowForRed2.gameObject.SetActive(false);
+      Application.model.uiModel.arrowForRed3.gameObject.SetActive(false);
+      SetIsRoadsEnabledToFalse();
+
    }
 
+   private void SetIsRoadsEnabledToTrue()
+   {
+      isRoadsEnabled = true;
+
+   }
+
+   private void SetIsRoadsEnabledToFalse()
+   {
+      isRoadsEnabled = false;
+
+   }
    /*public void DeleteAction ()
    {
       OilTankerMovment.onoil -= UIManager.Instance.SetNewGoldAmountText;

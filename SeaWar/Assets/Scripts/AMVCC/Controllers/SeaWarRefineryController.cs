@@ -35,13 +35,13 @@ namespace AMVCC.Controllers
       
         private void TakeDamage(float damage)
         {
-            if (Application.model.refineryModel.health > 0)
+            if (GetComponent<SeaWarRefineryView>().health > 0)
             {
-                Application.model.refineryModel.health -= damage;
+                GetComponent<SeaWarRefineryView>().health -= damage;
             }
             else
             {
-                Application.model.refineryModel.health = 0f;
+                GetComponent<SeaWarRefineryView>().health = 0f;
                 Death();
       
             }

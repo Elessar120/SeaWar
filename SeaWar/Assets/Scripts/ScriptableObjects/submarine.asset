@@ -18,7 +18,7 @@ MonoBehaviour:
   movmentSpeed: 5
   damage: 50
   health: 260
-  fireRate: 0
+  fireRate: 1
   sightRange: 3
   rotationSpeed: 180
   costWithGold: 260
@@ -33,6 +33,7 @@ MonoBehaviour:
   - Lench
   - BattleShip
   - OilTanker
-  - Submarine
+  - BlueSubmarine
   - SmallBattleship
   - MotorBoat
+  - RedSubmarine

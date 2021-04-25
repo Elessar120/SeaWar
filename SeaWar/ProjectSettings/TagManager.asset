@@ -8,7 +8,6 @@ TagManager:
   - BattleGround
   - Unit
   - StartPoint
-  - Submarine
   - Motorboat
   - OilTanker
   - BattleShip
@@ -26,6 +25,10 @@ TagManager:
   - RefineryRed2
   - RefineryRed3
   - RoadRed3
+  - BlueSubmarine
+  - RedSubmarine
+  - Red
+  - Blue
   layers:
   - Default
   - TransparentFX
@@ -35,20 +38,20 @@ TagManager:
   - UI
   - 
   - 
-  - Submarine
+  - BlueSubmarine
   - Motorboat
   - BlueOilTanker
-  - SmallBattleShip
-  - BattleShip
-  - Lench
+  - 
+  - 
+  - 
   - Enviroment
   - MiddleMap
   - StartPoint
   - ExitPoint
   - Refinery
   - Road
-  - 
-  - 
+  - RedOilTanker
+  - RedSubmarine
   - 
   - 
   - 

@@ -22,12 +22,17 @@ namespace AMVCC.Views
             {
                 outPoint = Application.model.oilTankerModel.rightOutPoint;
                 animationName = "rotatingRight";
+                gameObject.layer = LayerMask.NameToLayer("RedOilTanker");    
             }
             else if (transform.position.x < 0)
             {
                 outPoint = Application.model.oilTankerModel.leftOutPoint;
                 animationName = "rotatingLeft";
+                gameObject.layer = LayerMask.NameToLayer("BlueOilTanker");    
+
             }
+
+                
             oilTankerIsGoingToMiddleMap = true;
         }
     }

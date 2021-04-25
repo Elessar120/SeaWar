@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 5805555260310135600}
   m_Layer: 10
   m_Name: oilTanker
-  m_TagString: Untagged
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -683,6 +683,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c394131e0de4183bb5437b15ab91071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outPoint: {fileID: 0}
+  oilTankerRotationAnimator: {fileID: 0}
+  oilTankerIsGoingToMiddleMap: 0
+  animationName: 
 --- !u!114 &5805555260310135600
 MonoBehaviour:
   m_ObjectHideFlags: 0

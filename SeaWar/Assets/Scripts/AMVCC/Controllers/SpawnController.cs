@@ -86,40 +86,55 @@ namespace AMVCC.Controllers
         {
             if (hit.CompareTag("RefineryBlue1") || hit.CompareTag("RoadBlue1"))
             {
-                Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position);
+                prefab.tag = "Blue";
+                Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.identity);
 
             }
             else if (hit.CompareTag("RefineryBlue2") || hit.CompareTag("RoadBlue2"))
             {
-                Spawner(Application.model.spawnModel.spawnPointsForBlue2.transform.position);
+                prefab.tag = "Blue";
+
+                Spawner(Application.model.spawnModel.spawnPointsForBlue2.transform.position,Quaternion.identity);
 
             }
             else if (hit.CompareTag("RefineryBlue3") || hit.CompareTag("RoadBlue3"))
             {
-                Spawner(Application.model.spawnModel.spawnPointsForBlue3.transform.position);
+                prefab.tag = "Blue";
+
+                Spawner(Application.model.spawnModel.spawnPointsForBlue3.transform.position,Quaternion.identity);
                 
             }
             if (hit.CompareTag("RefineryRed1") || hit.CompareTag("RoadRed1"))
             {
-                Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position);
+                prefab.tag = "Red";
+
+                Spawner(Application.model.spawnModel.spawnPointsForRed1.transform.position,Quaternion.Euler(0,180,0));
 
             }
             else if (hit.CompareTag("RefineryRed2") || hit.CompareTag("RoadRed2"))
             {
-                Spawner(Application.model.spawnModel.spawnPointsForBlue2.transform.position);
+                prefab.tag = "Red";
+
+                Spawner(Application.model.spawnModel.spawnPointsForRed2.transform.position,Quaternion.Euler(0,180,0));
 
             }
-                else if (hit.CompareTag("RefineryRed3") || hit.CompareTag("RoadRed3"))
+            else if (hit.CompareTag("RefineryRed3") || hit.CompareTag("RoadRed3"))
             {
-                Spawner(Application.model.spawnModel.spawnPointsForBlue3.transform.position);
+                prefab.tag = "Red";
+
+                Spawner(Application.model.spawnModel.spawnPointsForRed3.transform.position,Quaternion.Euler(0,180,0));
                 
             }
         }
 
-        public void Spawner(Vector3 spawnPosition)
+        public void Spawner(Vector3 spawnPosition, Quaternion spawnRotation)
         {
-            Instantiate(prefab, spawnPosition,transform.rotation);
-            GameObject.FindObjectOfType<SeaWarUIView>().DisableRoads();
+            if (FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
+            {
+             
+                Instantiate(prefab, spawnPosition,spawnRotation);
+                GameObject.FindObjectOfType<SeaWarUIView>().DisableRoads();
+            }
 
         }
 
@@ -127,7 +142,7 @@ namespace AMVCC.Controllers
         {
             foreach (Button button in gamePlayButtons)
             {
-                if (SeaWarUIView.Instance.totalOilAmount >= costWithOil)
+                if (SeaWarUIView.Instance.totalOilAmount >= costWithOil)    
                 {
                     button.interactable = true;
 
