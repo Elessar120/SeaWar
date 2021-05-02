@@ -39,18 +39,19 @@ namespace AMVCC.Controllers.FSM.Submarine
         public void OnTriggerEnter(Collider other)
         {
          
+            /*
             if (!other.CompareTag(gameObject.tag) &&
                 (other.name == "Submarine(Clone)" || other.name == "OilTanker(Clone)" ||
                  other.name == "BattleShip(Clone)" || other.name == "SmallBattleship(Clone)" ||
                  other.name == "MotorBoat(Clone)" ))
             {
                 Debug.Log(other.name + other.tag);
-                currentState.OnTriggerEnter(this);
 
                 //Chase(submarine,hit.collider);
                 //SetFireRate(submarine,hit.collider);
-            }
-            
+            }*/
+            currentState.OnTriggerEnter(this, other);   
+
         }
         
         public void SetSubmarineTurnAnimationStateToTrue()
@@ -60,7 +61,8 @@ namespace AMVCC.Controllers.FSM.Submarine
 
         public void OnTriggerStay(Collider other)
         {
-            currentState.OnTriggerStay(this);
+           
+            currentState.OnTriggerStay(this, other);
 
         }
         public void TakeDamage(float damage)
@@ -95,27 +97,31 @@ namespace AMVCC.Controllers.FSM.Submarine
                 TransitionToState(movingBackState);
 
             }
+            if (PreviousState == chasingAndAttackingState)
+            {
+               TransitionToState(movingBackState);
+            }
             //Debug.Log("event");
         }
       
 
         public void OnTriggerExit(Collider other)
         {
-            if (!other.CompareTag(gameObject.tag) &&
+            /*if (!other.CompareTag(gameObject.tag) &&
                 (other.name == "Submarine(Clone)" || other.name == "OilTanker(Clone)" ||
                  other.name == "BattleShip(Clone)" || other.name == "SmallBattleship(Clone)" ||
                  other.name == "MotorBoat(Clone)" ))
             {
                 Debug.Log(other.name + other.tag);
-                currentState.OnTriggerExit(this);
 
                 //Chase(submarine,hit.collider);
                 //SetFireRate(submarine,hit.collider);
-            }        }
-       
-  
+            }        */
+            currentState.OnTriggerExit(this, other);
 
-    }
+        }
+       
+  }
     
     
 }

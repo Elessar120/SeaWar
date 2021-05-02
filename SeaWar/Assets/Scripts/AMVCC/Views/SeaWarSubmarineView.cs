@@ -10,12 +10,13 @@ namespace AMVCC.Views
         public bool wasInMiddleFirstTime;
         public bool submarineIsGoingToMiddleMap;
         public bool isCrossMiddleMap;
-        public bool isChasing;
+        public bool middleMapPassed;
         public Collider enemyCollider;
         public float health;
         public bool isAttackTime;
         public float fireRate;
         public GameObject rayCastingPoint;
+        public Vector3 nextDestination;
         private void Awake()
         {
 

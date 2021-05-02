@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using AMVCC.Views;
 namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
 {
     public class SubmarineTurningState : SubmarineBaseState
@@ -23,19 +23,21 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
 
         public void Update(SubmarineController submarine)
         {
+           
+           
         }
 
-        public void OnTriggerEnter(SubmarineController submarine)
+        public void OnTriggerEnter(SubmarineController submarine, Collider other)
         {
             
         }
 
-        public void OnTriggerStay(SubmarineController submarine)
+        public void OnTriggerStay(SubmarineController submarine, Collider other)
         {
             
         }
 
-        public void OnTriggerExit(SubmarineController submarine)
+        public void OnTriggerExit(SubmarineController submarine, Collider other)
         {
             
         }

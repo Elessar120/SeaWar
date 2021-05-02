@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OilTanker
   m_EditorClassIdentifier: 
   unitName: Oli Tanke
-  prefab: {fileID: 1028459362635390607, guid: bf4f7a732c9ae134d9f26a54c39c2ae1, type: 3}
+  prefab: {fileID: 6588569400580791501, guid: fafe088589146fa418420130056679a8, type: 3}
   level: 1
   movmentSpeed: 20
   damage: 0

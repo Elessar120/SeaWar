@@ -87,42 +87,67 @@ namespace AMVCC.Controllers
             if (hit.CompareTag("RefineryBlue1") || hit.CompareTag("RoadBlue1"))
             {
                 prefab.tag = "Blue";
-                Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.identity);
+                /*if (prefab.name == "SubmarineClone")
+                {
+                    Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,transform.rotation);
+
+                }*/
+                Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Application.model.spawnModel.spawnPointsForBlue1.transform.rotation);
 
             }
             else if (hit.CompareTag("RefineryBlue2") || hit.CompareTag("RoadBlue2"))
             {
                 prefab.tag = "Blue";
+                /*if (prefab.name == "SubmarineClone")
+                {
+                    Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.identity);
 
-                Spawner(Application.model.spawnModel.spawnPointsForBlue2.transform.position,Quaternion.identity);
+                }*/
+                Spawner(Application.model.spawnModel.spawnPointsForBlue2.transform.position,Application.model.spawnModel.spawnPointsForBlue2.transform.rotation);
 
             }
             else if (hit.CompareTag("RefineryBlue3") || hit.CompareTag("RoadBlue3"))
             {
                 prefab.tag = "Blue";
+                /*if (prefab.name == "SubmarineClone")
+                {
+                    Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.identity);
 
-                Spawner(Application.model.spawnModel.spawnPointsForBlue3.transform.position,Quaternion.identity);
+                }*/
+                Spawner(Application.model.spawnModel.spawnPointsForBlue3.transform.position,Application.model.spawnModel.spawnPointsForBlue3.transform.rotation);
                 
             }
             if (hit.CompareTag("RefineryRed1") || hit.CompareTag("RoadRed1"))
             {
                 prefab.tag = "Red";
+                /*if (prefab.name == "SubmarineClone")
+                {
+                    Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.Euler(0,180,0));
 
-                Spawner(Application.model.spawnModel.spawnPointsForRed1.transform.position,Quaternion.Euler(0,180,0));
+                }*/
+                Spawner(Application.model.spawnModel.spawnPointsForRed1.transform.position,Application.model.spawnModel.spawnPointsForRed1.transform.rotation);
 
             }
             else if (hit.CompareTag("RefineryRed2") || hit.CompareTag("RoadRed2"))
             {
                 prefab.tag = "Red";
+                /*if (prefab.name == "SubmarineClone")
+                {
+                    Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.Euler(0,180,0));
 
-                Spawner(Application.model.spawnModel.spawnPointsForRed2.transform.position,Quaternion.Euler(0,180,0));
+                }*/
+                Spawner(Application.model.spawnModel.spawnPointsForRed2.transform.position,Application.model.spawnModel.spawnPointsForRed2.transform.rotation);
 
             }
             else if (hit.CompareTag("RefineryRed3") || hit.CompareTag("RoadRed3"))
             {
                 prefab.tag = "Red";
+                /*if (prefab.name == "SubmarineClone")
+                {
+                    Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.Euler(0,180,0));
 
-                Spawner(Application.model.spawnModel.spawnPointsForRed3.transform.position,Quaternion.Euler(0,180,0));
+                }*/
+                Spawner(Application.model.spawnModel.spawnPointsForRed3.transform.position,Application.model.spawnModel.spawnPointsForRed3.transform.rotation);
                 
             }
         }

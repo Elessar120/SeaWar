@@ -7,8 +7,8 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
     {
         void EnterState(SubmarineController submarine);
         void Update(SubmarineController submarine);
-        void OnTriggerEnter(SubmarineController submarine);
-        void OnTriggerStay(SubmarineController submarine);
-        void OnTriggerExit(SubmarineController submarine);
+        void OnTriggerEnter(SubmarineController submarine, Collider other);
+        void OnTriggerStay(SubmarineController submarine, Collider other);
+        void OnTriggerExit(SubmarineController submarine, Collider other);
     }
 }
