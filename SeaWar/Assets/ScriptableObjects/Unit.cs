@@ -18,7 +18,7 @@ public class Unit : ScriptableObject
  public float rotationSpeed;
  public float costWithGold;
  public float costWithOil;
- public float upgradeCardsNeed;
+ public int upgradeCardsNeed;
  public float upgradeGoldsNeed;
  public float supportDamageRate;
  public float productionRate;
