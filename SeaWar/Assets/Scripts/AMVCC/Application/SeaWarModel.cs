@@ -1,6 +1,7 @@
 ﻿using AMVCC;
 using AMVCC.Models;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 public class SeaWarModel : SeaWarElement
@@ -11,4 +12,7 @@ public class SeaWarModel : SeaWarElement
         public SeaWarUIModel uiModel;
         public UserInputModel userInputModel;
         public SeaWarSpawnModel spawnModel;
+        public SeaWarMotorBoatModel motorBoatModel;
+        public SeaWarLenchModel lenchModel;
+        public SeaWarRadioActiveTowerModel radioActiveTowerModel;
 }

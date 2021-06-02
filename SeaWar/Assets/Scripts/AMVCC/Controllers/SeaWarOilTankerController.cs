@@ -55,6 +55,7 @@ namespace AMVCC.Controllers
                 // UIManager.Instance.SetNewGoldAmount();
                 SetIsGoingToMiddleMapStateToFalse();
                 Application.model.oilTankerModel.onExitMapAction();
+                SeaWarUIView.Instance.onCheckButtonIsInteractableAction();
                 Destroy(gameObject);
 
             }

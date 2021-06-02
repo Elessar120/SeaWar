@@ -29,6 +29,10 @@ TagManager:
   - RedSubmarine
   - Red
   - Blue
+  - BlueRefinery
+  - RedRefinery
+  - Tower
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -41,8 +45,8 @@ TagManager:
   - BlueSubmarine
   - Motorboat
   - BlueOilTanker
-  - 
-  - 
+  - Blue
+  - Red
   - 
   - Enviroment
   - MiddleMap

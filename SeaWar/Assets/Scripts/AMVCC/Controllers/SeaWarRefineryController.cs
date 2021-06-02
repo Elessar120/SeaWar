@@ -17,6 +17,7 @@ namespace AMVCC.Controllers
         private void AddOilAmount ()
         {
             Application.model.refineryModel.onOilProductionAction();
+            SeaWarUIView.Instance.onCheckButtonIsInteractableAction();
             if (SeaWarUIView.Instance.totalOilAmount >= Application.model.oilTankerModel.oilTankerData.costWithOil)
             {
 //                Debug.Log("we have money!");
@@ -33,7 +34,7 @@ namespace AMVCC.Controllers
              
         }
       
-        private void TakeDamage(float damage)
+        public void TakeDamage(float damage)
         {
             if (GetComponent<SeaWarRefineryView>().health > 0)
             {

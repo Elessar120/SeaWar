@@ -28,8 +28,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6588569400580791502}
-  m_Layer: 0
-  m_Name: OilTanker
+  m_Layer: 11
+  m_Name: oilTanker
   m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,6 +59,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 364231900237055029, guid: bf4f7a732c9ae134d9f26a54c39c2ae1,
         type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 364231900237055029, guid: bf4f7a732c9ae134d9f26a54c39c2ae1,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -74,6 +79,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 364231900237055029, guid: bf4f7a732c9ae134d9f26a54c39c2ae1,
         type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 364231900237055029, guid: bf4f7a732c9ae134d9f26a54c39c2ae1,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -85,16 +95,6 @@ PrefabInstance:
     - target: {fileID: 364231900237055029, guid: bf4f7a732c9ae134d9f26a54c39c2ae1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 364231900237055029, guid: bf4f7a732c9ae134d9f26a54c39c2ae1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 364231900237055029, guid: bf4f7a732c9ae134d9f26a54c39c2ae1,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 364231900237055029, guid: bf4f7a732c9ae134d9f26a54c39c2ae1,

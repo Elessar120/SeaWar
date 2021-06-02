@@ -50,15 +50,27 @@ namespace AMVCC.Controllers
             #endregion
             costWithGold = newUnit.costWithGold;
             costWithOil = newUnit.costWithOil;
-        
             prefab = newUnit.prefab;
-            if (newUnit.costWithOil > 0)    
+      CheckBuildingsCurrencyTypes(newUnit);
+            //SeaWarUIView.Instance.onCheckButtonIsInteractableAction();
+
+            //UIManager.Instance.totalOilAmount -= newUnit.costWithMoney;
+        }
+
+        private void CheckBuildingsCurrencyTypes(Unit newUnit) // to do refactor for single functionality
+        {
+            if (newUnit.costWithOil > 0)
             {
                 if (SeaWarUIView.Instance.totalOilAmount >= costWithOil)
                 {
                     SeaWarUIView.Instance.totalOilAmount -= costWithOil;
                     SeaWarUIView.Instance.SetNewOilAmountText();
-                    GameObject.FindObjectOfType<SeaWarUIView>().EnableRoads();
+                    if (!prefab.CompareTag("Tower"))
+                    {
+                        FindObjectOfType<SeaWarUIView>().EnableRoads();
+
+                    }
+
                     //Spawner();
 
                 }
@@ -69,24 +81,49 @@ namespace AMVCC.Controllers
                 {
                     SeaWarUIView.Instance.totalGoldAmount -= costWithGold;
                     SeaWarUIView.Instance.SetNewGoldAmountText();
-                    GameObject.FindObjectOfType<SeaWarUIView>().EnableRoads();
 
-                    //Spawner();
-                }
-                else
-                {
-                    //UIManager   
+                    if (!prefab.CompareTag("Tower"))
+                    {
+                        FindObjectOfType<SeaWarUIView>().EnableRoads();
+
+                    }
+                    else if (prefab.CompareTag("Tower"))
+                    {
+
+                    }
                 }
             }
-            SeaWarUIView.Instance.onCheckButtonIsInteractableAction();
+        }
 
-            //UIManager.Instance.totalOilAmount -= newUnit.costWithMoney;
+        public void FindProperSpawnPositionTowers(Collider hit)
+        {
+            Vector3 spawnPosition = hit.transform.position + new Vector3(0,1,0);
+
+            if (hit.gameObject.layer == LayerMask.NameToLayer("Blue"))
+            {
+                prefab.layer = LayerMask.NameToLayer("Blue");
+                Spawner(spawnPosition,hit.transform.rotation);
+                Debug.Log("tower spawn");
+
+            }
+            if (hit.gameObject.layer == LayerMask.NameToLayer("Red"))
+            {
+                prefab.layer = LayerMask.NameToLayer("Red");
+                Spawner(spawnPosition,hit.transform.rotation);
+                Debug.Log("tower spawn");
+
+            }
         }
         public void FindProperSpawnPosition(Collider hit)
         {
-            if (hit.CompareTag("RefineryBlue1") || hit.CompareTag("RoadBlue1"))
+            if (!prefab.CompareTag("Tower"))
             {
-                prefab.tag = "Blue";
+                      if (hit.CompareTag("RefineryBlue1") || hit.CompareTag("RoadBlue1"))
+            {
+                //prefab.tag = "Blue";
+                prefab.layer = LayerMask.NameToLayer("Blue");
+               
+                
                 /*if (prefab.name == "SubmarineClone")
                 {
                     Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,transform.rotation);
@@ -97,7 +134,9 @@ namespace AMVCC.Controllers
             }
             else if (hit.CompareTag("RefineryBlue2") || hit.CompareTag("RoadBlue2"))
             {
-                prefab.tag = "Blue";
+                //prefab.tag = "Blue";
+                prefab.layer = LayerMask.NameToLayer("Blue");
+
                 /*if (prefab.name == "SubmarineClone")
                 {
                     Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.identity);
@@ -108,7 +147,9 @@ namespace AMVCC.Controllers
             }
             else if (hit.CompareTag("RefineryBlue3") || hit.CompareTag("RoadBlue3"))
             {
-                prefab.tag = "Blue";
+                //prefab.tag = "Blue";
+                prefab.layer = LayerMask.NameToLayer("Blue");
+
                 /*if (prefab.name == "SubmarineClone")
                 {
                     Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.identity);
@@ -119,7 +160,9 @@ namespace AMVCC.Controllers
             }
             if (hit.CompareTag("RefineryRed1") || hit.CompareTag("RoadRed1"))
             {
-                prefab.tag = "Red";
+                //prefab.tag = "Red";
+                prefab.layer = LayerMask.NameToLayer("Red");
+
                 /*if (prefab.name == "SubmarineClone")
                 {
                     Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.Euler(0,180,0));
@@ -130,7 +173,9 @@ namespace AMVCC.Controllers
             }
             else if (hit.CompareTag("RefineryRed2") || hit.CompareTag("RoadRed2"))
             {
-                prefab.tag = "Red";
+                //prefab.tag = "Red";
+                prefab.layer = LayerMask.NameToLayer("Red");
+
                 /*if (prefab.name == "SubmarineClone")
                 {
                     Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.Euler(0,180,0));
@@ -141,7 +186,9 @@ namespace AMVCC.Controllers
             }
             else if (hit.CompareTag("RefineryRed3") || hit.CompareTag("RoadRed3"))
             {
-                prefab.tag = "Red";
+                //prefab.tag = "Red";
+                prefab.layer = LayerMask.NameToLayer("Red");
+
                 /*if (prefab.name == "SubmarineClone")
                 {
                     Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.Euler(0,180,0));
@@ -150,47 +197,70 @@ namespace AMVCC.Controllers
                 Spawner(Application.model.spawnModel.spawnPointsForRed3.transform.position,Application.model.spawnModel.spawnPointsForRed3.transform.rotation);
                 
             }
+            
+            if (hit.gameObject.layer == LayerMask.NameToLayer("Blue"))
+            {
+                prefab.layer = LayerMask.NameToLayer("Blue");
+                Spawner(hit.transform.position,hit.transform.rotation);
+            }
+            
+            else if (hit.gameObject.layer == LayerMask.NameToLayer("Red"))
+            {
+                prefab.layer = LayerMask.NameToLayer("Red");
+            }
+            }
+      
+            
+                
+            
         }
 
         public void Spawner(Vector3 spawnPosition, Quaternion spawnRotation)
         {
-            if (FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
+            if (!prefab.CompareTag("Tower"))
             {
-             
-                Instantiate(prefab, spawnPosition,spawnRotation);
-                GameObject.FindObjectOfType<SeaWarUIView>().DisableRoads();
+                if (FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
+                {
+                    Instantiate(prefab, spawnPosition,spawnRotation);
+                    FindObjectOfType<SeaWarUIView>().DisableRoads();
+                }
             }
+            else if (prefab.CompareTag("Tower"))
+            {
+                Instantiate(prefab, spawnPosition,spawnRotation);
+                //to do make tower spawner buttons intractable false after pushing and true after instantiating
+
+            }
+            
 
         }
 
-        private void SetButtonInteractableState()
+        private void SetButtonInteractableState()//to do fix this bug
         {
-            foreach (Button button in gamePlayButtons)
+            /*foreach (Button button in gamePlayButtons)
             {
-                if (SeaWarUIView.Instance.totalOilAmount >= costWithOil)    
+                if (costWithOil != 0)
                 {
-                    button.interactable = true;
-
-                }
-                else
-                {
+                    if (SeaWarUIView.Instance.totalOilAmount >= costWithOil)
+                        button.interactable = true;
                     button.interactable = false;
+                }
 
-                } 
-            }
+                if (costWithGold != 0)
+                {
+                    if (SeaWarUIView.Instance.totalGoldAmount >= costWithGold)
+                        button.interactable = true;
+                    button.interactable = false;
+                }
+               
+            }*/
+                
+               
+            
         
             foreach (Button button in gamePlayButtons)
             {
-                if (SeaWarUIView.Instance.totalGoldAmount >= costWithGold)
-                {
-                    button.interactable = true;
-
-                }
-                else
-                {
-                    button.interactable = false;
-
-                }
+                
             }
 
         }

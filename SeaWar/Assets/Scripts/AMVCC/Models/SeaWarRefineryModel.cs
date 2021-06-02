@@ -1,5 +1,6 @@
 ﻿using System;
 using AMVCC.Controllers;
+using UnityEngine;
 
 namespace AMVCC.Models
 {
@@ -12,10 +13,16 @@ namespace AMVCC.Models
         public float health;
         public float productionRate;
 
-        private void Start()
+        private void Awake()
         {
             health = refineryData.health;
             productionRate = refineryData.productionRate;
+        }
+
+        private void Start()
+        {
+            Debug.Log(health);
+
         }
     }
     

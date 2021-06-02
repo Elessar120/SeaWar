@@ -7,6 +7,7 @@ using AMVCC;
 using AMVCC.Models;
 using AMVCC.Views;
 using AMVCC.Controllers;
+
 namespace AMVCC.Views
 {
     public class SeaWarUIView : SeaWarElement

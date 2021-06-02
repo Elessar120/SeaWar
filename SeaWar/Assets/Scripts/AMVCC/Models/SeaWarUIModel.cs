@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace AMVCC.Models
 {
@@ -11,6 +12,7 @@ namespace AMVCC.Models
         public GameObject arrowForRed1;
         public GameObject arrowForRed2;
         public GameObject arrowForRed3;
+        public List<Button> towerButtons;
 
     }
 }

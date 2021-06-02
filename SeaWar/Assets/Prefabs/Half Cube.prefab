@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 456181476047084917}
   - component: {fileID: 2621011417488569013}
   - component: {fileID: 746341470438414924}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Box001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 532175535769145631}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: "\xA1\xA1\xD7\xFD\xD7\xFB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2117033853340000799}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: "\xD7\xFE\xD7\xFC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8735121483411956246}
-  m_Layer: 0
+  - component: {fileID: 1073842064291491477}
+  m_Layer: 2
   m_Name: Half Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,3 +173,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1073842064291491477
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8246849692308568236}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}

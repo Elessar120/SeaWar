@@ -1,4 +1,6 @@
-﻿namespace AMVCC.Views
+﻿using UnityEngine;
+
+namespace AMVCC.Views
 {
     public class SeaWarRefineryView : SeaWarElement
     {
@@ -8,15 +10,16 @@
 
         private void Awake()
         {
-            health = Application.model.refineryModel.health;
-            productionRate = Application.model.refineryModel.productionRate;
-            storedOil = Application.model.refineryModel.storedOil;
+           
 
         }
 
         private void Start()
         {
-            
+            health = Application.model.refineryModel.health;
+            productionRate = Application.model.refineryModel.productionRate;
+            storedOil = Application.model.refineryModel.storedOil;
+            Debug.Log("refineryview "+health);
            
           }   
         
