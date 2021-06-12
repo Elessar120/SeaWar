@@ -21,7 +21,12 @@ namespace AMVCC.Controllers
 
         private void OnTriggerEnter(Collider other)
         {
+            Debug.Log("it is working!");
 
+            if (other.gameObject.layer != gameObject.layer)
+            {
+                Debug.Log("it is working!");
+            }
         }
 
         private void OnTriggerStay(Collider other)

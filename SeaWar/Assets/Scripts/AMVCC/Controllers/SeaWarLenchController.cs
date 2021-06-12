@@ -39,7 +39,7 @@ namespace AMVCC.Controllers
             
             if (Physics.Raycast(ray,out hit, 2f))
             {
-                if (gameObject.CompareTag("Blue"))
+                if (gameObject.layer == LayerMask.NameToLayer("Blue"))
                 {
                     if (hit.collider.gameObject.CompareTag("RedRefinery"))
                     {
@@ -51,7 +51,7 @@ namespace AMVCC.Controllers
                     }
                 } 
                 
-                if (gameObject.CompareTag("Red"))
+                if (gameObject.layer == LayerMask.NameToLayer("Red"))
                 {
                     if (hit.collider.gameObject.CompareTag("BlueRefinery"))
                     {

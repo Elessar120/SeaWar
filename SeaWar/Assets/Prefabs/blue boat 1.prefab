@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 3893920097163911446}
   - component: {fileID: 8503353915164420710}
   - component: {fileID: 2879716544785805544}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: blue boat 1
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ Transform:
   m_GameObject: {fileID: 8444730129603090327}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.5, y: 0, z: 4.278}
-  m_LocalScale: {x: 0.25, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 5153726932222159110}
   - {fileID: 3080565016026959832}
