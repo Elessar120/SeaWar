@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace AMVCC.Views
 {
     public class SeaWarLenchView : SeaWarElement
     {
+        public float health;
         public float damage;
         public float speed;
         public float fireRate;
@@ -16,7 +18,10 @@ namespace AMVCC.Views
             speed = Application.model.lenchModel.speed;
             fireRate = Application.model.lenchModel.fireRate;
             timer = Application.model.lenchModel.fireRate;
+            health = Application.model.lenchModel.health;
             isAttackTime = true;
         }
+
+        
     }
 }

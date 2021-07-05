@@ -7836,6 +7836,7 @@ GameObject:
   - component: {fileID: 1795409676}
   - component: {fileID: 8982695099413459769}
   - component: {fileID: 1984853268}
+  - component: {fileID: 7665699044258170731}
   m_Layer: 18
   m_Name: Refinery
   m_TagString: BlueRefinery
@@ -7915,6 +7916,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7665699044258170731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901972556678267222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c642adb7f9c84b7899fa63bf6155b055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6931238534335302481
 GameObject:
   m_ObjectHideFlags: 0

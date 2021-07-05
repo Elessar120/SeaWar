@@ -23,7 +23,7 @@ namespace AMVCC.Controllers
         {
             Debug.Log("it is working!");
 
-            if (other.gameObject.layer != gameObject.layer)
+            if (!other.gameObject.CompareTag(gameObject.tag))
             {
                 Debug.Log("it is working!");
             }

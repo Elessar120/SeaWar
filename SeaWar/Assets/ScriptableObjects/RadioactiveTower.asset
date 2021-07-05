@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcbb73636c4482a877766f44931fad5, type: 3}
   m_Name: RadioactiveTower
   m_EditorClassIdentifier: 
-  unitName: RadioactiveTower
+  unitName: Radioactive Tower
   prefab: {fileID: 7742894662856617420, guid: 8233529f4bb5a5a44a55fe855d990092, type: 3}
   level: 1
   movmentSpeed: 0
   damage: 30
   health: 400
-  fireRate: 0
+  fireRate: 1
   sightRange: 4
   rotationSpeed: 0
   costWithGold: 1200

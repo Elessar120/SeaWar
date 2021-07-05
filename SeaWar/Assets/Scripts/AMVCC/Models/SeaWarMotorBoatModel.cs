@@ -10,13 +10,13 @@ namespace AMVCC.Models
     public class SeaWarMotorBoatModel : SeaWarElement
     {
         [FormerlySerializedAs("lenchData")] public Unit motorBoatData;
-        private float health;
-        private float fireRate;
-        private float sightRange;
-        private float costWithOil;
-        private int upgradeCost;
-        private float damage;
-        private float speed;
+        public float health;
+        public float fireRate;
+        public float sightRange;
+        public float costWithOil;
+        public int upgradeCost;
+        public float damage;
+        public float speed;
         private void Awake()
         {
             damage = motorBoatData.damage;

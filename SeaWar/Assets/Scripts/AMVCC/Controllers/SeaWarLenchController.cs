@@ -1,4 +1,5 @@
-﻿using AMVCC.Views;
+﻿using System;
+using AMVCC.Views;
 using UnityEngine;
 
 namespace AMVCC.Controllers
@@ -12,12 +13,17 @@ namespace AMVCC.Controllers
         private bool isStopTime;
         private void Awake()
         {
-            speed = GetComponent<SeaWarLenchView>().speed;
+            
+
+        }
+
+        private void Start()
+        {
+            speed = GetComponent<SeaWarAttackView>().speed;
             damage = GetComponent<SeaWarLenchView>().damage;
             fireRate = GetComponent<SeaWarLenchView>().fireRate;
             isAttackTime = GetComponent<SeaWarLenchView>().isAttackTime;
             isStopTime = GetComponent<SeaWarLenchView>().isStopTime;
-
         }
 
         private void Update()
@@ -39,9 +45,9 @@ namespace AMVCC.Controllers
             
             if (Physics.Raycast(ray,out hit, 2f))
             {
-                if (gameObject.layer == LayerMask.NameToLayer("Blue"))
+                if (!gameObject.CompareTag(hit.collider.tag))
                 {
-                    if (hit.collider.gameObject.CompareTag("RedRefinery"))
+                    if (hit.collider.gameObject.name == "Refinery")
                     {
                         Debug.Log("raycastHit " + hit.collider.name);
 
@@ -51,17 +57,7 @@ namespace AMVCC.Controllers
                     }
                 } 
                 
-                if (gameObject.layer == LayerMask.NameToLayer("Red"))
-                {
-                    if (hit.collider.gameObject.CompareTag("BlueRefinery"))
-                    {
-                        Debug.Log("raycastHit " + hit.collider.name);
-
-                        StopMoving();
-                        Attack(hit);
-                                        
-                    }
-                }
+                
             }
         }
 
@@ -95,11 +91,5 @@ namespace AMVCC.Controllers
             transform.position += transform.forward * speed * Time.deltaTime;
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            
-            
-            
-        }
     }
-    }
+}

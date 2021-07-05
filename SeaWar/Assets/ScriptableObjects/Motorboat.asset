@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcbb73636c4482a877766f44931fad5, type: 3}
   m_Name: Motorboat
   m_EditorClassIdentifier: 
-  unitName: MotorBoat
+  unitName: Motor Boat
   prefab: {fileID: 8444730129603090327, guid: 1275147a33b164a40867376f07e370c8, type: 3}
   level: 1
   movmentSpeed: 2.4

@@ -19,7 +19,7 @@ namespace AMVCC.Views
             health = Application.model.refineryModel.health;
             productionRate = Application.model.refineryModel.productionRate;
             storedOil = Application.model.refineryModel.storedOil;
-            Debug.Log("refineryview "+health);
+//            Debug.Log("refineryview "+health);
            
           }   
         

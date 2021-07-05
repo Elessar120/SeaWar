@@ -15,4 +15,10 @@ public class SeaWarModel : SeaWarElement
         public SeaWarMotorBoatModel motorBoatModel;
         public SeaWarLenchModel lenchModel;
         public SeaWarRadioActiveTowerModel radioActiveTowerModel;
+        public SeaWarMagneticTowerModel magneticTowerModel;
+        public SeaWarElectricTowerModel electricTowerModel;
+        public SeaWarSeaMineModel seaMineModel;
+        public SeaWarAntiAirCraftModel antiAirCraftModel;
+        public SeaWarArtilleryModel artilleryModel;
+        
 }

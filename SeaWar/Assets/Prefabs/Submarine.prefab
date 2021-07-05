@@ -77,6 +77,8 @@ GameObject:
   - component: {fileID: 7819856661389190030}
   - component: {fileID: 5710459776087863601}
   - component: {fileID: 5779645190645462365}
+  - component: {fileID: -2313801250756254886}
+  - component: {fileID: -3663487466772888983}
   m_Layer: 0
   m_Name: Submarine
   m_TagString: Red
@@ -245,3 +247,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 1, z: 0.99999994}
   m_Center: {x: 2, y: 0, z: 0}
+--- !u!114 &-2313801250756254886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593104252585514600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c642adb7f9c84b7899fa63bf6155b055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3663487466772888983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593104252585514600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f329d8438547f7afb26255c98f31c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

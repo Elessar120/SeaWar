@@ -45,12 +45,12 @@ namespace AMVCC.Controllers
 
         public void CheckOilTankerIsInMiddleOrExitPoint(Collider other)
         {
-            if (other.gameObject.layer == LayerMask.NameToLayer("MiddleMap"))
+            if (other.gameObject.CompareTag("Middle Map"))
             {
                 SetOilTankerTurnAnimationStateToTrue();
             }
 
-            if (other.gameObject.layer == LayerMask.NameToLayer("ExitPoint"))
+            if (other.gameObject.CompareTag("Exit Point"))
             {
                 // UIManager.Instance.SetNewGoldAmount();
                 SetIsGoingToMiddleMapStateToFalse();

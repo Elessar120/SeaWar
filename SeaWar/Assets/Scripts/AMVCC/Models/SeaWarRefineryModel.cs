@@ -21,7 +21,7 @@ namespace AMVCC.Models
 
         private void Start()
         {
-            Debug.Log(health);
+//            Debug.Log(health);
 
         }
     }

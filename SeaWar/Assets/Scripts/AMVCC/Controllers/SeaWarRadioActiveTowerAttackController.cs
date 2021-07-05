@@ -8,62 +8,87 @@ namespace AMVCC.Controllers
     {
         private SeaWarPlatformView platformView;
         private SeaWarRadioActiveTowerView towerView;
-        private float fireRate;
+      
         private void Start()
         {
-            SetFireRate();
+            //SetFireRate();
         }
 
         private void OnTriggerEnter(Collider other)
         {
-
-            if (other.gameObject.layer != gameObject.layer)
+            
+            if (!other.gameObject.CompareTag(gameObject.tag))
             {
-                towerView.attackTargets.Add(other.gameObject);
-                Attack(other.gameObject);
+                Debug.Log(gameObject.name);
+//                Debug.Log(other.gameObject.name);
+                //towerView.attackTargets.Add(other.gameObject);
+               // Attack(other.gameObject);
+               if (other.GetComponent<SeaWarHealthView>() != null)
+               {
+                   other.gameObject.GetComponent<SeaWarHealthView>().TakeDamage(GetComponent<SeaWarAttackView>().damage);
+
+               }
+
             }
             
         }
 
         private void OnTriggerStay(Collider other)
         {
-            fireRate -= Time.time;
-            if (fireRate <= 0)
+            if (!other.gameObject.CompareTag(gameObject.tag))
             {
-                foreach (GameObject target in towerView.attackTargets)
+                if (other.GetComponent<SeaWarAttackView>() != null)
                 {
-                    Attack(target);
-                    SetFireRate();
+                    other.GetComponent<SeaWarAttackView>().lastRecivedDamageTimeOfRadioactiveTower -= Time.deltaTime;
+//                    Debug.Log("fireRate : "+ other.GetComponent<SeaWarAttackView>().lastRecivedDamageTimeOfRadioactiveTower);
+                    
+                    if (other.GetComponent<SeaWarAttackView>().lastRecivedDamageTimeOfRadioactiveTower <= 0)
+                    {
+                        //Attack(other.gameObject);
+                        other.gameObject.GetComponent<SeaWarHealthView>().TakeDamage(GetComponent<SeaWarAttackView>().damage);
+                        Debug.Log(GetComponent<SeaWarAttackView>().damage);
+                        Debug.Log("Attack");
+                        other.GetComponent<SeaWarAttackView>().lastRecivedDamageTimeOfRadioactiveTower =
+                            Application.model.radioActiveTowerModel.fireRate;
+                        //SetFireRate(other.gameObject);
+                        // Debug.Log("fireRateSet : " + GetComponent<SeaWarAttackView>().fireRate);.
+                        /*foreach (GameObject target in towerView.attackTargets)
+                        {
+                            Attack(target);
+                            SetFireRate();
+                        }*/
+                    }
                 }
+
+                
             }
+            
+        }
+
+        private void Update()
+        {
+            
         }
 
         private void OnTriggerExit(Collider other)
         {
-            foreach (GameObject target in towerView.attackTargets)
-            {
-                if (other.gameObject.name == target.gameObject.name)
-                {
-                    //towerView.attackTargets[];
-                }
-            }
+            //SetFireRate(other.gameObject);
         }
 
-        private void SetFireRate()
+        private void SetFireRate(GameObject other)
         {
-            fireRate = GetComponent<SeaWarRadioActiveTowerView>().fireRate;
+           //fireRate = towerView.fireRate;
 
         }
 
         private void Attack(GameObject other)
         {
-            other.gameObject.GetComponent<SeaWarHealthController>().TakeDamage(towerView.damage);
-
+           
         }
 
         private void OnDestroy()
       {
-          platformView.platformIsFull = false;
+//          platformView.platformIsFull = false;
       }
     }
 }

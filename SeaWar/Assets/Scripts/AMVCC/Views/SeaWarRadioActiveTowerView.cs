@@ -8,13 +8,13 @@ namespace AMVCC.Views
         public float health;
         public float damage;
         public float fireRate;
-        public List<GameObject> attackTargets;
+        //public List<GameObject> attackTargets;
         private void Awake()
         {
             health = Application.model.radioActiveTowerModel.health;
             damage = Application.model.radioActiveTowerModel.damage;
             fireRate = Application.model.radioActiveTowerModel.fireRate;
-            attackTargets = new List<GameObject>();
+            //attackTargets = new List<GameObject>();
         }
     }
 }

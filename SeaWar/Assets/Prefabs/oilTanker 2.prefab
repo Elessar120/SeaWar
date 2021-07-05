@@ -532,8 +532,9 @@ GameObject:
   - component: {fileID: 1269231169450634660}
   - component: {fileID: 3666795299566530348}
   - component: {fileID: 5805555260310135600}
+  - component: {fileID: -675056446073856531}
   m_Layer: 10
-  m_Name: oilTanker
+  m_Name: oilTanker 2
   m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -697,6 +698,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e4d2b06888e439cb64bbdaf33adc61c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-675056446073856531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028459362635390607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c642adb7f9c84b7899fa63bf6155b055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1127337090583331157

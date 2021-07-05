@@ -10,7 +10,7 @@ namespace AMVCC.Models
         public Transform rightOutPoint;
         public Transform leftOutPoint;
         public float movmentSpeed;
-
+        public float health;
         public Unit oilTankerData;
         public int middleMaplayerMask;
 
@@ -19,7 +19,7 @@ namespace AMVCC.Models
         private void Awake()
         {
             movmentSpeed = oilTankerData.movmentSpeed;
-
+            health = oilTankerData.health;
         }
 
         private void Start()

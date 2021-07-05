@@ -4,12 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - MiddleMap
   - BattleGround
   - Unit
   - StartPoint
-  - Motorboat
-  - OilTanker
   - BattleShip
   - SmallBattleShip
   - Lench
@@ -33,6 +30,20 @@ TagManager:
   - RedRefinery
   - Tower
   - Platform
+  - Refinery
+  - Submarine
+  - Motor Boat
+  - Oil Tanker
+  - Radioactive Tower
+  - Electronic Tower
+  - Magnetic Tower
+  - Sea Mine
+  - Anti Air Craft
+  - Artillery
+  - Road
+  - Trench
+  - Middle Map
+  - Exit Point
   layers:
   - Default
   - TransparentFX

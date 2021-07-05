@@ -14,12 +14,14 @@ namespace AMVCC.Views
         public float timer;
         public bool isAttackTime;
         public bool isStopTime;
+        public float health;
         private void Awake()
         {
-            damage = Application.model.motorBoatModel.motorBoatData.damage;
-            speed = Application.model.motorBoatModel.motorBoatData.movmentSpeed;
-            fireRate = Application.model.motorBoatModel.motorBoatData.fireRate;
-            timer = Application.model.motorBoatModel.motorBoatData.fireRate;
+            damage = Application.model.motorBoatModel.damage;
+            speed = Application.model.motorBoatModel.speed;
+            fireRate = Application.model.motorBoatModel.fireRate;
+            timer = Application.model.motorBoatModel.fireRate;
+            health = Application.model.motorBoatModel.health;
             isAttackTime = true;
         }
     }

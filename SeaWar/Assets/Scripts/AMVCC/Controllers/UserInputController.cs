@@ -1,4 +1,5 @@
 ﻿using System;
+using AMVCC.Models;
 using AMVCC.Views;
 using UnityEngine;
 
@@ -23,18 +24,28 @@ namespace AMVCC.Controllers
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.collider != null)
+                    if (hit.collider != null && hit.collider.gameObject.layer != LayerMask.NameToLayer("UI"))
                     {
-                        if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Refinery")
-                        || hit.collider.gameObject.layer == LayerMask.NameToLayer("Road"))
-                        {
-                            Application.controller.spawnController.FindProperSpawnPosition(hit.collider);
+                        if (FindObjectOfType<SpawnController>().prefab != null)
+                        { 
+                            Application.model.spawnModel.prefab = FindObjectOfType<SpawnController>().prefab;
                         }
-                        else if (hit.collider.gameObject.CompareTag("Platform") && !platformView.platformIsFull)
+                        if (Application.model.spawnModel.prefab.name == "Sea Mine" || Application.model.spawnModel.prefab.name == "Electronic Tower" || Application.model.spawnModel.prefab.name == "Magnetic Tower" || Application.model.spawnModel.prefab.name == "Radioactive Tower" || Application.model.spawnModel.prefab.name == "Artillery" || Application.model.spawnModel.prefab.name == "Anti Air Craft" || Application.model.spawnModel.prefab.name == "Trench")
                         {
-                            Application.controller.spawnController.FindProperSpawnPosition(hit.collider);
-
+                            if (hit.collider.gameObject.name == "Platform" && !hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull
+                                                                           && !SeaWarUIView.Instance.isRoadsEnabled)
+                            {
+//                            Debug.Log("platform");
+                                FindObjectOfType<SpawnController>().FindProperSpawnPositionTowers(hit.collider);
+                                hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull = true;
+                            }
                         }
+                        else if (SeaWarUIView.Instance.isRoadsEnabled && (hit.collider.gameObject.name == "Refinery"
+                                                                          || hit.collider.gameObject.name == "Road"))
+                        {
+                            FindObjectOfType<SpawnController>().FindProperSpawnPosition(hit.collider);
+                        } 
+                       
                     }
                 }
             }
@@ -47,20 +58,28 @@ namespace AMVCC.Controllers
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if (hit.collider != null)
+                    if (hit.collider != null && hit.collider.gameObject.layer != LayerMask.NameToLayer("UI"))
                     {
-
-                        if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Refinery")
-                            || hit.collider.gameObject.layer == LayerMask.NameToLayer("Road"))
+                        if (FindObjectOfType<SpawnController>().prefab != null)
+                        { 
+                            Application.model.spawnModel.prefab = FindObjectOfType<SpawnController>().prefab;
+                        }
+                        if (Application.model.spawnModel.prefab.name == "Sea Mine" || Application.model.spawnModel.prefab.name == "Electronic Tower" || Application.model.spawnModel.prefab.name == "Magnetic Tower" || Application.model.spawnModel.prefab.name == "Radioactive Tower" || Application.model.spawnModel.prefab.name == "Artillery" || Application.model.spawnModel.prefab.name == "Anti Air Craft" || Application.model.spawnModel.prefab.name == "Trench")
+                        {
+                            if (hit.collider.gameObject.name == "Platform" && !hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull
+                                                                               && !SeaWarUIView.Instance.isRoadsEnabled)
+                            {
+//                            Debug.Log("platform");
+                                FindObjectOfType<SpawnController>().FindProperSpawnPositionTowers(hit.collider);
+                                hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull = true;
+                            }
+                        }
+                        else if (SeaWarUIView.Instance.isRoadsEnabled && (hit.collider.gameObject.name == "Refinery"
+                            || hit.collider.gameObject.name == "Road"))
                         {
                             FindObjectOfType<SpawnController>().FindProperSpawnPosition(hit.collider);
                         } 
-                        if (hit.collider.gameObject.CompareTag("Platform") && !hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull)
-                        {
-                            Debug.Log("platform");
-                            FindObjectOfType<SpawnController>().FindProperSpawnPositionTowers(hit.collider);
-                            hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull = true;
-                        }
+                       
                     }
                 }
             }
