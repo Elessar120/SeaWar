@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Diagnostics;
 using AMVCC.Models;
 using AMVCC.Views;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 namespace AMVCC.Controllers
 {
@@ -27,24 +29,92 @@ namespace AMVCC.Controllers
                     if (hit.collider != null && hit.collider.gameObject.layer != LayerMask.NameToLayer("UI"))
                     {
                         if (FindObjectOfType<SpawnController>().prefab != null)
-                        { 
-                            Application.model.spawnModel.prefab = FindObjectOfType<SpawnController>().prefab;
-                        }
-                        if (Application.model.spawnModel.prefab.name == "Sea Mine" || Application.model.spawnModel.prefab.name == "Electronic Tower" || Application.model.spawnModel.prefab.name == "Magnetic Tower" || Application.model.spawnModel.prefab.name == "Radioactive Tower" || Application.model.spawnModel.prefab.name == "Artillery" || Application.model.spawnModel.prefab.name == "Anti Air Craft" || Application.model.spawnModel.prefab.name == "Trench")
                         {
-                            if (hit.collider.gameObject.name == "Platform" && !hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull
-                                                                           && !SeaWarUIView.Instance.isRoadsEnabled)
+                            Debug.Log(hit.collider.gameObject.name);
+
+                            //Application.model.spawnModel.prefab = FindObjectOfType<SpawnController>().prefab;
+
+                            if (!FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
                             {
-//                            Debug.Log("platform");
-                                FindObjectOfType<SpawnController>().FindProperSpawnPositionTowers(hit.collider);
-                                hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull = true;
+                                if (hit.collider.gameObject.name == "Platform" && !hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull
+                                                                               && !SeaWarUIView.Instance.isRoadsEnabled)
+                                {
+                                    //Debug.Log("platform");
+                                    FindObjectOfType<SpawnController>().FindProperSpawnPositionTowers(hit.collider);
+                                    hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull = true;
+                                }
                             }
+                            else if (SeaWarUIView.Instance.isRoadsEnabled) 
+                            {
+                                if (hit.collider.name == "Refinery 1" || hit.collider.name == "Road 1")
+                                {
+                                    if (hit.collider.CompareTag("Blue"))
+                                    {
+                                        var spawnController = FindObjectOfType<SpawnController>();
+                                        spawnController.SetUnitTagToBlue();
+                                        spawnController.Spawner(
+                                            Application.model.spawnModel.spawnPointsForBlue1.transform.position,
+                                            Application.model.spawnModel.spawnPointsForBlue1.transform.rotation);
+
+                                    }
+
+                                    else if (hit.collider.CompareTag("Red"))
+                                    {
+                                        var spawnController = FindObjectOfType<SpawnController>();
+                                        spawnController.SetUnitTagToRed();
+                                        spawnController.Spawner(
+                                            Application.model.spawnModel.spawnPointsForRed1.transform.position,
+                                            Application.model.spawnModel.spawnPointsForRed1.transform.rotation);
+                                    }
+                                }
+                                else if (hit.collider.name == "Refinery 2" || hit.collider.name == "Road 2")
+                                {
+                                    Debug.Log("2");
+
+                                    if (hit.collider.CompareTag("Blue"))
+                                    {
+                                        var spawnController = FindObjectOfType<SpawnController>();
+                                        spawnController.SetUnitTagToBlue();
+                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForBlue2.transform.position,Application.model.spawnModel.spawnPointsForBlue2.transform.rotation);
+                                    }
+                                    
+                                    else if (hit.collider.CompareTag("Red"))
+                                    {
+                                        var spawnController = FindObjectOfType<SpawnController>();
+                                        spawnController.SetUnitTagToRed();
+                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForRed2.transform.position,Application.model.spawnModel.spawnPointsForRed2.transform.rotation);
+                                    
+                                    }
+                                }
+                            
+                                else if (hit.collider.name == "Refinery 3" || hit.collider.name == "Road 3")
+                                {
+                                    Debug.Log("3");
+                                    if (hit.collider.CompareTag("Blue"))
+                                    {
+                                        var spawnController = FindObjectOfType<SpawnController>();
+                                        spawnController.SetUnitTagToBlue();
+                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForBlue3.transform.position,Application.model.spawnModel.spawnPointsForBlue3.transform.rotation);
+                                    }
+                                    
+                                    else if (hit.collider.CompareTag("Red")) 
+                                    {
+                                        var spawnController = FindObjectOfType<SpawnController>();
+                                        spawnController.SetUnitTagToRed();
+                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForRed3.transform.position,Application.model.spawnModel.spawnPointsForRed3.transform.rotation);
+                                        
+                                    } 
+                                }
+                                
+
+                            } 
+                            
                         }
-                        else if (SeaWarUIView.Instance.isRoadsEnabled && (hit.collider.gameObject.name == "Refinery"
-                                                                          || hit.collider.gameObject.name == "Road"))
+                        /*if (Application.model.spawnModel.prefab.name == "Sea Mine" || Application.model.spawnModel.prefab.name == "Electric Tower" || Application.model.spawnModel.prefab.name == "Magnetic Tower" || Application.model.spawnModel.prefab.name == "Radioactive Tower" || Application.model.spawnModel.prefab.name == "Artillery" || Application.model.spawnModel.prefab.name == "Anti Air Craft" || Application.model.spawnModel.prefab.name == "Trench")
                         {
-                            FindObjectOfType<SpawnController>().FindProperSpawnPosition(hit.collider);
-                        } 
+                         
+                        }*/
+                         
                        
                     }
                 }
@@ -56,29 +126,98 @@ namespace AMVCC.Controllers
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 Application.model.userInputModel.clickedPosition = Input.mousePosition; 
                 RaycastHit hit;
+
                 if (Physics.Raycast(ray, out hit))
                 {
                     if (hit.collider != null && hit.collider.gameObject.layer != LayerMask.NameToLayer("UI"))
                     {
                         if (FindObjectOfType<SpawnController>().prefab != null)
-                        { 
-                            Application.model.spawnModel.prefab = FindObjectOfType<SpawnController>().prefab;
-                        }
-                        if (Application.model.spawnModel.prefab.name == "Sea Mine" || Application.model.spawnModel.prefab.name == "Electronic Tower" || Application.model.spawnModel.prefab.name == "Magnetic Tower" || Application.model.spawnModel.prefab.name == "Radioactive Tower" || Application.model.spawnModel.prefab.name == "Artillery" || Application.model.spawnModel.prefab.name == "Anti Air Craft" || Application.model.spawnModel.prefab.name == "Trench")
                         {
-                            if (hit.collider.gameObject.name == "Platform" && !hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull
-                                                                               && !SeaWarUIView.Instance.isRoadsEnabled)
+//                            Debug.Log(hit.collider.gameObject.name);
+
+                            //Application.model.spawnModel.prefab = FindObjectOfType<SpawnController>().prefab;
+
+                            if (!FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
                             {
-//                            Debug.Log("platform");
-                                FindObjectOfType<SpawnController>().FindProperSpawnPositionTowers(hit.collider);
-                                hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull = true;
+                                if (hit.collider.gameObject.name == "Platform" && !hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull
+                                                                               && !SeaWarUIView.Instance.isRoadsEnabled)
+                                {
+                                    //Debug.Log("platform");
+                                    FindObjectOfType<SpawnController>().FindProperSpawnPositionTowers(hit.collider);
+                                    hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull = true;
+                                }
                             }
+                            else if (SeaWarUIView.Instance.isRoadsEnabled) 
+                            {
+                                if (hit.collider.name == "Refinery 1" || hit.collider.name == "Road 1")
+                                {
+                                    if (hit.collider.CompareTag("Blue"))
+                                    {
+                                        var spawnController = FindObjectOfType<SpawnController>();
+                                        spawnController.SetUnitTagToBlue();
+                                        spawnController.Spawner(
+                                            Application.model.spawnModel.spawnPointsForBlue1.transform.position,
+                                            Application.model.spawnModel.spawnPointsForBlue1.transform.rotation);
+
+                                    }
+
+                                    else if (hit.collider.CompareTag("Red"))
+                                    {
+                                        var spawnController = FindObjectOfType<SpawnController>();
+                                        spawnController.SetUnitTagToRed();
+                                        spawnController.Spawner(
+                                            Application.model.spawnModel.spawnPointsForRed1.transform.position,
+                                            Application.model.spawnModel.spawnPointsForRed1.transform.rotation);
+                                    }
+                                }
+                                else if (hit.collider.name == "Refinery 2" || hit.collider.name == "Road 2")
+                                {
+                                    Debug.Log("2");
+
+                                    if (hit.collider.CompareTag("Blue"))
+                                    {
+                                        var spawnController = FindObjectOfType<SpawnController>();
+                                        spawnController.SetUnitTagToBlue();
+                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForBlue2.transform.position,Application.model.spawnModel.spawnPointsForBlue2.transform.rotation);
+                                    }
+                                    
+                                    else if (hit.collider.CompareTag("Red"))
+                                    {
+                                        var spawnController = FindObjectOfType<SpawnController>();
+                                        spawnController.SetUnitTagToRed();
+                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForRed2.transform.position,Application.model.spawnModel.spawnPointsForRed2.transform.rotation);
+                                    
+                                    }
+                                }
+                            
+                                else if (hit.collider.name == "Refinery 3" || hit.collider.name == "Road 3")
+                                {
+                                    Debug.Log("3");
+                                    if (hit.collider.CompareTag("Blue"))
+                                    {
+                                        var spawnController = FindObjectOfType<SpawnController>();
+                                        spawnController.SetUnitTagToBlue();
+                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForBlue3.transform.position,Application.model.spawnModel.spawnPointsForBlue3.transform.rotation);
+                                    }
+                                    
+                                    else if (hit.collider.CompareTag("Red")) 
+                                    {
+                                        var spawnController = FindObjectOfType<SpawnController>();
+                                        spawnController.SetUnitTagToRed();
+                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForRed3.transform.position,Application.model.spawnModel.spawnPointsForRed3.transform.rotation);
+                                        
+                                    } 
+                                }
+                                
+
+                            } 
+                            
                         }
-                        else if (SeaWarUIView.Instance.isRoadsEnabled && (hit.collider.gameObject.name == "Refinery"
-                            || hit.collider.gameObject.name == "Road"))
+                        /*if (Application.model.spawnModel.prefab.name == "Sea Mine" || Application.model.spawnModel.prefab.name == "Electric Tower" || Application.model.spawnModel.prefab.name == "Magnetic Tower" || Application.model.spawnModel.prefab.name == "Radioactive Tower" || Application.model.spawnModel.prefab.name == "Artillery" || Application.model.spawnModel.prefab.name == "Anti Air Craft" || Application.model.spawnModel.prefab.name == "Trench")
                         {
-                            FindObjectOfType<SpawnController>().FindProperSpawnPosition(hit.collider);
-                        } 
+                         
+                        }*/
+                         
                        
                     }
                 }

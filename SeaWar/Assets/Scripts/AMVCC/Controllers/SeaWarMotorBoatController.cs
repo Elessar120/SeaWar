@@ -46,9 +46,10 @@ namespace AMVCC.Controllers
             if (Physics.Raycast(ray,out hit, 2f))
             {
 //                Debug.Log("raycast");
-                if (!gameObject.CompareTag(hit.collider.tag))
+                if (!hit.collider.CompareTag(gameObject.tag))
                 {
-                    if (hit.collider.gameObject.name == "Refinery")
+//                    Debug.Log("stop moving");
+                    if (hit.collider.gameObject.name == "Refinery 1" || hit.collider.gameObject.name == "Refinery 2" || hit.collider.gameObject.name == "Refinery 3")
                     {
                         StopMoving();
                         Attack(hit);
@@ -85,6 +86,7 @@ namespace AMVCC.Controllers
         }
         private void Move()
         {
+//            Debug.Log(speed);
             transform.position += transform.forward * speed * Time.deltaTime;
         }
 

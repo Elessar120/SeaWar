@@ -16,5 +16,7 @@ namespace AMVCC.Views
             fireRate = Application.model.radioActiveTowerModel.fireRate;
             //attackTargets = new List<GameObject>();
         }
+
+       
     }
 }

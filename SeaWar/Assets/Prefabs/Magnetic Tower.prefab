@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5070544677672317445}
   - component: {fileID: 6301951341377377589}
   - component: {fileID: 974484921704095016}
+  - component: {fileID: 5637550393203519765}
+  - component: {fileID: 2527036571434629764}
   m_Layer: 2
   m_Name: Collider
   m_TagString: Untagged
@@ -56,11 +58,43 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705192830787312523}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.2, y: 1.2, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5637550393203519765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705192830787312523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d18f773e0d74e6eaf714a27b95586e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2527036571434629764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705192830787312523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f329d8438547f7afb26255c98f31c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0
+  lastRecivedDamageTimeOfRadioactiveTower: 0
+  reciveDamageOfMagneticTower: 0
+  reciveDamageOfElectricTower: 0
+  speed: 0
+  speedHolder: 0
+  damage: 0
+  damageHolder: 0
 --- !u!1 &8303036167009744891
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,12 +109,11 @@ GameObject:
   - component: {fileID: 279557234136944012}
   - component: {fileID: 3333260005444575050}
   - component: {fileID: -5255747040113888204}
-  - component: {fileID: -4356336559843252104}
   - component: {fileID: 3440109400472690851}
   - component: {fileID: 6536225046497714243}
-  m_Layer: 12
+  m_Layer: 2
   m_Name: Magnetic Tower
-  m_TagString: Magnetic Tower
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,7 +193,7 @@ BoxCollider:
   m_GameObject: {fileID: 8303036167009744891}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.2, y: 1.2, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
@@ -193,18 +226,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
---- !u!114 &-4356336559843252104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8303036167009744891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d18f773e0d74e6eaf714a27b95586e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3440109400472690851
 MonoBehaviour:
   m_ObjectHideFlags: 0

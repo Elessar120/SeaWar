@@ -52,7 +52,15 @@ namespace AMVCC.Controllers
             costWithOil = newUnit.costWithOil;
             prefab = newUnit.prefab;
             prefab.name = newUnit.unitName;
-      CheckBuildingsCurrencyTypes(newUnit);
+//            Debug.Log(newUnit.unitName + prefab.name);
+            if (FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
+            {
+                FindObjectOfType<SeaWarUIView>().DisableRoads();
+
+            }       
+            CheckBuildingsCurrencyTypes(newUnit);
+            
+            
             //SeaWarUIView.Instance.onCheckButtonIsInteractableAction();
 
             //UIManager.Instance.totalOilAmount -= newUnit.costWithMoney;
@@ -66,11 +74,21 @@ namespace AMVCC.Controllers
                 {
                     SeaWarUIView.Instance.totalOilAmount -= costWithOil;
                     SeaWarUIView.Instance.SetNewOilAmountText();
-                    if (prefab.name != "Radioactive Tower" && prefab.name != "Magnetic Tower" && prefab.name == "Electronic Tower")
+                    if (prefab.name != "Radioactive Tower" && prefab.name != "Magnetic Tower" && prefab.name != "Electric Tower" && prefab.name != "Sea Mine" && prefab.name != "Artillery" && prefab.name != "Trench")
                     {
                         FindObjectOfType<SeaWarUIView>().EnableRoads();
 
-                    }
+                    } 
+                    
+                    /*if (prefab.name == "Radioactive Tower" || prefab.name == "Magnetic Tower" || prefab.name == "Electric Tower" || prefab.name == "Sea Mine" || prefab.name == "Artillery" || prefab.name == "Trench")
+                    {
+                        if (FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
+                        {
+                            FindObjectOfType<SeaWarUIView>().DisableRoads();
+
+                        }
+
+                    }*/
                 }
             }
             else if (newUnit.costWithGold > 0)
@@ -80,15 +98,20 @@ namespace AMVCC.Controllers
                     SeaWarUIView.Instance.totalGoldAmount -= costWithGold;
                     SeaWarUIView.Instance.SetNewGoldAmountText();
 
-                    if (prefab.name == "Radioactive Tower" && prefab.name == "Magnetic Tower" && prefab.name == "Electronic Tower")
+                    if (prefab.name != "Radioactive Tower" && prefab.name != "Magnetic Tower" && prefab.name != "Electric Tower" && prefab.name != "Sea Mine" && prefab.name != "Artillery" && prefab.name != "Trench")
                     {
                         FindObjectOfType<SeaWarUIView>().EnableRoads();
-
-                    }
-                    else if (prefab.name == "Tower")
+                    } 
+                    
+                    /*if (prefab.name == "Radioactive Tower" || prefab.name == "Magnetic Tower" || prefab.name == "Electric Tower" || prefab.name == "Sea Mine" || prefab.name == "Artillery" || prefab.name == "Trench")
                     {
+                        if (FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
+                        {
+                            FindObjectOfType<SeaWarUIView>().DisableRoads();
 
-                    }
+                        }
+
+                    }*/
                 }
             }
         }
@@ -99,23 +122,36 @@ namespace AMVCC.Controllers
 
             if (hit.gameObject.CompareTag("Blue"))
             {
-                prefab.CompareTag("Blue");
+                prefab.tag = "Blue";
                 Spawner(spawnPosition,hit.transform.rotation);
 //                Debug.Log("tower spawn");
             }
             if (hit.gameObject.CompareTag("Red"))
             {
-                prefab.CompareTag("Red");
+                prefab.tag = "Red";
                 Spawner(spawnPosition,hit.transform.rotation);
                 Debug.Log("tower spawn");
 
             }
         }
+
+        public void SetUnitTagToBlue()
+        {
+            prefab.tag = "Blue";
+        }
+
+        public void SetUnitTagToRed()
+        {
+            prefab.tag = "Red";
+        }
+        /*
         public void FindProperSpawnPosition(Collider hit)
         {
-            if (prefab.name != ("Radioactive Tower") || prefab.name != "Magnetic Tower" || prefab.name != "Electronic Tower")
-            {
-                if (hit.name == "RefineryBlue1" || hit.name == "RoadBlue1")
+         // todo 
+         // refinery 1,2,3
+         // road 1,2,3
+         //must be backed
+                if (hit.CompareTag("Blue"))
                 {
                     //prefab.tag = "Blue";
                     prefab.tag = "Blue";
@@ -125,12 +161,12 @@ namespace AMVCC.Controllers
                          {
                             Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,transform.rotation);
 
-                         }*/
+                         }#1#
                     Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Application.model.spawnModel.spawnPointsForBlue1.transform.rotation);
 
                 }
                 
-                else if (hit.name == "RefineryBlue2" || hit.name == "RoadBlue2")
+                else if ((hit.name == "Refinery" || hit.name == "Road") && hit.CompareTag("Blue"))
                 {
                      //prefab.tag = "Blue";
                       prefab.tag = "Blue";
@@ -139,11 +175,11 @@ namespace AMVCC.Controllers
                       {
                           Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.identity);
 
-                      }*/
+                      }#1#
                       Spawner(Application.model.spawnModel.spawnPointsForBlue2.transform.position,Application.model.spawnModel.spawnPointsForBlue2.transform.rotation);
 
                 }
-                else if (hit.CompareTag("RefineryBlue3") || hit.CompareTag("RoadBlue3"))
+                else if ((hit.name == "Refinery" || hit.name == "Road") && hit.CompareTag("Blue"))
                 {
                     //prefab.tag = "Blue";
                     prefab.tag = "Blue";
@@ -152,11 +188,11 @@ namespace AMVCC.Controllers
                     {
                           Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.identity);
 
-                     }*/
+                     }#1#
                     Spawner(Application.model.spawnModel.spawnPointsForBlue3.transform.position,Application.model.spawnModel.spawnPointsForBlue3.transform.rotation);
                 
                 }
-                if (hit.name == "RefineryRed1" || hit.name == "RoadRed1")
+                if ((hit.name == "Refinery" || hit.name == "Road") && hit.CompareTag("Red"))
                 {
                     //prefab.tag = "Red";
                     prefab.tag = "Red";
@@ -165,11 +201,11 @@ namespace AMVCC.Controllers
                     {
                         Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.Euler(0,180,0));
     
-                    }*/
+                    }#1#
                     Spawner(Application.model.spawnModel.spawnPointsForRed1.transform.position,Application.model.spawnModel.spawnPointsForRed1.transform.rotation);
 
                 }
-                else if (hit.name == "RefineryRed2" || hit.name == "RoadRed2")
+                else if ((hit.name == "Refinery" || hit.name == "Road") && hit.CompareTag("Red"))
                 {
                     //prefab.tag = "Red";
                     prefab.tag = "Red";
@@ -178,11 +214,11 @@ namespace AMVCC.Controllers
                     {
                         Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.Euler(0,180,0));
     
-                    }*/
+                    }#1#
                     Spawner(Application.model.spawnModel.spawnPointsForRed2.transform.position,Application.model.spawnModel.spawnPointsForRed2.transform.rotation);
 
                 }
-                else if (hit.name == "RefineryRed3" || hit.name == "RoadRed3")
+                else if ((hit.name == "Refinery" || hit.name == "Road") && hit.CompareTag("Red"))
                 {
                     //prefab.tag = "Red";
                     prefab.tag = "Red";
@@ -191,12 +227,12 @@ namespace AMVCC.Controllers
                     {
                         Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.Euler(0,180,0));
     
-                    }*/
+                    }#1#
                     Spawner(Application.model.spawnModel.spawnPointsForRed3.transform.position,Application.model.spawnModel.spawnPointsForRed3.transform.rotation);
                 
                 }
             
-                if (hit.gameObject.CompareTag("Blue"))
+                /*if (hit.gameObject.CompareTag("Blue"))
                 {
                     prefab.tag = "Blue";
                     Spawner(hit.transform.position,hit.transform.rotation);
@@ -205,23 +241,28 @@ namespace AMVCC.Controllers
                 else if (hit.gameObject.CompareTag("Red"))
                 {
                     prefab.tag = "Red";
-                } 
-            }
+                } #1#
+            
         }
+        */
 
-        private void Spawner(Vector3 spawnPosition, Quaternion spawnRotation)
+        public void Spawner(Vector3 spawnPosition, Quaternion spawnRotation)
         {
-            if (prefab.name == "Radioactive Tower" && prefab.name == "Magnetic Tower" && prefab.name == "Electronic Tower")
+//            Debug.Log("spawner");
+            if (prefab.name != "Radioactive Tower" && prefab.name != "Magnetic Tower" && prefab.name != "Electric Tower" && prefab.name != "Sea Mine" && prefab.name != "Artillery" && prefab.name != "Trench")
             {
                 if (FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
                 {
-                    Instantiate(prefab, spawnPosition,spawnRotation);
+                     var unit = Instantiate(prefab, spawnPosition,spawnRotation);
+                     unit.name = prefab.name;
                     FindObjectOfType<SeaWarUIView>().DisableRoads();
                 }
             }
-            else if (prefab.name == "Radioactive Tower" || prefab.name == "Magnetic Tower" || prefab.name == "Electronic Tower")
+            else if (prefab.name == "Radioactive Tower" || prefab.name == "Magnetic Tower" || prefab.name == "Electronic Tower" || prefab.name != "Sea Mine" || prefab.name != "Artillery" || prefab.name != "Trench")
             {
-                Instantiate(prefab, spawnPosition,spawnRotation);
+                var unit = Instantiate(prefab, spawnPosition,spawnRotation);
+                unit.name = prefab.name;
+
                 //to do make tower spawner buttons intractable false after pushing and true after instantiating
 
             }

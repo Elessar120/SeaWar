@@ -8,9 +8,15 @@ namespace AMVCC.Controllers
     {
         private SeaWarPlatformView platformView;
         private SeaWarRadioActiveTowerView towerView;
-      
+
+        private void Awake()
+        {
+//            Debug.Log(transform.parent.name);
+        }
+
         private void Start()
         {
+          //  Debug.Log(transform.parent.name);
             //SetFireRate();
         }
 
@@ -19,12 +25,13 @@ namespace AMVCC.Controllers
             
             if (!other.gameObject.CompareTag(gameObject.tag))
             {
-                Debug.Log(gameObject.name);
+                //Debug.Log(transform.parent.name);
 //                Debug.Log(other.gameObject.name);
                 //towerView.attackTargets.Add(other.gameObject);
                // Attack(other.gameObject);
                if (other.GetComponent<SeaWarHealthView>() != null)
                {
+                   //Debug.Log(GetComponent<SeaWarAttackView>().damage);
                    other.gameObject.GetComponent<SeaWarHealthView>().TakeDamage(GetComponent<SeaWarAttackView>().damage);
 
                }
@@ -45,6 +52,8 @@ namespace AMVCC.Controllers
                     if (other.GetComponent<SeaWarAttackView>().lastRecivedDamageTimeOfRadioactiveTower <= 0)
                     {
                         //Attack(other.gameObject);
+                        Debug.Log(other.gameObject.name);
+
                         other.gameObject.GetComponent<SeaWarHealthView>().TakeDamage(GetComponent<SeaWarAttackView>().damage);
                         Debug.Log(GetComponent<SeaWarAttackView>().damage);
                         Debug.Log("Attack");
