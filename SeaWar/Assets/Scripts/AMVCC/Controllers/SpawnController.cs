@@ -74,7 +74,7 @@ namespace AMVCC.Controllers
                 {
                     SeaWarUIView.Instance.totalOilAmount -= costWithOil;
                     SeaWarUIView.Instance.SetNewOilAmountText();
-                    if (prefab.name != "Radioactive Tower" && prefab.name != "Magnetic Tower" && prefab.name != "Electric Tower" && prefab.name != "Sea Mine" && prefab.name != "Artillery" && prefab.name != "Trench")
+                    if (prefab.name != "Radioactive Tower" && prefab.name != "Magnetic Tower" && prefab.name != "Electric Tower" && prefab.name != "Sea Mine" && prefab.name != "Artillery" && prefab.name != "Trench" && prefab.name !="Anti Air Craft")
                     {
                         FindObjectOfType<SeaWarUIView>().EnableRoads();
 
@@ -98,7 +98,7 @@ namespace AMVCC.Controllers
                     SeaWarUIView.Instance.totalGoldAmount -= costWithGold;
                     SeaWarUIView.Instance.SetNewGoldAmountText();
 
-                    if (prefab.name != "Radioactive Tower" && prefab.name != "Magnetic Tower" && prefab.name != "Electric Tower" && prefab.name != "Sea Mine" && prefab.name != "Artillery" && prefab.name != "Trench")
+                    if (prefab.name != "Radioactive Tower" && prefab.name != "Magnetic Tower" && prefab.name != "Electric Tower" && prefab.name != "Sea Mine" && prefab.name != "Artillery" && prefab.name != "Trench" && prefab.name != "Anti Air Craft")
                     {
                         FindObjectOfType<SeaWarUIView>().EnableRoads();
                     } 
@@ -118,19 +118,40 @@ namespace AMVCC.Controllers
 
         public void FindProperSpawnPositionTowers(Collider hit)
         {
+//            Debug.Log("before spawn");
             Vector3 spawnPosition = hit.transform.position + new Vector3(0,2,0);
 
             if (hit.gameObject.CompareTag("Blue"))
             {
                 prefab.tag = "Blue";
-                Spawner(spawnPosition,hit.transform.rotation);
+                Spawner(spawnPosition,hit.transform.rotation,hit);
 //                Debug.Log("tower spawn");
             }
             if (hit.gameObject.CompareTag("Red"))
             {
                 prefab.tag = "Red";
-                Spawner(spawnPosition,hit.transform.rotation);
-                Debug.Log("tower spawn");
+                Spawner(spawnPosition,hit.transform.rotation,hit);
+//                Debug.Log("tower spawn");
+
+            }
+        }
+        public void FindProperSpawnPositionTrench(Collider hit)
+        {
+//            Debug.Log("before spawn");
+            Vector3 spawnPosition = hit.transform.position + new Vector3(0,2,0);
+
+            if (hit.gameObject.CompareTag("Blue"))
+            {
+                prefab.tag = "Blue";
+                Spawner(spawnPosition,hit.transform.rotation,hit);
+//                Debug.Log("tower spawn");
+            }
+            if (hit.gameObject.CompareTag("Red"))
+            {
+                prefab.tag = "Red";
+
+                Spawner(spawnPosition,hit.transform.rotation,hit);
+//                Debug.Log("tower spawn");
 
             }
         }
@@ -246,10 +267,10 @@ namespace AMVCC.Controllers
         }
         */
 
-        public void Spawner(Vector3 spawnPosition, Quaternion spawnRotation)
+        public void Spawner(Vector3 spawnPosition, Quaternion spawnRotation, Collider hit)
         {
 //            Debug.Log("spawner");
-            if (prefab.name != "Radioactive Tower" && prefab.name != "Magnetic Tower" && prefab.name != "Electric Tower" && prefab.name != "Sea Mine" && prefab.name != "Artillery" && prefab.name != "Trench")
+            if (prefab.name != "Radioactive Tower" && prefab.name != "Magnetic Tower" && prefab.name != "Electric Tower" && prefab.name != "Sea Mine" && prefab.name != "Artillery" && prefab.name != "Trench" && prefab.name != "Anti Air Craft")
             {
                 if (FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
                 {
@@ -258,11 +279,17 @@ namespace AMVCC.Controllers
                     FindObjectOfType<SeaWarUIView>().DisableRoads();
                 }
             }
-            else if (prefab.name == "Radioactive Tower" || prefab.name == "Magnetic Tower" || prefab.name == "Electronic Tower" || prefab.name != "Sea Mine" || prefab.name != "Artillery" || prefab.name != "Trench")
+            else if (prefab.name == "Radioactive Tower" || prefab.name == "Magnetic Tower" || prefab.name == "Electronic Tower" || prefab.name != "Sea Mine" || prefab.name != "Artillery" || prefab.name != "Trench" || prefab.name != "Anti Air Craft")
             {
+                
                 var unit = Instantiate(prefab, spawnPosition,spawnRotation);
                 unit.name = prefab.name;
+                if (unit.name == "Trench")
+                {
+                    //Debug.Log("i am trench");
+                    unit.transform.SetParent(hit.gameObject.transform);
 
+                }
                 //to do make tower spawner buttons intractable false after pushing and true after instantiating
 
             }

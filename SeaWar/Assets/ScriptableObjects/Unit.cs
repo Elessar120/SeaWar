@@ -11,8 +11,10 @@ public class Unit : ScriptableObject
  public GameObject prefab;
  public int level;
  public float movmentSpeed;
+ public float rotateSpeed;
  public float enemySlowDownCoefficient;
  public float damage;
+ public float explosionArea;
  public float increasedDamageCoefficient;
  public float health;
  public float fireRate;

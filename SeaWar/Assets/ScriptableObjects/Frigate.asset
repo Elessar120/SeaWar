@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcbb73636c4482a877766f44931fad5, type: 3}
+  m_Name: Frigate
+  m_EditorClassIdentifier: 
+  unitName: Frigate
+  prefab: {fileID: 7652783745557652756, guid: bfbe31c532740bc4b8337d800d4ff750, type: 3}
+  level: 1
+  movmentSpeed: 1
+  rotateSpeed: 60
+  enemySlowDownCoefficient: 0
+  damage: 40
+  explosionArea: 0
+  increasedDamageCoefficient: 0
+  health: 400
+  fireRate: 1
+  sightRange: 3
+  rotationSpeed: 0
+  costWithGold: 3000
+  costWithOil: 0
+  upgradeCardsNeed: 2
+  upgradeGoldsNeed: 0
+  supportDamageRate: 0
+  productionRate: 0
+  earnedMoney: 0
+  spawnButton: {fileID: 0}
+  AttackTargets: []

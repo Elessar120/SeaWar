@@ -9,10 +9,11 @@ namespace AMVCC.Controllers
         private void OnTriggerEnter(Collider other)
         {
         
-            Debug.Log("oh yea!");
             
             if(other.gameObject.GetComponent<SeaWarAttackView>() != null)
             {
+//                Debug.Log("oh yea!");
+
                  other.gameObject.GetComponent<SeaWarAttackView>().speed
                         = other.gameObject.GetComponent<SeaWarAttackView>().speed *
                                 Application.model.magneticTowerModel.enemyCoenfficientSlowDown;
@@ -29,8 +30,12 @@ namespace AMVCC.Controllers
 
         private void OnTriggerExit(Collider other)
         {
-            other.gameObject.GetComponent<SeaWarAttackView>().speed
-                = other.gameObject.GetComponent<SeaWarAttackView>().speedHolder;
+            if (other.GetComponent<SeaWarAttackView>())
+            {
+                other.gameObject.GetComponent<SeaWarAttackView>().speed
+                    = other.gameObject.GetComponent<SeaWarAttackView>().speedHolder;
+            }
+           
         }
     }
 }

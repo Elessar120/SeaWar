@@ -20,5 +20,8 @@ public class SeaWarModel : SeaWarElement
         public SeaWarSeaMineModel seaMineModel;
         public SeaWarAntiAirCraftModel antiAirCraftModel;
         public SeaWarArtilleryModel artilleryModel;
-        
+        public SeaWarTrenchModel trenchModel;
+        public SeaWarJetFighterModel jetFighterModel;
+        public SeaWarHelicopterModel helicopterModel;
+        public SeaWarFrigateModel seaWarFrigateModel;
 }

@@ -22,7 +22,7 @@ namespace AMVCC.Views
                     SetFireRateSubmarine();
                     SetReciveDamageOfRadioactiveTower();
                     SetSubmarinSpeed();
-                    SetSubmarinDamage();
+                    SetSubmarineDamage();
                     break;
                 case "Motor Boat(Clone)":
                     Debug.Log("switch motor boat");
@@ -39,7 +39,7 @@ namespace AMVCC.Views
                     SetLenchDamage();
 
                     break;
-                case "Radioactive Tower":
+                case "Radioactive Tower(Clone)":
                     SetFireRateRadioactiveTower();
                     SetRadioactiveTowerDamage();
                     break;
@@ -58,11 +58,30 @@ namespace AMVCC.Views
 
                     break;
                 case "Anti Air Craft(Clone)":
+                    Debug.Log(gameObject.name);
                     SetAntiAirCraftDamage();
-
+                    SetAntiAirCraftFireRate();
+                    break;
+                case "Jet Fighter(Clone)":
+                    SetJetFighterSpeed();
+                    SetJetFighterDamage();
+                    SetJetFighterFireRate();
+                    break;
+                case "Helicopter(Clone)":
+                    SetHelicopterSpeed();
+                    SetHelicopterDamage();
+                    SetHelicopterFireRate();
                     break;
                 }
         }
+
+       
+        
+
+        
+
+        
+
 
         private void Start()
         {
@@ -84,7 +103,7 @@ namespace AMVCC.Views
             damageHolder = damage;
         }
 
-        private void SetSubmarinDamage()
+        private void SetSubmarineDamage()
         {
             damage = Application.model.submarineModel.damage;
             damageHolder = damage;
@@ -94,51 +113,76 @@ namespace AMVCC.Views
         {
             damage = Application.model.radioActiveTowerModel.damage;
             damageHolder = damage;
-            Debug.Log("radioactive tower damage :" + damage );
+//            Debug.Log("radioactive tower damage :" + damage );
         }
 
         private void SetArtilleryDamage()
         {
-            damage = Application.model.artilleryModel.damage;
+           // damage = GetComponent<art>();
             damageHolder = damage;
         }
 
         private void SetSeaMineDamage()
         {
-            damage = Application.model.seaMineModel.damage;
+            damage =GetComponent<SeaWarSeaMineView>().damage;
             damageHolder = damage;
+            Debug.Log(damage);
         }
 
         private void SetAntiAirCraftDamage()
         {
-            damage = Application.model.antiAirCraftModel.damage;
+            damage = GetComponent<SeaWarAntiAirCraftView>().damage;
             damageHolder = damage;
         }
-
+        private void SetJetFighterDamage()
+        {
+            damage = Application.model.jetFighterModel.damage;
+            damageHolder = damage;
+//            Debug.Log("damage" + damage);
+            
+        }
+        private void SetHelicopterDamage()
+        {
+            damage = Application.model.helicopterModel.damage;
+            damageHolder = damage;
+            
+        }
+        private void SetReciveDamageOfRadioactiveTower()
+        {
+            lastRecivedDamageTimeOfRadioactiveTower = Application.model.radioActiveTowerModel.fireRate;
+        }
         private void SetLenchSpeed()
         {
-            speed = Application.model.lenchModel.speed;
+            speed = GetComponent<SeaWarLenchView>().speed;
             speedHolder = speed;
         }
 
         private void SetMotorBoatSpeed()
         {
-            speed = Application.model.motorBoatModel.speed;
+            speed = GetComponent<SeaWarMotorBoatView>().speed;
             speedHolder = speed;
 
         }
 
         private void SetSubmarinSpeed()
         {
-            speed = Application.model.submarineModel.speed;
+            //speed = GetComponent<SeaWarSubmarineView>().sp;
             speedHolder = speed;
 
         }
 
-        private void SetReciveDamageOfRadioactiveTower()
+        private void SetJetFighterSpeed()
         {
-            lastRecivedDamageTimeOfRadioactiveTower = Application.model.radioActiveTowerModel.fireRate;
+            speed = GetComponent<SeaWarJetFighterView>().speed;
+            speedHolder = speed;
         }
+        private void SetHelicopterSpeed()
+        {
+            speed = GetComponent<SeaWarHelicopterView>().speed;
+            speedHolder = speed;
+            
+        }
+        
 
         private void SetFireRateMagneticTower()
         {
@@ -166,6 +210,24 @@ namespace AMVCC.Views
         private void SetFireRateSubmarine()
         {
             fireRate = GetComponent<SeaWarSubmarineView>().fireRate;
+        }
+        private void SetJetFighterFireRate()
+        {
+            fireRate = GetComponent<SeaWarJetFighterView>().fireRate;
+        }
+
+        private void SetAntiAirCraftFireRate()
+        {
+            fireRate = GetComponent<SeaWarAntiAirCraftView>().fireRate;
+
+        }
+        private void SetHelicopterFireRate()
+        {
+            fireRate = Application.model.helicopterModel.fireRate;
+        }
+        private void Update()
+        {
+//            Debug.Log(gameObject.name + " : " + damage);
         }
     }
 }

@@ -1,16 +1,28 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using AMVCC.Controllers;
 using UnityEngine;
 
 namespace AMVCC.Views
 {
     public class SeaWarHealthView : SeaWarElement
-    {
-        private float health;
+    { 
+        public float health;
+        private bool isDead;
+        public List<GameObject> attackers = new List<GameObject>();
+            
         private void Start()
         {
             switch(gameObject.name)
             {
-                case "Rifinery":
+                case "Refinery 1":
+                   SetHealthRefinery();
+                    break;
+                case "Refinery 2":
+                   SetHealthRefinery();
+                    break;
+                case "Refinery 3":
                    SetHealthRefinery();
                     break;
                 case "Submarin":
@@ -28,13 +40,36 @@ namespace AMVCC.Views
                 case "Radioactive Tower":
                     SetHealthRadioactiveTower();
                     break;
-                case "Electronic Tower":
+                case "Electric Tower":
                     SetHealthElectronicTower();
                     break;
                 case "Magnetic Tower":
                     SetHealthMagneticTower();
                     break;
+                case "Trench":
+                    SetHealthTrench();
+                    break;
+                case "Anti Air Craft":
+                    SetAntiAirCraftHealth();
+                    Debug.Log("running!");
+
+                    break;
+                case "Jet Fighter":
+                    SetJetFighterHealth();
+
+                    break;
+                case "Helicopter":
+                    SetHelicopterHealth();
+                    break;
             }
+        }
+
+       
+
+
+        private void SetHealthTrench()
+        {
+            health = Application.model.trenchModel.health;
         }
 
         private void SetHealthMagneticTower()
@@ -76,23 +111,50 @@ namespace AMVCC.Views
         {
             health = Application.model.refineryModel.health;
         }
+        private void SetJetFighterHealth()
+        {
+            health = Application.model.jetFighterModel.health;
+        }
 
+        private void SetAntiAirCraftHealth()
+        {
+            health = Application.model.antiAirCraftModel.health;
+        }
+        private void SetHelicopterHealth()
+        {
+            health = Application.model.helicopterModel.health;
+        }
         public void TakeDamage(float damage)
         {
-            Debug.Log(health);
+                //     Debug.Log(damage);
             if (health > 0)
             {
+                isDead = false;
                 health -= damage;
-                Debug.Log(health);
-
+//                    Debug.Log( gameObject.name + health);
             }
-            else
+            if (health <= 0)
             {
                 health = 0f;
+                isDead = true;
+                OnRegister();
                 Death();
-      
             }
-        }
+            //return isDead;
+            }
+
+        private void OnRegister()
+        {
+            Debug.Log("list has : " + attackers.Count + "objects");
+            foreach (GameObject attacker in attackers)
+            {
+                Debug.Log(attacker.name);
+                if (attacker.name == "Helicopter(Clone)")
+                {
+                    attacker.GetComponent<SeaWarHelicopterAttackController>().onKillAction();
+                    Debug.Log("I called action");
+                }
+            }        }
 
         private void Death()
         {

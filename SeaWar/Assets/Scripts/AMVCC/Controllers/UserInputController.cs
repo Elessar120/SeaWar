@@ -53,8 +53,8 @@ namespace AMVCC.Controllers
                                         var spawnController = FindObjectOfType<SpawnController>();
                                         spawnController.SetUnitTagToBlue();
                                         spawnController.Spawner(
-                                            Application.model.spawnModel.spawnPointsForBlue1.transform.position,
-                                            Application.model.spawnModel.spawnPointsForBlue1.transform.rotation);
+                                            Application.model.spawnModel.waterSpawnPointsForBlue1.transform.position,
+                                            Application.model.spawnModel.waterSpawnPointsForBlue1.transform.rotation,hit.collider);
 
                                     }
 
@@ -63,8 +63,8 @@ namespace AMVCC.Controllers
                                         var spawnController = FindObjectOfType<SpawnController>();
                                         spawnController.SetUnitTagToRed();
                                         spawnController.Spawner(
-                                            Application.model.spawnModel.spawnPointsForRed1.transform.position,
-                                            Application.model.spawnModel.spawnPointsForRed1.transform.rotation);
+                                            Application.model.spawnModel.waterSpawnPointsForRed1.transform.position,
+                                            Application.model.spawnModel.waterSpawnPointsForRed1.transform.rotation,hit.collider);
                                     }
                                 }
                                 else if (hit.collider.name == "Refinery 2" || hit.collider.name == "Road 2")
@@ -75,14 +75,14 @@ namespace AMVCC.Controllers
                                     {
                                         var spawnController = FindObjectOfType<SpawnController>();
                                         spawnController.SetUnitTagToBlue();
-                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForBlue2.transform.position,Application.model.spawnModel.spawnPointsForBlue2.transform.rotation);
+                                        spawnController.Spawner(Application.model.spawnModel.waterSpawnPointsForBlue2.transform.position,Application.model.spawnModel.waterSpawnPointsForBlue2.transform.rotation,hit.collider);
                                     }
                                     
                                     else if (hit.collider.CompareTag("Red"))
                                     {
                                         var spawnController = FindObjectOfType<SpawnController>();
                                         spawnController.SetUnitTagToRed();
-                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForRed2.transform.position,Application.model.spawnModel.spawnPointsForRed2.transform.rotation);
+                                        spawnController.Spawner(Application.model.spawnModel.waterSpawnPointsForRed2.transform.position,Application.model.spawnModel.waterSpawnPointsForRed2.transform.rotation,hit.collider);
                                     
                                     }
                                 }
@@ -94,14 +94,14 @@ namespace AMVCC.Controllers
                                     {
                                         var spawnController = FindObjectOfType<SpawnController>();
                                         spawnController.SetUnitTagToBlue();
-                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForBlue3.transform.position,Application.model.spawnModel.spawnPointsForBlue3.transform.rotation);
+                                        spawnController.Spawner(Application.model.spawnModel.waterSpawnPointsForBlue3.transform.position,Application.model.spawnModel.waterSpawnPointsForBlue3.transform.rotation,hit.collider);
                                     }
                                     
                                     else if (hit.collider.CompareTag("Red")) 
                                     {
                                         var spawnController = FindObjectOfType<SpawnController>();
                                         spawnController.SetUnitTagToRed();
-                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForRed3.transform.position,Application.model.spawnModel.spawnPointsForRed3.transform.rotation);
+                                        spawnController.Spawner(Application.model.spawnModel.waterSpawnPointsForRed3.transform.position,Application.model.spawnModel.waterSpawnPointsForRed3.transform.rotation,hit.collider);
                                         
                                     } 
                                 }
@@ -133,78 +133,181 @@ namespace AMVCC.Controllers
                     {
                         if (FindObjectOfType<SpawnController>().prefab != null)
                         {
-//                            Debug.Log(hit.collider.gameObject.name);
+                            Debug.Log(hit.collider.gameObject.name);
 
                             //Application.model.spawnModel.prefab = FindObjectOfType<SpawnController>().prefab;
 
                             if (!FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
                             {
-                                if (hit.collider.gameObject.name == "Platform" && !hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull
-                                                                               && !SeaWarUIView.Instance.isRoadsEnabled)
+                                if (hit.collider.gameObject.name == "Platform" && FindObjectOfType<SpawnController>().prefab.name != "Trench" && FindObjectOfType<SpawnController>().prefab.name != "Sea Mine" && !hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull)
+                                
                                 {
                                     //Debug.Log("platform");
                                     FindObjectOfType<SpawnController>().FindProperSpawnPositionTowers(hit.collider);
+//                                    Debug.Log(hit.collider.gameObject.name);
                                     hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull = true;
+                                }
+                                else if ((hit.collider.gameObject.name == "Radioactive Tower" || hit.collider.gameObject.name == "Magnetic Tower" || hit.collider.gameObject.name == "Electric Tower" || hit.collider.gameObject.name == "Anti Air Craft" || hit.collider.gameObject.name == "Artillery") && FindObjectOfType<SpawnController>().prefab.name == "Trench") 
+                                {
+                                    // spawn trench
+                                    Debug.Log(hit.collider.gameObject.name);
+
+                                    FindObjectOfType<SpawnController>().FindProperSpawnPositionTrench(hit.collider);
+                                }
+                                else if (hit.collider.name == "Trench")
+                                {
+                                    Debug.Log("You can't Build a Trench on Another Trench!");
+                                }
+                                else if (hit.collider.name == "Water 1" || hit.collider.name == "Water 2" || hit.collider.name == "Water 3")
+                                {
+                                    //Debug.Log(FindObjectOfType<SpawnController>().prefab.name == "Sea Mine");
+                                    //Debug.Log(hit.collider.gameObject.GetComponent<SeaWarWaterPlatformView>().hasMine);
+                                        
+
+                                    if (FindObjectOfType<SpawnController>().prefab.name == "Sea Mine" && !hit.collider.gameObject.GetComponent<SeaWarWaterPlatformView>().hasMine)
+                                    {
+                                        Debug.Log(hit.collider.gameObject.name);
+
+                                        FindObjectOfType<SpawnController>().FindProperSpawnPositionTowers(hit.collider);
+                                        hit.collider.gameObject.GetComponent<SeaWarWaterPlatformView>().hasMine = true;
+                                        
+                                    }
+                                    
                                 }
                             }
                             else if (SeaWarUIView.Instance.isRoadsEnabled) 
                             {
-                                if (hit.collider.name == "Refinery 1" || hit.collider.name == "Road 1")
+                                if (hit.collider.name == "Refinery 1" || hit.collider.name == "Water 1")
                                 {
                                     if (hit.collider.CompareTag("Blue"))
                                     {
-                                        var spawnController = FindObjectOfType<SpawnController>();
-                                        spawnController.SetUnitTagToBlue();
-                                        spawnController.Spawner(
-                                            Application.model.spawnModel.spawnPointsForBlue1.transform.position,
-                                            Application.model.spawnModel.spawnPointsForBlue1.transform.rotation);
+                                        if (FindObjectOfType<SpawnController>().prefab.name == "Jet Fighter" || FindObjectOfType<SpawnController>().prefab.name == "Helicopter")
+                                        {
+                                            var spawnController = FindObjectOfType<SpawnController>();
+                                            spawnController.SetUnitTagToBlue();
+                                            spawnController.Spawner(
+                                                Application.model.spawnModel.airSpawnPointsForBlue1.transform.position,
+                                                 Application.model.spawnModel.airSpawnPointsForBlue1.transform.rotation,hit.collider);
+                                        }
+                                        else
+                                        {
+                                            var spawnController = FindObjectOfType<SpawnController>();
+                                            spawnController.SetUnitTagToBlue();
+                                            spawnController.Spawner(
+                                                Application.model.spawnModel.waterSpawnPointsForBlue1.transform.position,
+                                                Application.model.spawnModel.waterSpawnPointsForBlue1.transform.rotation,hit.collider);
+                                        }
+                                        
 
                                     }
 
                                     else if (hit.collider.CompareTag("Red"))
                                     {
-                                        var spawnController = FindObjectOfType<SpawnController>();
-                                        spawnController.SetUnitTagToRed();
-                                        spawnController.Spawner(
-                                            Application.model.spawnModel.spawnPointsForRed1.transform.position,
-                                            Application.model.spawnModel.spawnPointsForRed1.transform.rotation);
+                                        if (FindObjectOfType<SpawnController>().prefab.name == "Jet Fighter" || FindObjectOfType<SpawnController>().prefab.name == "Helicopter")
+                                        {
+                                            var spawnController = FindObjectOfType<SpawnController>();
+                                            spawnController.SetUnitTagToRed();
+                                            spawnController.Spawner(
+                                                Application.model.spawnModel.airSpawnPointsForRed1.transform.position,
+                                                Application.model.spawnModel.airSpawnPointsForRed1.transform.rotation,hit.collider);
+                                        }
+                                        else
+                                        {
+                                            var spawnController = FindObjectOfType<SpawnController>();
+                                            spawnController.SetUnitTagToRed();
+                                            spawnController.Spawner(
+                                                Application.model.spawnModel.waterSpawnPointsForRed1.transform.position,
+                                                Application.model.spawnModel.waterSpawnPointsForRed1.transform.rotation,hit.collider);
+                                        }
                                     }
                                 }
-                                else if (hit.collider.name == "Refinery 2" || hit.collider.name == "Road 2")
+                                else if (hit.collider.name == "Refinery 2" || hit.collider.name == "Water 2")
                                 {
                                     Debug.Log("2");
 
                                     if (hit.collider.CompareTag("Blue"))
                                     {
-                                        var spawnController = FindObjectOfType<SpawnController>();
-                                        spawnController.SetUnitTagToBlue();
-                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForBlue2.transform.position,Application.model.spawnModel.spawnPointsForBlue2.transform.rotation);
+                                        if (FindObjectOfType<SpawnController>().prefab.name == "Jet Fighter" || FindObjectOfType<SpawnController>().prefab.name == "Helicopter")
+                                        {
+                                            var spawnController = FindObjectOfType<SpawnController>();
+                                            spawnController.SetUnitTagToBlue();
+                                            spawnController.Spawner(
+                                                Application.model.spawnModel.airSpawnPointsForBlue2.transform.position,
+                                                Application.model.spawnModel.airSpawnPointsForBlue2.transform.rotation,hit.collider);
+                                        }
+                                        else
+                                        {
+                                            var spawnController = FindObjectOfType<SpawnController>();
+                                            spawnController.SetUnitTagToBlue();
+                                            spawnController.Spawner(
+                                                Application.model.spawnModel.waterSpawnPointsForBlue2.transform.position,
+                                                Application.model.spawnModel.waterSpawnPointsForBlue2.transform.rotation,hit.collider);
+                                        }
                                     }
                                     
                                     else if (hit.collider.CompareTag("Red"))
                                     {
-                                        var spawnController = FindObjectOfType<SpawnController>();
-                                        spawnController.SetUnitTagToRed();
-                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForRed2.transform.position,Application.model.spawnModel.spawnPointsForRed2.transform.rotation);
+                                        if (FindObjectOfType<SpawnController>().prefab.name == "Jet Fighter"  || FindObjectOfType<SpawnController>().prefab.name == "Helicopter")
+                                        {
+                                            var spawnController = FindObjectOfType<SpawnController>();
+                                            spawnController.SetUnitTagToRed();
+                                            spawnController.Spawner(
+                                                Application.model.spawnModel.airSpawnPointsForRed2.transform.position,
+                                                Application.model.spawnModel.airSpawnPointsForRed2.transform.rotation,hit.collider);
+                                        }
+                                        else
+                                        {
+                                            var spawnController = FindObjectOfType<SpawnController>();
+                                            spawnController.SetUnitTagToRed();
+                                            spawnController.Spawner(
+                                                Application.model.spawnModel.waterSpawnPointsForRed2.transform.position,
+                                                Application.model.spawnModel.waterSpawnPointsForRed2.transform.rotation,hit.collider);
+                                        }
                                     
                                     }
                                 }
                             
-                                else if (hit.collider.name == "Refinery 3" || hit.collider.name == "Road 3")
+                                else if (hit.collider.name == "Refinery 3" || hit.collider.name == "Water 3")
                                 {
                                     Debug.Log("3");
                                     if (hit.collider.CompareTag("Blue"))
                                     {
-                                        var spawnController = FindObjectOfType<SpawnController>();
-                                        spawnController.SetUnitTagToBlue();
-                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForBlue3.transform.position,Application.model.spawnModel.spawnPointsForBlue3.transform.rotation);
+                                        if (FindObjectOfType<SpawnController>().prefab.name == "Jet Fighter"  || FindObjectOfType<SpawnController>().prefab.name == "Helicopter")
+                                        {
+                                            var spawnController = FindObjectOfType<SpawnController>();
+                                            spawnController.SetUnitTagToBlue();
+                                            spawnController.Spawner(
+                                                Application.model.spawnModel.airSpawnPointsForBlue3.transform.position,
+                                                Application.model.spawnModel.airSpawnPointsForBlue3.transform.rotation,hit.collider);
+                                        }
+                                        else
+                                        {
+                                            var spawnController = FindObjectOfType<SpawnController>();
+                                            spawnController.SetUnitTagToBlue();
+                                            spawnController.Spawner(
+                                                Application.model.spawnModel.waterSpawnPointsForBlue3.transform.position,
+                                                Application.model.spawnModel.waterSpawnPointsForBlue3.transform.rotation,hit.collider);
+                                        }
                                     }
                                     
                                     else if (hit.collider.CompareTag("Red")) 
                                     {
-                                        var spawnController = FindObjectOfType<SpawnController>();
-                                        spawnController.SetUnitTagToRed();
-                                        spawnController.Spawner(Application.model.spawnModel.spawnPointsForRed3.transform.position,Application.model.spawnModel.spawnPointsForRed3.transform.rotation);
+                                        if (FindObjectOfType<SpawnController>().prefab.name == "Jet Fighter"  || FindObjectOfType<SpawnController>().prefab.name == "Helicopter")
+                                        {
+                                            var spawnController = FindObjectOfType<SpawnController>();
+                                            spawnController.SetUnitTagToRed();
+                                            spawnController.Spawner(
+                                                Application.model.spawnModel.airSpawnPointsForRed3.transform.position,
+                                                Application.model.spawnModel.airSpawnPointsForRed3.transform.rotation,hit.collider);
+                                        }
+                                        else
+                                        {
+                                            var spawnController = FindObjectOfType<SpawnController>();
+                                            spawnController.SetUnitTagToRed();
+                                            spawnController.Spawner(
+                                                Application.model.spawnModel.waterSpawnPointsForRed3.transform.position,
+                                                Application.model.spawnModel.waterSpawnPointsForRed3.transform.rotation,hit.collider);
+                                        }
                                         
                                     } 
                                 }

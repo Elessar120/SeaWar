@@ -12,13 +12,13 @@ namespace AMVCC.Controllers
             {
                 if (other.name == "Artillery" || other.name == "Radioactive Tower" || other.name == "Anti Air Craft" || other.name == "Sea Mine")
                 {
-                    Debug.Log("befor effect : " + other.GetComponent<SeaWarAttackView>().damage);
+//                    Debug.Log("befor effect : " + other.GetComponent<SeaWarAttackView>().damage);
                 
                     GetComponent<SeaWarElectricTowerView>().effectedTowers.Add(other);
                     other.GetComponent<SeaWarAttackView>().damage = other.GetComponent<SeaWarAttackView>().damage *
                                                                     Application.model.electricTowerModel
                                                                         .damageIncreasedCoeffidency;
-                    Debug.Log("after effect : " + other.GetComponent<SeaWarAttackView>().damage);
+//                    Debug.Log("after effect : " + other.GetComponent<SeaWarAttackView>().damage);
                 }
             }
         }

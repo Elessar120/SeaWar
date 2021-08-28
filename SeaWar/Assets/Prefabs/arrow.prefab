@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8621721842067219824}
   - component: {fileID: 1211408891294703505}
-  m_Layer: 19
+  m_Layer: 2
   m_Name: KeyLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,6 +90,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &3296039274750931517
@@ -102,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 327960202402163218}
   - component: {fileID: 8839411372929793028}
-  m_Layer: 19
+  m_Layer: 2
   m_Name: BackLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,6 +183,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &3623689116312752657
@@ -195,7 +197,7 @@ GameObject:
   - component: {fileID: 1329737902483092103}
   - component: {fileID: 473938610745547273}
   - component: {fileID: 1869396941584911015}
-  m_Layer: 19
+  m_Layer: 2
   m_Name: Box1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,10 +237,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -263,6 +267,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3626463341566707421
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7786354630866049336}
-  m_Layer: 19
+  m_Layer: 2
   m_Name: arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8484592123984186429}
-  m_Layer: 19
+  m_Layer: 2
   m_Name: CameraPreset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +344,7 @@ GameObject:
   - component: {fileID: 8355724589137728309}
   - component: {fileID: 3909140591171138319}
   - component: {fileID: 8980089423811159386}
-  m_Layer: 19
+  m_Layer: 2
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,10 +384,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -407,6 +414,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7070448438317495267
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3283302540940102997}
-  m_Layer: 19
+  m_Layer: 2
   m_Name: LightPreset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7680677636053722250}
   - component: {fileID: 6643496414347222955}
-  m_Layer: 19
+  m_Layer: 2
   m_Name: FillLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,6 +538,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &7984211687495739274
@@ -542,7 +551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6824371826471388820}
   - component: {fileID: 183425371575601957}
-  m_Layer: 19
+  m_Layer: 2
   m_Name: TurnTableCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}

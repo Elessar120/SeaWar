@@ -52,10 +52,14 @@ namespace AMVCC.Controllers
                     if (other.GetComponent<SeaWarAttackView>().lastRecivedDamageTimeOfRadioactiveTower <= 0)
                     {
                         //Attack(other.gameObject);
-                        Debug.Log(other.gameObject.name);
+//                        Debug.Log(other.gameObject.name);
 
-                        other.gameObject.GetComponent<SeaWarHealthView>().TakeDamage(GetComponent<SeaWarAttackView>().damage);
-                        Debug.Log(GetComponent<SeaWarAttackView>().damage);
+                        if (other.gameObject.GetComponent<SeaWarHealthView>())
+                        {
+                            other.gameObject.GetComponent<SeaWarHealthView>().TakeDamage(GetComponent<SeaWarAttackView>().damage);
+
+                        }
+                        //Debug.Log(GetComponent<SeaWarAttackView>().damage);
                         Debug.Log("Attack");
                         other.GetComponent<SeaWarAttackView>().lastRecivedDamageTimeOfRadioactiveTower =
                             Application.model.radioActiveTowerModel.fireRate;
