@@ -7,10 +7,15 @@ namespace AMVCC.Models
     {
         public float damage;
         public Unit artilleryData;
-
-        private void Awake()
+        public float fireRate;
+        public float health;
+        public float speed;
+    private void Awake()
         {
             damage = artilleryData.damage;
+            speed = artilleryData.movmentSpeed;
+            fireRate = artilleryData.fireRate;
+            health = artilleryData.health;
         }
     }
 }

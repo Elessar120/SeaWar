@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcbb73636c4482a877766f44931fad5, type: 3}
+  m_Name: Artillery
+  m_EditorClassIdentifier: 
+  unitName: Artillery
+  prefab: {fileID: 4256583329625073247, guid: e8e48bf288fe0074eb4218e22ce8c24b, type: 3}
+  level: 1
+  movmentSpeed: 0
+  rotateSpeed: 360
+  enemySlowDownCoefficient: 0
+  damage: 10
+  explosionArea: 0
+  increasedDamageCoefficient: 0
+  health: 500
+  fireRate: 0.2
+  sightRange: 4
+  rotationSpeed: 0
+  costWithGold: 0
+  costWithOil: 2500
+  upgradeCardsNeed: 2
+  upgradeGoldsNeed: 0
+  supportDamageRate: 0
+  productionRate: 0
+  earnedMoney: 0
+  spawnButton: {fileID: 0}
+  AttackTargets: []

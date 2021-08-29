@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 7406097450352507873}
   m_Layer: 0
   m_Name: Radioactive Tower
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

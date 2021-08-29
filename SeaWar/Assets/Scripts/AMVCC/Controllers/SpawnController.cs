@@ -119,7 +119,7 @@ namespace AMVCC.Controllers
         public void FindProperSpawnPositionTowers(Collider hit)
         {
 //            Debug.Log("before spawn");
-            Vector3 spawnPosition = hit.transform.position + new Vector3(0,2,0);
+            Vector3 spawnPosition = hit.transform.position + new Vector3(0,.5f,0);
 
             if (hit.gameObject.CompareTag("Blue"))
             {
