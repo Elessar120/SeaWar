@@ -52,7 +52,7 @@ namespace AMVCC.Controllers
             costWithOil = newUnit.costWithOil;
             prefab = newUnit.prefab;
             prefab.name = newUnit.unitName;
-//            Debug.Log(newUnit.unitName + prefab.name);
+            Debug.Log(newUnit.unitName + prefab.name);
             if (FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
             {
                 FindObjectOfType<SeaWarUIView>().DisableRoads();
