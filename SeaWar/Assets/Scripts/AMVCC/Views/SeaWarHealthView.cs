@@ -152,8 +152,8 @@ namespace AMVCC.Views
             {
                 health = 0f;
                 isDead = true;
-                OnRegister();
                 Death();
+                OnRegister();
             }
             //return isDead;
             }
@@ -163,16 +163,20 @@ namespace AMVCC.Views
             Debug.Log("list has : " + attackers.Count + "objects");
             foreach (GameObject attacker in attackers)
             {
-                Debug.Log(attacker.name);
-                if (attacker.name == "Helicopter(Clone)")   
+                if (attacker != null)
                 {
-                    attacker.GetComponent<SeaWarHelicopterAttackController>().onKillAction();
-                    Debug.Log("I called action");
+                    Debug.Log(attacker.name);
+                    if (attacker.name == "Helicopter(Clone)")   
+                    {
+                        attacker.GetComponent<SeaWarHelicopterAttackController>().onKillAction();
+                        Debug.Log("I called action");
+                    }
+                    else if (attacker.name == "Frigate(Clone)")
+                    {
+                        attacker.GetComponent<SeaWarFrigateAttackController>().onKillAction();
+                    }
                 }
-                else if (attacker.name == "Frigate(Clone)")
-                {
-                    attacker.GetComponent<SeaWarFrigateAttackController>().onKillAction();
-                }
+                
             }        
         }
 

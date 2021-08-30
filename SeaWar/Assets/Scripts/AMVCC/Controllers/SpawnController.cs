@@ -52,6 +52,7 @@ namespace AMVCC.Controllers
             costWithOil = newUnit.costWithOil;
             prefab = newUnit.prefab;
             prefab.name = newUnit.unitName;
+            
             Debug.Log(newUnit.unitName + prefab.name);
             if (FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
             {
@@ -119,7 +120,7 @@ namespace AMVCC.Controllers
         public void FindProperSpawnPositionTowers(Collider hit)
         {
 //            Debug.Log("before spawn");
-            Vector3 spawnPosition = hit.transform.position + new Vector3(0,.5f,0);
+            Vector3 spawnPosition = hit.transform.position + new Vector3(0,0,0);
 
             if (hit.gameObject.CompareTag("Blue"))
             {

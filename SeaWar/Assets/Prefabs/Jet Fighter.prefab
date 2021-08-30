@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 5553884380368058812}
   m_Layer: 2
   m_Name: Jet Fighter(Clone)
-  m_TagString: Untagged
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

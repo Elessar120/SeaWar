@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 2473983956925997010}
   m_Layer: 2
   m_Name: aiSkyDomeLight1
-  m_TagString: Untagged
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
