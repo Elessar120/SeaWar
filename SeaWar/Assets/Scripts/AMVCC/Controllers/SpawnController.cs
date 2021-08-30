@@ -124,12 +124,28 @@ namespace AMVCC.Controllers
             if (hit.gameObject.CompareTag("Blue"))
             {
                 prefab.tag = "Blue";
+                if (prefab.transform.parent)
+                {
+                    prefab.transform.parent.tag = "Blue";
+                }
+                if (prefab.transform.GetChild(0))
+                {
+                    prefab.transform.GetChild(0).tag = "Blue";
+                }
                 Spawner(spawnPosition,hit.transform.rotation,hit);
 //                Debug.Log("tower spawn");
             }
             if (hit.gameObject.CompareTag("Red"))
             {
                 prefab.tag = "Red";
+                if (prefab.transform.parent)
+                {
+                    prefab.transform.parent.tag = "Red";
+                }       
+                if (prefab.transform.GetChild(0))
+                {
+                    prefab.transform.GetChild(0).tag = "Red";
+                }
                 Spawner(spawnPosition,hit.transform.rotation,hit);
 //                Debug.Log("tower spawn");
 
@@ -159,11 +175,30 @@ namespace AMVCC.Controllers
         public void SetUnitTagToBlue()
         {
             prefab.tag = "Blue";
+            if (prefab.transform.parent)
+            {
+                prefab.transform.parent.tag = "Blue";
+            }
+            if (prefab.transform.GetChild(0))
+            {
+                prefab.transform.GetChild(0).tag = "Blue";
+            }
+            
         }
 
         public void SetUnitTagToRed()
         {
             prefab.tag = "Red";
+            if (prefab.transform.parent)
+            {
+                prefab.transform.parent.tag = "Red";
+            }
+
+            if (prefab.transform.GetChild(0))
+            {
+                prefab.transform.GetChild(0).tag = "Red";
+            }
+            
         }
         /*
         public void FindProperSpawnPosition(Collider hit)

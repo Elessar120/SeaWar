@@ -50,12 +50,13 @@ namespace AMVCC.Controllers
         {
             if (!other.CompareTag(transform.parent.tag))
             {
-                if (other.gameObject.name == "Oil Tanker" || other.gameObject.name == "Radioactive Tower" || other.gameObject.name == "Magnetic Tower" || other.gameObject.name == "Electric Tower" || other.gameObject.name == "Motor Boat" || other.gameObject.name == "Lench" || other.gameObject.name == "Submarine" || other.gameObject.name == "Trench" || other.gameObject.name == "Anti Air Craft" || other.gameObject.name == "Artillery")
+                if (other.gameObject.name == "Refinery 1" || other.gameObject.name == "Refinery 2" || other.gameObject.name == "Refinery 3" || other.gameObject.name == "Oil Tanker" || other.gameObject.name == "Radioactive Tower" || other.gameObject.name == "Magnetic Tower" || other.gameObject.name == "Electric Tower" || other.gameObject.name == "Motor Boat" || other.gameObject.name == "Lench" || other.gameObject.name == "Submarine" || other.gameObject.name == "Trench" || other.gameObject.name == "Anti Air Craft" || other.gameObject.name == "Artillery")
 
                 {
+                    Debug.Log("cumiiiiiiiiiing! to " + other.name + " pussy! it is so good!");
+
                     //StopMoving();
                     Attack(other);
-                      
                 }
             }
         }

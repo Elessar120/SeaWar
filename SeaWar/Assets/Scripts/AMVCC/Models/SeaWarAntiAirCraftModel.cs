@@ -15,6 +15,7 @@ namespace AMVCC.Models
         {
             damage = antiAirCraftData.damage;
             health = antiAirCraftData.health;
+            fireRate = antiAirCraftData.fireRate;
         }
     }
 }

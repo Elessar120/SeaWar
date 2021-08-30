@@ -2276,7 +2276,7 @@ GameObject:
   - component: {fileID: 5772257110111992439}
   m_Layer: 11
   m_Name: Lench
-  m_TagString: Blue
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

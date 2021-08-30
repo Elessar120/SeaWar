@@ -35,9 +35,10 @@ namespace AMVCC.Controllers
             if (!other.CompareTag(gameObject.tag))
             {
 
-                if (other.name == "Jet Fighter" || other.name == "Helicopter" || other.name == "Missile")
+                if (other.name == "Motor Boat" || other.name == "Lench" || other.name == "Frigate" || other.name == "BattleShip" || other.name == "Oil Tanker" || other.name == "Submarine")
 
                 {
+                    Debug.Log("Fire!");
 //todo                    StartCoroutine("Rotator");
                     Attack(other);
                     
@@ -52,7 +53,7 @@ namespace AMVCC.Controllers
             if (!other.CompareTag(gameObject.tag))
             {
 
-                if (other.name == "Jet Fighter" || other.name == "Helicopter" || other.name == "Missile")
+                if (other.name == "Motor Boat" || other.name == "Lench" || other.name == "Frigate" || other.name == "BattleShip" || other.name == "Oil Tanker" || other.name == "Submarine")
 
                 {
                     Attack(other);

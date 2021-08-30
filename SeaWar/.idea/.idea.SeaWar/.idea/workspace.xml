@@ -2,70 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57948be8-0927-4994-a554-03ff991ccd6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Artillery.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Artillery.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Demo Scene.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Demo Scene/CameraController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Demo Scene/CameraController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Demo Scene/Demo.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Demo Scene/Demo.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Demo Scene/DemoSettings.lighting" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Demo Scene/DemoSettings.lighting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Demo Scene/Digital Blue Camouflage.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Demo Scene/Digital Blue Camouflage.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Demo Scene/Universal Camoflauge.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Demo Scene/Universal Camoflauge.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Demo Scene/Woodlands Camoflauge.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Demo Scene/Woodlands Camoflauge.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Camouflage.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Camouflage/Digital Blue Camouflage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Camouflage/Digital Blue Camouflage.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Camouflage/Universal Camoflauge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Camouflage/Universal Camoflauge.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Camouflage/Woodlands Camoflauge.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Camouflage/Woodlands Camoflauge.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Details.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Details.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Main 1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Main 1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Main 2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Main 2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Main 3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Main 3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Textures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Textures/Detail Textures.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Textures/Detail Textures.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Textures/brushed metal.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Textures/brushed metal.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Textures/lightmap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Textures/lightmap.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Trim 1.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Trim 1.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Trim 2.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Trim 2.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Trim 3.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Materials/Trim 3.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Tank Model.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/Artillery Tank/Tank Model.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Artillery.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Artillery.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Artillery.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Artillery.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarArtilleryController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarArtilleryController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarArtilleryView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarArtilleryView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SeaWar info/تجهیزات متداول.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../SeaWar info/تجهیزات متداول.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Anti Air Craft.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Anti Air Craft.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Radioactive Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Radioactive Tower.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/electronic tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/electronic tower.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Artillery.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Artillery.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Frigate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Frigate.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Helicopter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Helicopter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Jet Fighter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Jet Fighter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lench.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Lench.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarAntiAirCraftController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarAntiAirCraftController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarArtilleryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarArtilleryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarJetFighterAttckController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarJetFighterAttckController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SpawnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SpawnController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarArtilleryModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarArtilleryModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarAntiAirCraftModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarAntiAirCraftModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarArtilleryView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarArtilleryView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarAttackView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarAttackView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHealthView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHealthView.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,13 +66,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarTrenchController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarJetFighterView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarJetFighterModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarAntiAirCraftModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarAntiAirCraftController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarHelicopterController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSeaMineView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarAntiAirCraftView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarRadioActiveTowerAttackController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarAttackView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHelicopterView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarHelicopterMoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarHelicopterModel.cs" />
@@ -130,18 +77,22 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/FrigateModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/UserInputController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarJetFighterAttckController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarFrigateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarFrigateView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarElement.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarFrigateModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHealthView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarFrigateMoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarFrigateAttackController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarFrigateRotateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarArtilleryModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarArtilleryView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHealthView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarArtilleryController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarArtilleryView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarAntiAirCraftModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarAntiAirCraftView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarAttackView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarAntiAirCraftController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarJetFighterAttckController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SpawnController.cs" />
     </changedPaths>
   </component>
@@ -403,6 +354,8 @@
       <workItem from="1630182907457" duration="3282000" />
       <workItem from="1630238200987" duration="7541000" />
       <workItem from="1630258952383" duration="3075000" />
+      <workItem from="1630331384298" duration="593000" />
+      <workItem from="1630341951853" duration="7703000" />
     </task>
     <task id="LOCAL-00001" summary="wrong spawn position bugs fixed, UI bugs remain, refactor code for removing codes about using layer, working on electric tower">
       <created>1625493955267</created>

@@ -61,10 +61,25 @@ namespace AMVCC.Views
                 case "Helicopter":
                     SetHelicopterHealth();
                     break;
+                case  "Artillery":
+                    SetArtilleryHealth();
+                    break;
+                case "Frigate":
+                    SetFrigateHealth();
+                    break;
             }
         }
 
-       
+        private void SetFrigateHealth()
+        {
+            health = Application.model.seaWarFrigateModel.health;
+        }
+
+        private void SetArtilleryHealth()
+        {
+            Debug.Log("artillery health : " + health);
+            health = Application.model.artilleryModel.health;
+        }
 
 
         private void SetHealthTrench()

@@ -1826,6 +1826,7 @@ GameObject:
   - component: {fileID: 4256583329029746321}
   - component: {fileID: 4256583329029746322}
   - component: {fileID: 4256583329029746323}
+  - component: {fileID: 1088102529749840759}
   m_Layer: 0
   m_Name: Artillery
   m_TagString: Blue
@@ -1907,8 +1908,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7, y: 3, z: 5}
-  m_Center: {x: 0, y: 0, z: -0.2}
+  m_Size: {x: 2.7, y: 50, z: 5}
+  m_Center: {x: 0, y: 15.93, z: -0.2}
 --- !u!54 &4256583329029746323
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1925,6 +1926,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1088102529749840759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256583329029746325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c642adb7f9c84b7899fa63bf6155b055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  attackers: []
 --- !u!1 &4256583329046187106
 GameObject:
   m_ObjectHideFlags: 0
@@ -2428,6 +2443,9 @@ GameObject:
   - component: {fileID: 4256583329297864783}
   - component: {fileID: 4256583329297864781}
   - component: {fileID: 4256583329297864782}
+  - component: {fileID: 911540396508892849}
+  - component: {fileID: 3818991114477741783}
+  - component: {fileID: 3608727186541431288}
   m_Layer: 2
   m_Name: Artillery(Clone)
   m_TagString: Untagged
@@ -2476,8 +2494,57 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 3, z: 20}
+  m_Size: {x: 20, y: 5, z: 20}
   m_Center: {x: 0, y: 0, z: 12.5}
+--- !u!114 &911540396508892849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256583329297864768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2aa78d3ea374dea93e583518496c9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0
+  isAttackTime: 0
+--- !u!114 &3818991114477741783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256583329297864768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea39fe069a248d590fbf93ed7b85b25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0
+  damage: 0
+  speed: 0
+--- !u!114 &3608727186541431288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256583329297864768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f329d8438547f7afb26255c98f31c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0
+  lastRecivedDamageTimeOfRadioactiveTower: 0
+  reciveDamageOfMagneticTower: 0
+  reciveDamageOfElectricTower: 0
+  speed: 0
+  speedHolder: 0
+  damage: 0
+  damageHolder: 0
 --- !u!1 &4256583329331977689
 GameObject:
   m_ObjectHideFlags: 0
@@ -3070,7 +3137,7 @@ GameObject:
   - component: {fileID: 4256583329625073246}
   m_Layer: 0
   m_Name: Artillery
-  m_TagString: Blue
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

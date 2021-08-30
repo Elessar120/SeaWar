@@ -33,13 +33,13 @@ namespace AMVCC.Controllers
 
         private void OnTriggerEnter(Collider other)
         {
-
             if (!other.CompareTag(gameObject.tag))
             {
 
                 if (other.name == "Jet Fighter" || other.name == "Helicopter" || other.name == "Missile")
 
                 {
+
 //todo                    StartCoroutine("Rotator");
                    Attack(other);
                     
@@ -74,7 +74,9 @@ namespace AMVCC.Controllers
 
             if (isAttackTime)
             {
-                hit.GetComponent<SeaWarHealthView>().TakeDamage(GetComponent<SeaWarAttackView>().damage);
+                hit.GetComponent<SeaWarHealthView>().TakeDamage(GetComponent<SeaWarAntiAirCraftView>().damage);
+                Debug.Log("AHHHH! " + hit.name + "is in me! it's damage is : " + GetComponent<SeaWarAttackView>().damage);
+
             }
 
             isAttackTime = false;
