@@ -495,6 +495,7 @@ GameObject:
   - component: {fileID: 3046388094804873604}
   - component: {fileID: 2344201696027492555}
   - component: {fileID: 1580254844148234616}
+  - component: {fileID: 1105675921320831111}
   m_Layer: 0
   m_Name: Anti Air Craft
   m_TagString: Blue
@@ -580,6 +581,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.015, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1105675921320831111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3483732699265210394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f329d8438547f7afb26255c98f31c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 0
+  lastRecivedDamageTimeOfRadioactiveTower: 0
+  reciveDamageOfMagneticTower: 0
+  reciveDamageOfElectricTower: 0
+  speed: 0
+  speedHolder: 0
+  damage: 0
+  damageHolder: 0
 --- !u!1 &3726402446766340510
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,25 @@
+﻿using System;
+using UnityEngine;
+
+namespace AMVCC.Models
+{
+    public class SeaWarBattleshipModel : SeaWarElement
+    {
+        public Unit battleshipData;
+        public float missleSpeed;
+        public float speed;
+        public float health;
+        public float damage;
+        public float fireRate;
+        public float rotateSpeed;
+        private void Awake()
+        {
+            missleSpeed = battleshipData.missleSpeed;
+            speed = battleshipData.movmentSpeed;
+            health = battleshipData.health;
+            damage = battleshipData.damage;
+            fireRate = battleshipData.fireRate;
+            rotateSpeed = battleshipData.rotateSpeed;
+        }
+    }
+}

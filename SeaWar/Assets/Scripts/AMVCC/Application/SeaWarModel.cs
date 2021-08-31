@@ -24,4 +24,5 @@ public class SeaWarModel : SeaWarElement
         public SeaWarJetFighterModel jetFighterModel;
         public SeaWarHelicopterModel helicopterModel;
         public SeaWarFrigateModel seaWarFrigateModel;
+        public SeaWarBattleshipModel battleshipModel;
 }
