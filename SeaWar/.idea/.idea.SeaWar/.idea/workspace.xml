@@ -69,7 +69,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarHelicopterAttackController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/FrigateModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/UserInputController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarFrigateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarFrigateView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarElement.cs" />
@@ -85,8 +84,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarAttackView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarAntiAirCraftController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarJetFighterAttckController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHealthView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/UserInputController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SpawnController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHealthView.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nvkw4CZd3Voqph4zwu9SPctwCa" />
@@ -350,6 +350,7 @@
       <workItem from="1630331384298" duration="593000" />
       <workItem from="1630341951853" duration="7703000" />
       <workItem from="1630354477333" duration="4959000" />
+      <workItem from="1630405901063" duration="8670000" />
     </task>
     <task id="LOCAL-00001" summary="wrong spawn position bugs fixed, UI bugs remain, refactor code for removing codes about using layer, working on electric tower">
       <created>1625493955267</created>

@@ -120,8 +120,8 @@ namespace AMVCC.Controllers
         public void FindProperSpawnPositionTowers(Collider hit)
         {
 //            Debug.Log("before spawn");
-            Vector3 spawnPosition = hit.transform.position + new Vector3(0,0,0);
-
+            Vector3 spawnPosition = hit.transform.position + new Vector3(0,hit.GetComponentInChildren<Renderer>().bounds.extents.y,0);
+//Debug.Log(hit.transform.position.y + "   " + hit.GetComponent<BoxCollider>().bounds.extents.y + "   " + prefab.GetComponent<BoxCollider>().bounds.extents.y + " = " + spawnPosition);
             if (hit.gameObject.CompareTag("Blue"))
             {
                 prefab.tag = "Blue";
@@ -152,22 +152,22 @@ namespace AMVCC.Controllers
 
             }
         }
-        public void FindProperSpawnPositionTrench(Collider hit)
+        public void FindProperSpawnPositionTrench(GameObject hit)
         {
 //            Debug.Log("before spawn");
-            Vector3 spawnPosition = hit.transform.position + new Vector3(0,2,0);
+            Vector3 spawnPosition = hit.transform.position - new Vector3(0,hit.GetComponent<BoxCollider>().bounds.extents.y,0);
 
             if (hit.gameObject.CompareTag("Blue"))
             {
                 prefab.tag = "Blue";
-                Spawner(spawnPosition,hit.transform.rotation,hit);
+                Spawner(spawnPosition,hit.transform.rotation,hit.GetComponent<Collider>());
 //                Debug.Log("tower spawn");
             }
             if (hit.gameObject.CompareTag("Red"))
             {
                 prefab.tag = "Red";
 
-                Spawner(spawnPosition,hit.transform.rotation,hit);
+                Spawner(spawnPosition,hit.transform.rotation,hit.GetComponent<Collider>());
 //                Debug.Log("tower spawn");
 
             }
@@ -320,6 +320,7 @@ namespace AMVCC.Controllers
                 
                 var unit = Instantiate(prefab, spawnPosition,spawnRotation);
                 unit.name = prefab.name;
+                unit.transform.position += new Vector3(0, unit.GetComponent<BoxCollider>().bounds.extents.y, 0);
                 if (unit.name == "Trench")
                 {
                     //Debug.Log("i am trench");

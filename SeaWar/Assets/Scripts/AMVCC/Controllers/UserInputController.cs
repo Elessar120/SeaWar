@@ -152,7 +152,7 @@ namespace AMVCC.Controllers
                                     // spawn trench
                                     Debug.Log(hit.collider.gameObject.name);
 
-                                    FindObjectOfType<SpawnController>().FindProperSpawnPositionTrench(hit.collider);
+                                    FindObjectOfType<SpawnController>().FindProperSpawnPositionTrench(hit.collider.gameObject);
                                 }
                                 else if (hit.collider.name == "Trench")
                                 {

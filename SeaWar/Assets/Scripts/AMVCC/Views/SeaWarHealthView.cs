@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using AMVCC.Controllers;
 using UnityEngine;
 
@@ -182,7 +183,12 @@ namespace AMVCC.Views
 
         private void Death()
         {
+            if (transform.parent && gameObject.name != "Trench")
+            {
+                Destroy(transform.parent.gameObject);
+            }
             Destroy(gameObject);
+            
         }
     }
 }

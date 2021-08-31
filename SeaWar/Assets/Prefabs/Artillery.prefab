@@ -1842,7 +1842,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4256583329029746325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.069, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 4256583329536917358}
@@ -1908,8 +1908,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7, y: 50, z: 5}
-  m_Center: {x: 0, y: 15.93, z: -0.2}
+  m_Size: {x: 5, y: 1.75, z: 5}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &4256583329029746323
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3135,9 +3135,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4256583329625073246}
-  m_Layer: 0
+  - component: {fileID: 862996034321427669}
+  m_Layer: 2
   m_Name: Artillery
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3157,6 +3158,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &862996034321427669
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4256583329625073247}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4256583329644500814
 GameObject:
   m_ObjectHideFlags: 0
