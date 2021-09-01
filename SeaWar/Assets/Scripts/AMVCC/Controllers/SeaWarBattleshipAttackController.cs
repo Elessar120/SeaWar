@@ -8,6 +8,8 @@ namespace AMVCC.Controllers
     public class SeaWarBattleshipAttackController : SeaWarElement
     {
         [SerializeField]private bool isAttackTime;
+        [SerializeField] private GameObject missle;
+        [SerializeField] private Transform missleLauncher;
         private float fireRate;
         private float damage;
         private Vector3 directionVector;
@@ -68,7 +70,7 @@ namespace AMVCC.Controllers
 //            Debug.Log(other.gameObject.name);
             if (!other.CompareTag(transform.parent.tag))
             {
-                if (other.gameObject.name == "Radioactive Tower" || other.gameObject.name == "Magnetic Tower" || other.gameObject.name == "Electric Tower" || other.gameObject.name == "Trench" || other.gameObject.name == "Anti Air Craft" || other.gameObject.name == "Artillery")
+                    if (other.gameObject.name == "Radioactive Tower" || other.gameObject.name == "Magnetic Tower" || other.gameObject.name == "Electric Tower" || other.gameObject.name == "Trench" || other.gameObject.name == "Anti Air Craft" || other.gameObject.name == "Artillery")
                 {
                     //GetComponentInParent<SeaWarHelicopterMoveController>().moveAction();
                     //todo StartCoroutine("Rotator");
@@ -110,7 +112,8 @@ namespace AMVCC.Controllers
                 {
                     
                         var trench = hit.transform.Find("Trench");
-                        trench.GetComponent<SeaWarHealthView>().TakeDamage(damage);
+                        //trench.GetComponent<SeaWarHealthView>().TakeDamage(damage);
+                        MissleSpawner();
                         isAttackTime = false;
                 }
 
@@ -123,7 +126,8 @@ namespace AMVCC.Controllers
                 {
                     Debug.Log("suck " + hit.name + "'s dick!");
 
-                        hit.GetComponent<SeaWarHealthView>().TakeDamage(damage);
+                        //hit.GetComponent<SeaWarHealthView>().TakeDamage(damage);
+                        MissleSpawner();
                         isAttackTime = false; 
                 }
                 
@@ -132,7 +136,14 @@ namespace AMVCC.Controllers
 
         }
 
-        private void RemoveQueue()
+        private void MissleSpawner()
+        {
+            GameObject spawnedMissle = Instantiate(missle,missleLauncher.position,missleLauncher.transform.rotation * Quaternion.Euler(-90,0,0));
+            spawnedMissle.tag = gameObject.transform.parent.tag;
+            spawnedMissle.transform.SetParent(gameObject.transform);    
+        }
+
+        private void RemoveQueue()  
         {
             targets.Dequeue();
 

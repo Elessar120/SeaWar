@@ -58,13 +58,13 @@ namespace AMVCC.Controllers
         {
             directionVector = (Vector3)targets.Peek() - transform.position;
 
-            float rotationDegree = Mathf.Atan(directionVector.y / directionVector.magnitude) * Mathf.Rad2Deg;
+            double rotationDegree = Mathf.Atan(directionVector.y / directionVector.x) * Mathf.Rad2Deg;
             Debug.Log("rotation Degree : " + rotationDegree);
 
             Rotator(rotationDegree);
         }
 
-        private void Rotator(float rotationDegree)
+        private void Rotator(double rotationDegree)
         {
             /*if (targets.Count == 0)
             {
@@ -73,7 +73,7 @@ namespace AMVCC.Controllers
             }*/
             //else
             //{
-                Quaternion lookRotation = Quaternion.LookRotation(directionVector);
+                Quaternion lookRotation = Quaternion.LookRotation(directionVector,Vector3.up);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation,rotateSpeed * Time.deltaTime);
                 //Debug.Log("rotation degree is : " + rotationDegree);
                 //  }

@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 8319464231139343158}
   m_Layer: 0
   m_Name: Gunship
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 1449186138877568131}
   m_Layer: 0
   m_Name: Helicopter
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,7 +13,9 @@ public class Unit : ScriptableObject
  public float movmentSpeed;
  
  public float missleSpeed;
- 
+ public float missleDamage;
+ public float missleHealth;
+     
  public float rotateSpeed;
  public float enemySlowDownCoefficient;
  public float damage;

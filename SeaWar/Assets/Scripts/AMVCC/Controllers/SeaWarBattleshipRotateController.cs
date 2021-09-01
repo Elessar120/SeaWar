@@ -57,15 +57,15 @@ namespace AMVCC.Controllers
         }
         private void RotationCalculator()
         {
-            directionVector = (Vector3)targets.Peek() - GetComponentInChildren<Transform>().position;
+            directionVector = (Vector3)targets.Peek() - transform.position;
 
-            float rotationDegree = Mathf.Atan(directionVector.y / directionVector.magnitude) * Mathf.Rad2Deg;
+            double rotationDegree = Mathf.Atan(directionVector.y / directionVector.x) * Mathf.Rad2Deg;
             Debug.Log("rotation Degree : " + rotationDegree);
 
             Rotator(rotationDegree);
         }
 
-        private void Rotator(float rotationDegree)
+        private void Rotator(double rotationDegree)
         {
             /*if (targets.Count == 0)
             {
