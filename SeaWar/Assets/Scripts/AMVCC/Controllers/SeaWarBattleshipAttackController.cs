@@ -100,40 +100,9 @@ namespace AMVCC.Controllers
 
         private void Attack(Collider hit)
         {
-            if (!hit.GetComponent<SeaWarHealthView>().attackers.Contains(gameObject))
-            {
-                hit.GetComponent<SeaWarHealthView>().attackers.Add(gameObject);     
-            }
-            Debug.Log("my name is : " + hit.name);
+
+            //Debug.Log("my name is : " + hit.name);
             //SeaWarHelicopterMoveController.moveAction();
-            if (hit.transform.Find("Trench"))
-            {
-                if (isAttackTime)
-                {
-                    
-                        var trench = hit.transform.Find("Trench");
-                        //trench.GetComponent<SeaWarHealthView>().TakeDamage(damage);
-                        MissleSpawner();
-                        isAttackTime = false;
-                }
-
-                isAttackTime = false;
-
-            }
-            else if(!hit.transform.Find("Trench"))
-            {
-                if (isAttackTime)
-                {
-                    Debug.Log("suck " + hit.name + "'s dick!");
-
-                        //hit.GetComponent<SeaWarHealthView>().TakeDamage(damage);
-                        MissleSpawner();
-                        isAttackTime = false; 
-                }
-                
-                isAttackTime = false;
-            }
-
         }
 
         private void MissleSpawner()

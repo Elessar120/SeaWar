@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 1052818518893341803}
   m_Layer: 2
   m_Name: Radioactive Tower(Clone)
-  m_TagString: Blue
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 218476194545155027}
   m_Layer: 0
   m_Name: Radioactive Tower
-  m_TagString: Blue
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

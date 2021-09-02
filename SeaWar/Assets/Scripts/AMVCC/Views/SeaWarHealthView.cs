@@ -68,7 +68,25 @@ namespace AMVCC.Views
                 case "Frigate":
                     SetFrigateHealth();
                     break;
+                case "Battleship":
+                    SetBattleshipHealth();
+                    break;
+                case "Battleship Missle(Clone)":
+                    SetBattleshipMissleHealth();
+                    break;
             }
+            
+        }
+
+        private void SetBattleshipHealth()
+        {
+            health = Application.model.battleshipModel.health;
+        }
+
+        private void SetBattleshipMissleHealth()
+        {
+            health = Application.model.battleshipModel.missleHealth;
+
         }
 
         private void SetFrigateHealth()
@@ -183,7 +201,7 @@ namespace AMVCC.Views
 
         private void Death()
         {
-            if (transform.parent && gameObject.name != "Trench")
+            if (transform.parent && gameObject.name != "Trench" && gameObject.name != "Battleship Missle(Clone)")
             {
                 Destroy(transform.parent.gameObject);
             }

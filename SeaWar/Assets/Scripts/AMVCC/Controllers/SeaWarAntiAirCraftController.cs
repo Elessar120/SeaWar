@@ -36,7 +36,7 @@ namespace AMVCC.Controllers
             if (!other.CompareTag(gameObject.tag))
             {
 
-                if (other.name == "Jet Fighter" || other.name == "Helicopter" || other.name == "Missile")
+                if (other.name == "Jet Fighter" || other.name == "Helicopter" || other.name == "Battleship Missle(Clone)")
 
                 {
 
@@ -54,7 +54,7 @@ namespace AMVCC.Controllers
             if (!other.CompareTag(gameObject.tag))
             {
 
-                if (other.name == "Jet Fighter" || other.name == "Helicopter" || other.name == "Missile")
+                if (other.name == "Jet Fighter" || other.name == "Helicopter" || other.name == "Battleship Missle(Clone)")
 
                 {
                    Attack(other);
