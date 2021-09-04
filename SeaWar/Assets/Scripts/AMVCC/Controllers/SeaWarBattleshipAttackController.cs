@@ -25,6 +25,26 @@ namespace AMVCC.Controllers
             onKillAction += RemoveQueue;
             onKillAction += CallActionInRotateClass;
             onKillAction += ChangeMovementStates;
+            onKillAction += UpdateMissilsTarget;
+        }
+
+        private void UpdateMissilsTarget()
+        {
+            /*foreach (Transform child in transform)
+            {
+                if (child.name == "Battleship Missle(Clone)")
+                {
+                    child.GetComponent<SeaWarBattleshipMissleAttackController>().noEnemyAction();
+                }
+            }*/
+            foreach (Transform child in transform)
+            {
+                if (child.name == "Battleship Missle(Clone)")
+                {
+                    child.transform.SetParent(null);
+                        
+                }
+            }
         }
 
         private void Update()
@@ -100,9 +120,40 @@ namespace AMVCC.Controllers
 
         private void Attack(Collider hit)
         {
-
-            //Debug.Log("my name is : " + hit.name);
+            if (!hit.GetComponent<SeaWarHealthView>().attackers.Contains(gameObject))
+            {
+                hit.GetComponent<SeaWarHealthView>().attackers.Add(gameObject);     
+            }
+            Debug.Log("my name is : " + hit.name);
             //SeaWarHelicopterMoveController.moveAction();
+            if (hit.transform.Find("Trench"))
+            {
+                if (isAttackTime)
+                {
+                    
+                        var trench = hit.transform.Find("Trench");
+                        //trench.GetComponent<SeaWarHealthView>().TakeDamage(damage);
+                        MissleSpawner();
+                        isAttackTime = false;
+                }
+
+                isAttackTime = false;
+
+            }
+            else if(!hit.transform.Find("Trench"))
+            {
+                if (isAttackTime)
+                {
+                    Debug.Log("suck " + hit.name + "'s dick!");
+
+                        //hit.GetComponent<SeaWarHealthView>().TakeDamage(damage);
+                        MissleSpawner();
+                        isAttackTime = false; 
+                }
+                
+                isAttackTime = false;
+            }
+
         }
 
         private void MissleSpawner()
@@ -133,6 +184,17 @@ namespace AMVCC.Controllers
             }
 
         }
- 
+
+        private void OnDestroy()
+        {
+            foreach (Transform child in transform)
+            {
+                if (child.name == "Battleship Missle(Clone)")
+                {
+                    child.transform.SetParent(null);
+                        
+                }
+            }
+        }
     }
 }

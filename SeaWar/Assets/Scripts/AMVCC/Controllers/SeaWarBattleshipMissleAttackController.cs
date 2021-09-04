@@ -9,11 +9,26 @@ namespace AMVCC.Controllers
     {
          [SerializeField]private Collider target;
          [SerializeField]private float damage;
-
-         private void Start() 
-         { 
+         public Action noEnemyAction;
+         private void Start()
+         {
+             noEnemyAction += UpdateTarget;
              target = (Collider)GetComponentInParent<SeaWarBattleshipAttackController>().targets.Peek(); 
              damage = Application.model.battleshipModel.damage;
+         }
+
+         private void UpdateTarget()
+         {
+             if (gameObject.transform.parent)
+             {
+                 if (GetComponentInParent<SeaWarBattleshipAttackController>().targets.Peek() != null)
+                 {
+                     target = (Collider)GetComponentInParent<SeaWarBattleshipAttackController>().targets.Peek(); 
+                 }
+             }
+             
+             target = (Collider)GetComponentInParent<SeaWarBattleshipAttackController>().targets.Peek(); 
+
          }
          private void OnTriggerEnter(Collider other)
          {
@@ -28,36 +43,8 @@ namespace AMVCC.Controllers
                          other.GetComponent<SeaWarHealthView>().attackers.Add(gameObject);     
                      }
                      other.GetComponent<SeaWarHealthView>().TakeDamage(damage);
-                     if (hit.transform.Find("Trench"))
-                     {
-                         if (isAttackTime)
-                         {
-                    
-                             var trench = hit.transform.Find("Trench");
-                             //trench.GetComponent<SeaWarHealthView>().TakeDamage(damage);
-                             MissleSpawner();
-                             isAttackTime = false;
-                         }
-
-                         isAttackTime = false;
-
-                     }
-                     else if(!hit.transform.Find("Trench"))
-                     {
-                         if (isAttackTime)
-                         {
-                             Debug.Log("suck " + hit.name + "'s dick!");
-
-                             //hit.GetComponent<SeaWarHealthView>().TakeDamage(damage);
-                             MissleSpawner();
-                             isAttackTime = false; 
-                         }
-                
-                         isAttackTime = false;
-                     }
-
-                 }
-                     Destroy(gameObject);
+                     
+                     Destroy(transform.parent.gameObject);
                  }
              }
          }
