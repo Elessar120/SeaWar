@@ -8,51 +8,83 @@ namespace AMVCC.Controllers
     {
         [SerializeField] new Rigidbody rigidbody;
         [SerializeField] float speed;
-        [SerializeField]private Collider target;
+        public GameObject target;
+        private Vector3 targetPosition;
+        public GameObject myBattleship;
+        //public Action noEnemyAction;
+        public bool isExploded;
         private void Start()
         {
+           // noEnemyAction += UpdateTarget;
             rigidbody = GetComponent<Rigidbody>();
             speed = Application.model.battleshipModel.missleSpeed;
-            target = (Collider)GetComponentInParent<SeaWarBattleshipAttackController>().targets.Peek();
-
+            //target = GetComponent<SeaWarBattleshipMissleView>().target;
+            targetPosition = target.transform.position;
         }
      
         private void FixedUpdate()
         {
-            /*if (target == null)
+            if (transform.position.y >= 9)
             {
-                target = GetComponent<SeaWarBattleshipMissleView>().target;
+                
+                Vector3 directionVector = targetPosition - transform.position;
+                RotationCalculator(directionVector);
+                transform.position += transform.forward * Time.deltaTime * speed;
 
             }
+            else
+            {
+                transform.position += transform.forward * Time.deltaTime * speed;
 
+            }
+            /*if (target != null)
+            {
+                
+
+            }
+            else if(target == null)
+            {
+                target = targetClone;
+                transform.position += transform.forward * Time.deltaTime * speed;
+
+            }*/
+                    
+
+            
+            /*
             if (damage == 0)
             {
                 damage = Application.model.battleshipModel.damage;
             }*/
-            if (target != null)
+                
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (!other.CompareTag(gameObject.tag))
             {
-                Vector3 directionVector = target.gameObject.transform.position - transform.position;
-                if (transform.localPosition.y >= 375)
+                if (other.gameObject.name == "Radioactive Tower" || other.gameObject.name == "Magnetic Tower" ||
+                    other.gameObject.name == "Electric Tower" || other.gameObject.name == "Trench" ||
+                    other.gameObject.name == "Anti Air Craft" || other.gameObject.name == "Artillery")
                 {
-                    RotationCalculator(directionVector);
-                    transform.position += transform.forward * Time.deltaTime * speed;
-
-                }
-                else
-                {
-                    transform.position += transform.forward * Time.deltaTime * speed;
-
+                    GetComponentInChildren<SeaWarBattleshipMissleAttackController>().onMissleHit();
                 }
             }
-            else
-            {
-                //Destroy(gameObject);
-            }
-
-            
         }
 
         
+
+        /*private void UpdateTarget()
+        {
+            if (gameObject.transform.parent)
+            {
+                if (GetComponentInParent<SeaWarBattleshipAttackController>().targets != null)
+                {
+                    target = GetComponentInParent<SeaWarBattleshipAttackController>().targets.Peek(); 
+                }
+            }
+             
+        }*/
 
         private void RotationCalculator(Vector3 directionVector)
         {

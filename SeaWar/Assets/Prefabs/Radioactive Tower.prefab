@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 5520849624221475643}
   - component: {fileID: 7406097450352507873}
   - component: {fileID: 218476194545155027}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Radioactive Tower
   m_TagString: Red
   m_Icon: {fileID: 0}

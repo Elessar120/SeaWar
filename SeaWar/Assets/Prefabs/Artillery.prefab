@@ -1829,7 +1829,7 @@ GameObject:
   - component: {fileID: 1088102529749840759}
   - component: {fileID: 5675758721069961852}
   - component: {fileID: 8810927193933370954}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Artillery
   m_TagString: Red
   m_Icon: {fileID: 0}

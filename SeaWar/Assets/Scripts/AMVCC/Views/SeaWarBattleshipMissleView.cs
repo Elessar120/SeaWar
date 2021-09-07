@@ -7,11 +7,18 @@ namespace AMVCC.Views
     public class SeaWarBattleshipMissleView : SeaWarElement
     {
         public float health;
-        public Collider target;
-        private void Start()
+        public GameObject target;
+        private void Awake()
         {
             health = Application.model.battleshipModel.missleHealth;
-            target = (Collider)GetComponentInParent<SeaWarBattleshipAttackController>().targets.Peek();
+
         }
+
+        private void Start()
+        {
+            //target = GetComponentInParent<SeaWarBattleshipAttackController>().targets.Peek(); 
+            gameObject.transform.SetParent(null);
+        }
+       
     }
 }

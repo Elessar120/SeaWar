@@ -197,7 +197,7 @@ namespace AMVCC.Views
 
                     if (attacker.name == "Battleship(Clone)")
                     {
-                        attacker.GetComponent<SeaWarBattleshipAttackController>().onKillAction();
+                        attacker.GetComponent<SeaWarBattleshipAttackController>().onKillAction(gameObject);
                     }
                 }
                 

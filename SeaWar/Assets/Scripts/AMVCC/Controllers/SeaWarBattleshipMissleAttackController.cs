@@ -7,46 +7,42 @@ namespace AMVCC.Controllers
 {
     public class SeaWarBattleshipMissleAttackController : SeaWarElement
     {
-         [SerializeField]private Collider target;
          [SerializeField]private float damage;
-         public Action noEnemyAction;
+         public Action onMissleHit;
+         private float explosionRadius;
          private void Start()
          {
-             noEnemyAction += UpdateTarget;
-             target = (Collider)GetComponentInParent<SeaWarBattleshipAttackController>().targets.Peek(); 
+             //motherBattleship = GetComponentInParent<Transform>();
+             //Debug.Log("mother battleship name : " + motherBattleship.name);
+             //gameObject.transform.parent.SetParent(null);
+             //target = motherBattleship.GetComponent<SeaWarBattleshipAttackController>().targets.Peek(); 
+             explosionRadius = Application.model.battleshipModel.battleshipData.explosionArea;
              damage = Application.model.battleshipModel.damage;
+             onMissleHit += ExplosionDamage;
          }
 
-         private void UpdateTarget()
+         private void ExplosionDamage()
          {
-             if (gameObject.transform.parent)
+             Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
+             Destroy(transform.parent.gameObject);
+             foreach (Collider hitCollider in hitColliders)
              {
-                 if (GetComponentInParent<SeaWarBattleshipAttackController>().targets.Peek() != null)
+                 if (hitCollider.gameObject.layer == LayerMask.NameToLayer("Buildings"))
                  {
-                     target = (Collider)GetComponentInParent<SeaWarBattleshipAttackController>().targets.Peek(); 
-                 }
-             }
-             
-             target = (Collider)GetComponentInParent<SeaWarBattleshipAttackController>().targets.Peek(); 
-
-         }
-         private void OnTriggerEnter(Collider other)
-         {
-             if (!other.CompareTag(gameObject.tag))
-             {
-                 if (other.gameObject.name == "Radioactive Tower" || other.gameObject.name == "Magnetic Tower" ||
-                     other.gameObject.name == "Electric Tower" || other.gameObject.name == "Trench" ||
-                     other.gameObject.name == "Anti Air Craft" || other.gameObject.name == "Artillery")
-                 {
-                     if (!other.GetComponent<SeaWarHealthView>().attackers.Contains(gameObject))
+                     if (hitCollider.transform.Find("Trench"))
                      {
-                         other.GetComponent<SeaWarHealthView>().attackers.Add(gameObject);     
+                         var trench = hitCollider.transform.Find("Trench");
+                         trench.GetComponent<SeaWarHealthView>().TakeDamage(damage);
                      }
-                     other.GetComponent<SeaWarHealthView>().TakeDamage(damage);
-                     
-                     Destroy(transform.parent.gameObject);
+                     else 
+                     {
+                         hitCollider.GetComponent<SeaWarHealthView>().TakeDamage(damage);
+                         //Debug.Log(gameObject.transform.parent + "aaaaaaa");
+                     } 
                  }
+                 
              }
+            
          }
     }
 }

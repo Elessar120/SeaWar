@@ -122,9 +122,9 @@ GameObject:
   - component: {fileID: -3131213154484083842}
   - component: {fileID: 1110225839741835358}
   - component: {fileID: 2339864398791136639}
-  m_Layer: 0
-  m_Name: Electronic Tower
-  m_TagString: Blue
+  m_Layer: 6
+  m_Name: electronic tower
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 2473983956925997010}
   m_Layer: 2
   m_Name: aiSkyDomeLight1
-  m_TagString: Blue
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

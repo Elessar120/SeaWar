@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using AMVCC.Views;
 namespace AMVCC.Controllers
@@ -8,45 +9,41 @@ namespace AMVCC.Controllers
     public class SeaWarBattleshipAttackController : SeaWarElement
     {
         [SerializeField]private bool isAttackTime;
+        private bool isStoppedForEver;
         [SerializeField] private GameObject missle;
         [SerializeField] private Transform missleLauncher;
         private float fireRate;
-        private float damage;
-        private Vector3 directionVector;
-        public Queue targets = new Queue();
-        public Queue targetsPosition = new Queue();
-        public Action onKillAction;
+        public Queue<GameObject> targets = new Queue<GameObject>();
+        private List<GameObject> launchedMissles = new List<GameObject>(); 
+        public Action<GameObject> onKillAction;
+        public Action<GameObject> onMissleDestroyed;
         private void Start()
         {
             fireRate = GetComponent<SeaWarBattleshipView>().fireRate;
-            damage = GetComponent<SeaWarBattleshipView>().damage;
-//            Debug.Log("fire rate is : " + fireRate);
             isAttackTime = true;
             onKillAction += RemoveQueue;
-            onKillAction += CallActionInRotateClass;
+            //onKillAction += CallActionInRotateClass;
             onKillAction += ChangeMovementStates;
-            onKillAction += UpdateMissilsTarget;
+            //onKillAction += UpdateMissilsTarget;
+            onMissleDestroyed += DeleteDestroyedMissleFromList;
         }
 
-        private void UpdateMissilsTarget()
+        /*private void UpdateMissilsTarget(GameObject target)
         {
-            /*foreach (Transform child in transform)
-            {
-                if (child.name == "Battleship Missle(Clone)")
-                {
-                    child.GetComponent<SeaWarBattleshipMissleAttackController>().noEnemyAction();
-                }
-            }*/
             foreach (Transform child in transform)
             {
                 if (child.name == "Battleship Missle(Clone)")
                 {
-                    child.transform.SetParent(null);
-                        
+                    child.GetComponent<SeaWarBattleshipMissleMoveController>().noEnemyAction();
                 }
             }
-        }
+            
+        }*/
 
+        private void DeleteDestroyedMissleFromList(GameObject destroyedmissle)
+        {
+            launchedMissles.Remove(destroyedmissle);
+        }
         private void Update()
         {   
             if (!isAttackTime)
@@ -69,8 +66,8 @@ namespace AMVCC.Controllers
                     GetComponentInParent<SeaWarBattleshipMoveController>().StopMoving();
 
                     Debug.Log("push it!");
-                    targets.Enqueue(other);
-                    GetComponentInChildren<SeaWarBattleshipRotateController>().reachEnemyAction(other);
+                    targets.Enqueue(other.gameObject);
+                    //GetComponentInChildren<SeaWarBattleshipRotateController>().reachEnemyAction(other);
                     
                     //targetsPosition.Enqueue(other.transform.position);
 
@@ -78,6 +75,7 @@ namespace AMVCC.Controllers
                 }
                 if (other.name == "Refinery 1" || other.name == "Refinery 2" || other.name == "Refinery 3")
                 {
+                    isStoppedForEver = true;
                     Debug.Log("collide!");
                     GetComponentInParent<SeaWarBattleshipMoveController>().moveAction();
                 }
@@ -90,16 +88,16 @@ namespace AMVCC.Controllers
 //            Debug.Log(other.gameObject.name);
             if (!other.CompareTag(transform.parent.tag))
             {
-                    if (other.gameObject.name == "Radioactive Tower" || other.gameObject.name == "Magnetic Tower" || other.gameObject.name == "Electric Tower" || other.gameObject.name == "Trench" || other.gameObject.name == "Anti Air Craft" || other.gameObject.name == "Artillery")
-                {
-                    //GetComponentInParent<SeaWarHelicopterMoveController>().moveAction();
-                    //todo StartCoroutine("Rotator");
-                    if (targets.Count != 0)
+                    if (other.gameObject.name == "Radioactive Tower" || other.gameObject.name == "Magnetic Tower" || other.gameObject.name == "Electric Tower" || other.gameObject.name == "Trench" || other.gameObject.name == "Anti Air Craft" || other.gameObject.name == "Artillery") 
                     {
-                        Attack((Collider)targets.Peek());
+                        //GetComponentInParent<SeaWarHelicopterMoveController>().moveAction();
+                        //todo StartCoroutine("Rotator");
+                        if (targets.Count != 0)
+                        {
+                            Launch(targets.Peek());
 
+                        }
                     }
-                }
                
                 
             }
@@ -118,7 +116,7 @@ namespace AMVCC.Controllers
             }
         }*/
 
-        private void Attack(Collider hit)
+        private void Launch(GameObject hit)
         {
             if (!hit.GetComponent<SeaWarHealthView>().attackers.Contains(gameObject))
             {
@@ -126,59 +124,52 @@ namespace AMVCC.Controllers
             }
             Debug.Log("my name is : " + hit.name);
             //SeaWarHelicopterMoveController.moveAction();
-            if (hit.transform.Find("Trench"))
-            {
+            
                 if (isAttackTime)
                 {
                     
-                        var trench = hit.transform.Find("Trench");
                         //trench.GetComponent<SeaWarHealthView>().TakeDamage(damage);
                         MissleSpawner();
                         isAttackTime = false;
                 }
-
-                isAttackTime = false;
-
-            }
-            else if(!hit.transform.Find("Trench"))
-            {
-                if (isAttackTime)
-                {
-                    Debug.Log("suck " + hit.name + "'s dick!");
-
-                        //hit.GetComponent<SeaWarHealthView>().TakeDamage(damage);
-                        MissleSpawner();
-                        isAttackTime = false; 
-                }
-                
-                isAttackTime = false;
-            }
-
         }
 
         private void MissleSpawner()
         {
             GameObject spawnedMissle = Instantiate(missle,missleLauncher.position,missleLauncher.transform.rotation * Quaternion.Euler(-90,0,0));
+            spawnedMissle.GetComponent<SeaWarBattleshipMissleMoveController>().target = targets.Peek();
             spawnedMissle.tag = gameObject.transform.parent.tag;
-            spawnedMissle.transform.SetParent(gameObject.transform);    
+            //spawnedMissle.GetComponentInChildren<SeaWarBattleshipMissleAttackController>().motherBattleship =
+              //  spawnedMissle;
+            //launchedMissles.Add(spawnedMissle);
+            //spawnedMissle.transform.SetParent(transform);    
         }
 
-        private void RemoveQueue()  
+        private void RemoveQueue(GameObject removedtarget)
         {
-            targets.Dequeue();
+            /*foreach (var VARIABLE in targets)
+            {
+                Debug.Log("targets : " + VARIABLE.name);
+            }*/
+            targets = new Queue<GameObject>(targets.Where(removedtarget => !targets.Contains(removedtarget)));
+            /*foreach (var VARIABLE in targets)
+            {
+                Debug.Log("targets : " + VARIABLE.name);
+            }*/
 
         }
 
-        private void CallActionInRotateClass()
+        /*private void CallActionInRotateClass(GameObject target)
         {
             GetComponentInChildren<SeaWarBattleshipRotateController>().deadEnemyAction();                            
 
-        }
+        }*/
 
-        private void ChangeMovementStates()
+        private void ChangeMovementStates(GameObject target)
         {
-            if (targets.Count == 0)
+            if (targets.Count == 0 && !isStoppedForEver)
             {
+                
                 GetComponentInParent<SeaWarBattleshipMoveController>().moveAction();
 
             }
