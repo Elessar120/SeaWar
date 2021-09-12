@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: -5255747040113888204}
   - component: {fileID: 3440109400472690851}
   - component: {fileID: 6536225046497714243}
+  - component: {fileID: 5383922453552590514}
   m_Layer: 6
   m_Name: Magnetic Tower
   m_TagString: Red
@@ -198,7 +199,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.06, z: 0.1}
+  m_Size: {x: 0.08, y: 0.06, z: 0.08}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3333260005444575050
 Rigidbody:
@@ -263,3 +264,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   attackers: []
+--- !u!114 &5383922453552590514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8303036167009744891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f819c8cc2d914003915612502b47d4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

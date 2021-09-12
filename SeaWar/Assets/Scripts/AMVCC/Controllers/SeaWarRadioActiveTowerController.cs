@@ -7,11 +7,9 @@ namespace AMVCC.Controllers
     public class SeaWarRadioActiveTowerController : SeaWarElement
 
     {
-        private SeaWarPlatformView platformView;
 
         private void Awake()
         {
-            //platformView = new SeaWarPlatformView();
         }
 
         private void Start()
@@ -41,7 +39,7 @@ namespace AMVCC.Controllers
 
         private void OnDestroy()
         {
-            platformView.platformIsFull = false;
+            //platformView.platformIsFull = false;
         }
     }
 }

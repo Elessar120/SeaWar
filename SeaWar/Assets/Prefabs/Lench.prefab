@@ -2136,7 +2136,7 @@ GameObject:
   - component: {fileID: 5216046530107643557}
   m_Layer: 0
   m_Name: Lench
-  m_TagString: Untagged
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2276,7 +2276,7 @@ GameObject:
   - component: {fileID: 5772257110111992439}
   m_Layer: 11
   m_Name: Lench
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2356,6 +2356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f7d2731665499fa9322a49a97e1928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lenchView: {fileID: 8295721599633502893}
 --- !u!114 &877510993743474630
 MonoBehaviour:
   m_ObjectHideFlags: 0

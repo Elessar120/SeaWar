@@ -8,7 +8,8 @@ namespace AMVCC.Controllers
     {
         private float speed;
         private float damage;
-        private float fireRate;
+        [SerializeField] SeaWarLenchView lenchView;
+        private float fireRate; 
         private bool isAttackTime;
         private bool isStopTime;
         private void Awake()
@@ -21,7 +22,7 @@ namespace AMVCC.Controllers
         {
             speed = GetComponent<SeaWarAttackView>().speed;
             damage = GetComponent<SeaWarLenchView>().damage;
-            fireRate = GetComponent<SeaWarLenchView>().fireRate;
+            fireRate = lenchView.fireRate;
             isAttackTime = GetComponent<SeaWarLenchView>().isAttackTime;
             isStopTime = GetComponent<SeaWarLenchView>().isStopTime;
         }
@@ -47,7 +48,7 @@ namespace AMVCC.Controllers
             {
                 if (!gameObject.CompareTag(hit.collider.tag))
                 {
-                    if (hit.collider.gameObject.name == "Refinery")
+                    if (hit.collider.gameObject.name == "Refinery 1" || hit.collider.gameObject.name == "Refinery 2" || hit.collider.gameObject.name == "Refinery 3")
                     {
                         Debug.Log("raycastHit " + hit.collider.name);
 
@@ -72,11 +73,11 @@ namespace AMVCC.Controllers
 
             if (isAttackTime)
             {
-                hit.collider.gameObject.GetComponentInParent<SeaWarRefineryController>().TakeDamage(damage);
+                hit.collider.gameObject.GetComponentInParent<SeaWarHealthView>().TakeDamage(damage);
                 isAttackTime = false;
             }
             
-            fireRate -= Time.time;
+            fireRate -= Time.deltaTime;
             if (fireRate <= 0)
             {
                 fireRate = GetComponent<SeaWarLenchView>().fireRate;

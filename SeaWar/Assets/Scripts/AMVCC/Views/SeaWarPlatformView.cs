@@ -6,28 +6,19 @@ namespace AMVCC.Views
     public class SeaWarPlatformView : SeaWarElement
     {
         public bool platformIsFull;
-        public bool hasTrench;
+
+        public Action onBuildingTime;
         //public static Action OnTrenchDestroyedAction;
-        private void OnTriggerEnter(Collider other)
+        private void Start()
         {
-            if (other.name == "Trench")
-            {
-                hasTrench = true;
-                //OnTrenchDestroyedAction += SetHasTrenchToFalse;
-            }
+            onBuildingTime += ChangePlatformState;
         }
 
-        private void OnTriggerExit(Collider other)
-        {
-            if (other.name == "Trench")
-            {
-                hasTrench = false;
-            }
-        }
 
-        /*private void SetHasTrenchToFalse()
+        private void ChangePlatformState()
         {
-            hasTrench = false;
-        }*/
+
+            platformIsFull = !platformIsFull;
+        }
     }
 }

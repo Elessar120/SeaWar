@@ -22,13 +22,13 @@ namespace AMVCC.Views
             {
                 outPoint = Application.model.oilTankerModel.rightOutPoint;
                 animationName = "rotatingRight";
-                gameObject.name = "RedOilTanker";    
+                //gameObject.name = "RedOilTanker";    
             }
             else if (transform.position.x < 0)
             {
                 outPoint = Application.model.oilTankerModel.leftOutPoint;
                 animationName = "rotatingLeft";
-                gameObject.name = "BlueOilTanker";    
+                //gameObject.name = "BlueOilTanker";    
 
             }
 

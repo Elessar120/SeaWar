@@ -4,10 +4,12 @@ using UnityEngine;
 
 namespace AMVCC.Controllers
 {
-    public class SeaWarMotorBoatController : SeaWarElement
+    public class 
+    SeaWarMotorBoatController : SeaWarElement
     {
         private float speed;
         private float damage;
+        [SerializeField] private SeaWarMotorBoatView motorBoatView;
         private float fireRate;
         private bool isAttackTime;
         private bool isStopTime;
@@ -21,7 +23,7 @@ namespace AMVCC.Controllers
         {
             speed = GetComponent<SeaWarAttackView>().speed;
             damage = GetComponent<SeaWarMotorBoatView>().damage;
-            fireRate = GetComponent<SeaWarMotorBoatView>().fireRate;
+            fireRate = motorBoatView.fireRate;
             isAttackTime = GetComponent<SeaWarMotorBoatView>().isAttackTime;
             isStopTime = GetComponent<SeaWarMotorBoatView>().isStopTime;
         }
@@ -72,11 +74,11 @@ namespace AMVCC.Controllers
 
             if (isAttackTime)
             {
-                hit.collider.gameObject.GetComponentInParent<SeaWarRefineryController>().TakeDamage(damage);
+                hit.collider.gameObject.GetComponentInParent<SeaWarHealthView>().TakeDamage(damage);
                 isAttackTime = false;
             }
             
-            fireRate -= Time.time;
+            fireRate -= Time.deltaTime;
             if (fireRate <= 0)
             {
                 fireRate = GetComponent<SeaWarMotorBoatView>().fireRate;

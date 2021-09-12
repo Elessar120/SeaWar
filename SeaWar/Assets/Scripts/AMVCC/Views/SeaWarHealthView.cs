@@ -206,10 +206,18 @@ namespace AMVCC.Views
 
         private void Death()
         {
+            if (gameObject.layer == LayerMask.NameToLayer("Buildings"))
+            {
+                                
+
+                gameObject.GetComponent<SeaWarPlatformController>().onDestroy();
+            }
             if (transform.parent && gameObject.name != "Trench")
             {
                 Destroy(transform.parent.gameObject);
             }
+
+            
             Destroy(gameObject);
             
         }

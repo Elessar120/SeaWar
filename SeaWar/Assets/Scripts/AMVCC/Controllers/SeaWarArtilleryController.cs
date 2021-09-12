@@ -6,13 +6,16 @@ namespace AMVCC.Controllers
 {
     public class SeaWarArtilleryController : SeaWarElement
     {
+        [SerializeField] private SeaWarArtilleryView artilleryView;
         [SerializeField]private float fireRate;
+        private float damage;
         [SerializeField]private bool isAttackTime;
 
         private void Start()
         {
             isAttackTime = true;
-            fireRate = GetComponent<SeaWarArtilleryView>().fireRate;
+            fireRate = artilleryView.fireRate;
+            damage = artilleryView.damage;
         }
 
         private void Update()
@@ -53,7 +56,7 @@ namespace AMVCC.Controllers
             if (!other.CompareTag(gameObject.tag))
             {
 
-                if (other.name == "Motor Boat" || other.name == "Lench" || other.name == "Frigate" || other.name == "BattleShip" || other.name == "Oil Tanker" || other.name == "Submarine")
+                if (other.name == "Motor Boat" || other.name == "Lench" || other.name == "Frigate" || other.name == "Battleship" || other.name == "Oil Tanker" || other.name == "Submarine")
 
                 {
                     Attack(other);
@@ -73,7 +76,7 @@ namespace AMVCC.Controllers
 
             if (isAttackTime)
             {
-                hit.GetComponent<SeaWarHealthView>().TakeDamage(GetComponent<SeaWarAttackView>().damage);
+                hit.GetComponent<SeaWarHealthView>().TakeDamage(damage);
             }
 
             isAttackTime = false;

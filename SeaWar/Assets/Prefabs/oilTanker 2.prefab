@@ -529,10 +529,10 @@ GameObject:
   - component: {fileID: 364231900237055029}
   - component: {fileID: 4018163983904424849}
   - component: {fileID: 8411746898766546635}
-  - component: {fileID: 1269231169450634660}
   - component: {fileID: 3666795299566530348}
   - component: {fileID: 5805555260310135600}
   - component: {fileID: -675056446073856531}
+  - component: {fileID: 393020259}
   m_Layer: 10
   m_Name: oilTanker 2
   m_TagString: Blue
@@ -653,25 +653,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &1269231169450634660
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028459362635390607}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 692c3a33800a31d43942d1c7de84d0f5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &3666795299566530348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,6 +693,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c642adb7f9c84b7899fa63bf6155b055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  attackers: []
+--- !u!95 &393020259
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028459362635390607}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 692c3a33800a31d43942d1c7de84d0f5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1127337090583331157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,10 +1044,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1070,6 +1074,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1614559572432632158
 GameObject:
   m_ObjectHideFlags: 0

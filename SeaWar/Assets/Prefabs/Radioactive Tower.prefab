@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 1052818518893341803}
   m_Layer: 2
   m_Name: Radioactive Tower(Clone)
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,9 +226,10 @@ GameObject:
   - component: {fileID: 5520849624221475643}
   - component: {fileID: 7406097450352507873}
   - component: {fileID: 218476194545155027}
+  - component: {fileID: 8560825598394062767}
   m_Layer: 6
   m_Name: Radioactive Tower
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -326,5 +327,17 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.35, z: 0.25}
+  m_Size: {x: 0.24, y: 0.35, z: 0.24}
   m_Center: {x: 0, y: -0.0035292953, z: 0}
+--- !u!114 &8560825598394062767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7742894662856617420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f819c8cc2d914003915612502b47d4da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

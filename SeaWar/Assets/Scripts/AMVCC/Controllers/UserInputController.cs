@@ -41,7 +41,7 @@ namespace AMVCC.Controllers
                                 {
                                     //Debug.Log("platform");
                                     FindObjectOfType<SpawnController>().FindProperSpawnPositionTowers(hit.collider);
-                                    hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull = true;
+                                    hit.collider.gameObject.GetComponent<SeaWarPlatformView>().onBuildingTime();
                                 }
                             }
                             else if (SeaWarUIView.Instance.isRoadsEnabled) 
@@ -145,7 +145,7 @@ namespace AMVCC.Controllers
                                     //Debug.Log("platform");
                                     FindObjectOfType<SpawnController>().FindProperSpawnPositionTowers(hit.collider);
 //                                    Debug.Log(hit.collider.gameObject.name);
-                                    hit.collider.gameObject.GetComponent<SeaWarPlatformView>().platformIsFull = true;
+                                    hit.collider.gameObject.GetComponent<SeaWarPlatformView>().onBuildingTime();
                                 }
                                 else if ((hit.collider.gameObject.name == "Radioactive Tower" || hit.collider.gameObject.name == "Magnetic Tower" || hit.collider.gameObject.name == "Electric Tower" || hit.collider.gameObject.name == "Anti Air Craft" || hit.collider.gameObject.name == "Artillery") && FindObjectOfType<SpawnController>().prefab.name == "Trench") 
                                 {
