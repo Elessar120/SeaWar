@@ -206,7 +206,7 @@ namespace AMVCC.Views
 
         private void Death()
         {
-            if (transform.parent && gameObject.name != "Trench" && gameObject.name != "Battleship Missle(Clone)")
+            if (transform.parent && gameObject.name != "Trench")
             {
                 Destroy(transform.parent.gameObject);
             }

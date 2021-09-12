@@ -19,12 +19,13 @@ namespace AMVCC.Controllers
              explosionRadius = Application.model.battleshipModel.battleshipData.explosionArea;
              damage = Application.model.battleshipModel.damage;
              onMissleHit += ExplosionDamage;
+             Destroy(transform.parent.gameObject,15);
          }
 
          private void ExplosionDamage()
          {
+             
              Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
-             Destroy(transform.parent.gameObject);
              foreach (Collider hitCollider in hitColliders)
              {
                  if (hitCollider.gameObject.layer == LayerMask.NameToLayer("Buildings"))
@@ -35,13 +36,15 @@ namespace AMVCC.Controllers
                          trench.GetComponent<SeaWarHealthView>().TakeDamage(damage);
                      }
                      else 
-                     {
+                     {  
                          hitCollider.GetComponent<SeaWarHealthView>().TakeDamage(damage);
                          //Debug.Log(gameObject.transform.parent + "aaaaaaa");
                      } 
                  }
                  
              }
+             Destroy(transform.parent.gameObject);
+
             
          }
     }

@@ -21,7 +21,7 @@ namespace AMVCC.Controllers
         {
             fireRate = GetComponent<SeaWarBattleshipView>().fireRate;
             isAttackTime = true;
-            onKillAction += RemoveQueue;
+            //onKillAction += RemoveQueue;
             //onKillAction += CallActionInRotateClass;
             onKillAction += ChangeMovementStates;
             //onKillAction += UpdateMissilsTarget;
@@ -55,6 +55,7 @@ namespace AMVCC.Controllers
                     isAttackTime = true;
                 }
             }
+            Debug.Log("targets count : " + targets.Count);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -66,7 +67,7 @@ namespace AMVCC.Controllers
                     GetComponentInParent<SeaWarBattleshipMoveController>().StopMoving();
 
                     Debug.Log("push it!");
-                    targets.Enqueue(other.gameObject);
+                    //targets.Enqueue(other.gameObject);
                     //GetComponentInChildren<SeaWarBattleshipRotateController>().reachEnemyAction(other);
                     
                     //targetsPosition.Enqueue(other.transform.position);
@@ -92,9 +93,9 @@ namespace AMVCC.Controllers
                     {
                         //GetComponentInParent<SeaWarHelicopterMoveController>().moveAction();
                         //todo StartCoroutine("Rotator");
-                        if (targets.Count != 0)
+                        if (other)
                         {
-                            Launch(targets.Peek());
+                            Launch(other);
 
                         }
                     }
@@ -116,7 +117,7 @@ namespace AMVCC.Controllers
             }
         }*/
 
-        private void Launch(GameObject hit)
+        private void Launch(Collider hit)
         {
             if (!hit.GetComponent<SeaWarHealthView>().attackers.Contains(gameObject))
             {
@@ -129,15 +130,16 @@ namespace AMVCC.Controllers
                 {
                     
                         //trench.GetComponent<SeaWarHealthView>().TakeDamage(damage);
-                        MissleSpawner();
+                        MissleSpawner(hit);
                         isAttackTime = false;
                 }
         }
 
-        private void MissleSpawner()
+        private void MissleSpawner(Collider other)
         {
             GameObject spawnedMissle = Instantiate(missle,missleLauncher.position,missleLauncher.transform.rotation * Quaternion.Euler(-90,0,0));
-            spawnedMissle.GetComponent<SeaWarBattleshipMissleMoveController>().target = targets.Peek();
+            spawnedMissle.GetComponent<SeaWarBattleshipMissleMoveController>().target = other.gameObject;
+            
             spawnedMissle.tag = gameObject.transform.parent.tag;
             //spawnedMissle.GetComponentInChildren<SeaWarBattleshipMissleAttackController>().motherBattleship =
               //  spawnedMissle;
@@ -147,11 +149,12 @@ namespace AMVCC.Controllers
 
         private void RemoveQueue(GameObject removedtarget)
         {
+            targets.Dequeue();
             /*foreach (var VARIABLE in targets)
             {
                 Debug.Log("targets : " + VARIABLE.name);
             }*/
-            targets = new Queue<GameObject>(targets.Where(removedtarget => !targets.Contains(removedtarget)));
+            //targets = new Queue<GameObject>(targets.Where(removedtarget => !targets.Contains(removedtarget)));
             /*foreach (var VARIABLE in targets)
             {
                 Debug.Log("targets : " + VARIABLE.name);
@@ -167,7 +170,7 @@ namespace AMVCC.Controllers
 
         private void ChangeMovementStates(GameObject target)
         {
-            if (targets.Count == 0 && !isStoppedForEver)
+            if (/*targets.Count == 0 &&*/ !isStoppedForEver)
             {
                 
                 GetComponentInParent<SeaWarBattleshipMoveController>().moveAction();
