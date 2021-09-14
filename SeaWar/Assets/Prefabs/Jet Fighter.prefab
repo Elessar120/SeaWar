@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -6415200098117149692}
   - component: {fileID: 7693450080659008519}
   - component: {fileID: 8243792399396980205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Jet Fighter
   m_TagString: Blue
   m_Icon: {fileID: 0}

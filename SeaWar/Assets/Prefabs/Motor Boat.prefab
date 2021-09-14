@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 8503353915164420710}
   - component: {fileID: 2879716544785805544}
   - component: {fileID: 1034398980341073356}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: Motor Boat
   m_TagString: Blue
   m_Icon: {fileID: 0}

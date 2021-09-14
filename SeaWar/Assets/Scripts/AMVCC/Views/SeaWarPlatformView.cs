@@ -11,14 +11,15 @@ namespace AMVCC.Views
         //public static Action OnTrenchDestroyedAction;
         private void Start()
         {
+            platformIsFull = false;
             onBuildingTime += ChangePlatformState;
         }
 
 
         private void ChangePlatformState()
         {
-
             platformIsFull = !platformIsFull;
+
         }
     }
 }

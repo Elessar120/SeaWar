@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 2541778541978315116}
   - component: {fileID: 5979320623536761858}
   - component: {fileID: 5272055900013601755}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Battleship
   m_TagString: Red
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557377429887400002}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 34.42771, y: 54.002808, z: 166.89534}
@@ -277,6 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isStopTime: 0
+  isStopTimeForEver: 0
 --- !u!114 &2541778541978315116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,6 +874,7 @@ GameObject:
   - component: {fileID: 5847167398526181305}
   - component: {fileID: 6922275696296365956}
   - component: {fileID: 5093060439702418320}
+  - component: {fileID: 3875505505755550100}
   m_Layer: 2
   m_Name: Battleship(Clone)
   m_TagString: Untagged
@@ -939,6 +941,7 @@ MonoBehaviour:
   isAttackTime: 0
   missle: {fileID: 5934533382260418480, guid: b005de41d60f2a046a2fb4f9bbd2bb57, type: 3}
   missleLauncher: {fileID: 1557106495}
+  battleshipMoveController: {fileID: 3084502671174000737}
 --- !u!114 &5093060439702418320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -956,3 +959,16 @@ MonoBehaviour:
   fireRate: 0
   isStopTime: 0
   damage: 0
+--- !u!65 &3875505505755550100
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883872485123446014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 180, y: 100, z: 355}
+  m_Center: {x: 0, y: 0, z: -265}

@@ -18,7 +18,7 @@ namespace AMVCC.Controllers
         public bool isExploded;
         private void Start()
         {
-            Debug.Log(target.name);
+//            Debug.Log(target.name);
            // noEnemyAction += UpdateTarget;
             rigidbody = GetComponent<Rigidbody>();
             speed = Application.model.battleshipModel.missleSpeed;

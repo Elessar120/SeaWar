@@ -171,8 +171,8 @@ namespace AMVCC.Views
             {
                 health = 0f;
                 isDead = true;
-                Death();
                 OnRegister();
+                Death();
             }
             //return isDead;
             }
@@ -197,7 +197,7 @@ namespace AMVCC.Views
 
                     if (attacker.name == "Battleship(Clone)")
                     {
-                        attacker.GetComponent<SeaWarBattleshipAttackController>().onKillAction(gameObject);
+                        attacker.GetComponentInParent<SeaWarBattleshipMoveController>().isStopTime = false;
                     }
                 }
                 
@@ -208,7 +208,6 @@ namespace AMVCC.Views
         {
             if (gameObject.layer == LayerMask.NameToLayer("Buildings"))
             {
-                                
 
                 gameObject.GetComponent<SeaWarPlatformController>().onDestroy();
             }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6588569400580791502}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: Oil Tanker
   m_TagString: Blue
   m_Icon: {fileID: 0}

@@ -53,7 +53,7 @@ namespace AMVCC.Controllers
             prefab = newUnit.prefab;
             prefab.name = newUnit.unitName;
             
-            Debug.Log(newUnit.unitName + prefab.name);
+//            Debug.Log(newUnit.unitName + prefab.name);
             if (FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
             {
                 FindObjectOfType<SeaWarUIView>().DisableRoads();
@@ -128,12 +128,13 @@ namespace AMVCC.Controllers
                 if (prefab.transform.parent)
                 {
                     prefab.transform.parent.tag = "Blue";
+                    
                 }
                 if (prefab.transform.GetChild(0))
                 {
                     prefab.transform.GetChild(0).tag = "Blue";
                 }
-                Spawner(spawnPosition,hit.transform.rotation,hit);
+                Spawner(spawnPosition,Quaternion.Euler(0,90,0),hit);
 //                Debug.Log("tower spawn");
             }
             if (hit.gameObject.CompareTag("Red"))
@@ -147,7 +148,7 @@ namespace AMVCC.Controllers
                 {
                     prefab.transform.GetChild(0).tag = "Red";
                 }
-                Spawner(spawnPosition,hit.transform.rotation,hit);
+                Spawner(spawnPosition,Quaternion.Euler(0,-90,0),hit);
 //                Debug.Log("tower spawn");
 
             }

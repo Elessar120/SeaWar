@@ -10,11 +10,11 @@ namespace AMVCC.Controllers
     {
         [SerializeField]private float fireRate;
         [SerializeField]private bool isAttackTime;
-
+        [SerializeField] private SeaWarAttackView attackView;
         private void Start()
         {
             isAttackTime = true;
-            fireRate = GetComponent<SeaWarAttackView>().fireRate;
+            fireRate = attackView.fireRate;
         }
 
         private void Update()
@@ -36,34 +36,46 @@ namespace AMVCC.Controllers
             if (!other.CompareTag(gameObject.tag))
             {
 
-                if (other.name == "Jet Fighter" || other.name == "Helicopter" || other.name == "Battleship Missle(Clone)")
+                if (other.gameObject.layer == LayerMask.NameToLayer("Air Crafts"))
 
                 {
 
 //todo                    StartCoroutine("Rotator");
                    Attack(other);
-                    
+                    InvokeRepeating("FindingEnemy",0,0.1f);
 
                 }
                 
             }
         }
 
-        private void OnTriggerStay(Collider other)
+        private void FindingEnemy()
         {
-            if (!other.CompareTag(gameObject.tag))
+            Collider[] colliders = Physics.OverlapSphere(transform.position, 5);
+            foreach (Collider other in colliders)
             {
-
-                if (other.name == "Jet Fighter" || other.name == "Helicopter" || other.name == "Battleship Missle(Clone)")
-
+                if (!other.CompareTag(gameObject.tag))
                 {
-                   Attack(other);
+
+                    if (other.gameObject.layer == LayerMask.NameToLayer("Air Crafts"))
+
+                    {
+                        Attack(other);
                     
 
+                    }
+                
                 }
                 
             }
+            
         }
+
+        //private void OnDrawGizmos()
+        /*{
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(transform.position,5);
+        }*/
 
         /*todo private IEnumerator Rotator()
         {

@@ -11,11 +11,12 @@ namespace AMVCC.Controllers
         [SerializeField]private bool isAttackTime;
         private bool isStoppedForEver;
         [SerializeField] private GameObject missle;
-        [SerializeField] private Transform missleLauncher;
+        [SerializeField] private Transform missleLauncher; 
+        public SeaWarBattleshipMoveController battleshipMoveController;
         private float fireRate;
         public Queue<GameObject> targets = new Queue<GameObject>();
         private List<GameObject> launchedMissles = new List<GameObject>(); 
-        public Action<GameObject> onKillAction;
+        public Action onKillAction;
         public Action<GameObject> onMissleDestroyed;
         private void Start()
         {
@@ -23,7 +24,7 @@ namespace AMVCC.Controllers
             isAttackTime = true;
             //onKillAction += RemoveQueue;
             //onKillAction += CallActionInRotateClass;
-            onKillAction += ChangeMovementStates;
+            //onKillAction += ChangeMovementStates;
             //onKillAction += UpdateMissilsTarget;
             onMissleDestroyed += DeleteDestroyedMissleFromList;
         }
@@ -55,18 +56,18 @@ namespace AMVCC.Controllers
                     isAttackTime = true;
                 }
             }
-            Debug.Log("targets count : " + targets.Count);
+//            Debug.Log("targets count : " + targets.Count);
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if (!other.CompareTag(transform.parent.tag))
             {
-                if (other.gameObject.name == "Radioactive Tower" || other.gameObject.name == "Magnetic Tower" || other.gameObject.name == "Electric Tower" || other.gameObject.name == "Trench" || other.gameObject.name == "Anti Air Craft" || other.gameObject.name == "Artillery")
+                if (other.gameObject.layer == LayerMask.NameToLayer("Buildings"))
                 {
-                    GetComponentInParent<SeaWarBattleshipMoveController>().StopMoving();
+                    battleshipMoveController.isStopTime = true;
 
-                    Debug.Log("push it!");
+//                    Debug.Log("push it!");
                     //targets.Enqueue(other.gameObject);
                     //GetComponentInChildren<SeaWarBattleshipRotateController>().reachEnemyAction(other);
                     
@@ -74,34 +75,37 @@ namespace AMVCC.Controllers
 
                     //Attack(other);
                 }
-                if (other.name == "Refinery 1" || other.name == "Refinery 2" || other.name == "Refinery 3")
+                /*else if (other.gameObject.layer == LayerMask.NameToLayer("Refinery"))
                 {
-                    isStoppedForEver = true;
-                    Debug.Log("collide!");
-                    GetComponentInParent<SeaWarBattleshipMoveController>().moveAction();
-                }
+                    battleshipMoveController.isStopTimeForEver = true;
+                    Debug.Log("collide!"); 
+                    battleshipMoveController.isStopTime = true;
+                }*/
+               
                 
             }
         }
         
         private void OnTriggerStay(Collider other)
         {
+            
 //            Debug.Log(other.gameObject.name);
             if (!other.CompareTag(transform.parent.tag))
             {
-                    if (other.gameObject.name == "Radioactive Tower" || other.gameObject.name == "Magnetic Tower" || other.gameObject.name == "Electric Tower" || other.gameObject.name == "Trench" || other.gameObject.name == "Anti Air Craft" || other.gameObject.name == "Artillery") 
-                    {
-                        //GetComponentInParent<SeaWarHelicopterMoveController>().moveAction();
-                        //todo StartCoroutine("Rotator");
-                        if (other)
-                        {
-                            Launch(other);
+                if ( other.gameObject.layer == LayerMask.NameToLayer("Buildings"))
+                {
+                    if (other)
+                    { 
+                        Launch(other);
 
-                        }
                     }
-               
-                
+                }
+                    //GetComponentInParent<SeaWarHelicopterMoveController>().moveAction();
+                    //todo StartCoroutine("Rotator");
+                    
+                   
             }
+           
         }
 
         /*private void OnTriggerExit(Collider other)
@@ -123,7 +127,7 @@ namespace AMVCC.Controllers
             {
                 hit.GetComponent<SeaWarHealthView>().attackers.Add(gameObject);     
             }
-            Debug.Log("my name is : " + hit.name);
+//            Debug.Log("my name is : " + hit.name);
             //SeaWarHelicopterMoveController.moveAction();
             
                 if (isAttackTime)
@@ -168,16 +172,16 @@ namespace AMVCC.Controllers
 
         }*/
 
-        private void ChangeMovementStates(GameObject target)
+        /*private void ChangeMovementStates()
         {
-            if (/*targets.Count == 0 &&*/ !isStoppedForEver)
+            if (/*targets.Count == 0 &&#1# !isStoppedForEver)
             {
                 
-                GetComponentInParent<SeaWarBattleshipMoveController>().moveAction();
+                GetComponentInParent<SeaWarBattleshipMoveController>().onMoveAction();
 
             }
 
-        }
+        }*/
 
         private void OnDestroy()
         {

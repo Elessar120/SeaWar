@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7701708543176178166}
   - component: {fileID: 796741529800340854}
   - component: {fileID: 5161295680545900358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Battleship Missle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 7608206433315511250}
   - component: {fileID: 4244759714425852898}
   - component: {fileID: 5027234970891285598}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Explosion Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

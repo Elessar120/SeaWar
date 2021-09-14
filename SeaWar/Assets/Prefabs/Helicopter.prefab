@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 4119523233576501567}
   - component: {fileID: 1449186138877568131}
   - component: {fileID: 4600950331983487759}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Helicopter
   m_TagString: Blue
   m_Icon: {fileID: 0}
