@@ -58,12 +58,14 @@ namespace AMVCC.Controllers
 
         private void Move()
         {
+            
             if (transform.position.y >= 9)
             {
                 
                 Vector3 directionVector = targetPosition - transform.position;
                 RotationCalculator(directionVector);
                 transform.position += transform.forward * Time.deltaTime * speed;
+               
 
             }
             else
@@ -113,7 +115,7 @@ namespace AMVCC.Controllers
         private void Rotator(Vector3 directionalVector)
         {
             Quaternion lookRotation = Quaternion.LookRotation(directionalVector);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation,lookRotation, Time.deltaTime * 60);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation,lookRotation, Time.deltaTime * 120);
         }
     }
 }

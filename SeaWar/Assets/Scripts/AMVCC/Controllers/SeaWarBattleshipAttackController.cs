@@ -16,13 +16,13 @@ namespace AMVCC.Controllers
         private float fireRate;
         public Queue<GameObject> targets = new Queue<GameObject>();
         private List<GameObject> launchedMissles = new List<GameObject>(); 
-        public Action onKillAction;
+        public Action<GameObject> onKillAction;
         public Action<GameObject> onMissleDestroyed;
         private void Start()
         {
             fireRate = GetComponent<SeaWarBattleshipView>().fireRate;
             isAttackTime = true;
-            //onKillAction += RemoveQueue;
+            onKillAction += RemoveQueue;
             //onKillAction += CallActionInRotateClass;
             //onKillAction += ChangeMovementStates;
             //onKillAction += UpdateMissilsTarget;
@@ -94,11 +94,19 @@ namespace AMVCC.Controllers
             {
                 if ( other.gameObject.layer == LayerMask.NameToLayer("Buildings"))
                 {
+                    if (!other.GetComponent<SeaWarHealthView>().attackers.Contains(gameObject))
+                    {
+                        other.GetComponent<SeaWarHealthView>().attackers.Add(gameObject);     
+                    }
+
                     if (other)
-                    { 
+                    {
                         Launch(other);
 
                     }
+
+                    
+                    
                 }
                     //GetComponentInParent<SeaWarHelicopterMoveController>().moveAction();
                     //todo StartCoroutine("Rotator");
@@ -123,10 +131,7 @@ namespace AMVCC.Controllers
 
         private void Launch(Collider hit)
         {
-            if (!hit.GetComponent<SeaWarHealthView>().attackers.Contains(gameObject))
-            {
-                hit.GetComponent<SeaWarHealthView>().attackers.Add(gameObject);     
-            }
+            
 //            Debug.Log("my name is : " + hit.name);
             //SeaWarHelicopterMoveController.moveAction();
             
@@ -183,16 +188,6 @@ namespace AMVCC.Controllers
 
         }*/
 
-        private void OnDestroy()
-        {
-            foreach (Transform child in transform)
-            {
-                if (child.name == "Battleship Missle(Clone)")
-                {
-                    child.transform.SetParent(null);
-                        
-                }
-            }
-        }
+        
     }
 }

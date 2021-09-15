@@ -26,17 +26,26 @@ namespace AMVCC.Controllers
          {
              
              Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
+             
              foreach (Collider hitCollider in hitColliders)
              {
                  if (hitCollider.gameObject.layer == LayerMask.NameToLayer("Buildings"))
                  {
                      if (hitCollider.transform.Find("Trench"))
                      {
+                         /*if (!hitCollider.GetComponent<SeaWarHealthView>().attackers.Contains(gameObject))
+                         {
+                             hitCollider.GetComponent<SeaWarHealthView>().attackers.Add(gameObject);     
+                         }*/
                          var trench = hitCollider.transform.Find("Trench");
                          trench.GetComponent<SeaWarHealthView>().TakeDamage(damage);
                      }
                      else 
                      {  
+                         /*if (!hitCollider.GetComponent<SeaWarHealthView>().attackers.Contains(gameObject))
+                         {
+                             hitCollider.GetComponent<SeaWarHealthView>().attackers.Add(gameObject);     
+                         }*/
                          hitCollider.GetComponent<SeaWarHealthView>().TakeDamage(damage);
                          //Debug.Log(gameObject.transform.parent + "aaaaaaa");
                      } 
@@ -46,6 +55,11 @@ namespace AMVCC.Controllers
              Destroy(transform.parent.gameObject);
 
             
+         }
+
+         private void OnDrawGizmos()
+         {
+             Gizmos.DrawWireSphere(transform.position,explosionRadius);
          }
     }
 }

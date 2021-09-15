@@ -195,9 +195,10 @@ namespace AMVCC.Views
                         attacker.GetComponent<SeaWarFrigateAttackController>().onKillAction();
                     }
 
-                    if (attacker.name == "Battleship(Clone)")
+                    if (attacker.name == "Battleship(Clone)" || attacker.name == "Battleship Missle(Clone)")
                     {
                         attacker.GetComponentInParent<SeaWarBattleshipMoveController>().isStopTime = false;
+                        //attacker.GetComponent<SeaWarBattleshipAttackController>().onKillAction(gameObject);
                     }
                 }
                 
