@@ -81,3 +81,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Text Space/Gold
+    uniqueID: 3282201
+    locked: 0
+  - name: Text Space/Oil
+    uniqueID: 1013604865
+    locked: 0

@@ -58,7 +58,7 @@ namespace AMVCC.Views
       Application.model.refineryModel.onOilProductionAction += SetNewOilAmountText;
       Application.model.oilTankerModel.onExitMapAction += SetNewGoldAmount;
       Application.model.oilTankerModel.onExitMapAction += SetNewGoldAmountText;
-      goldAmountText.text = "Gold: " + totalGoldAmount;
+      goldAmountText.text = "" + totalGoldAmount;
    }
 
    private void Update()
@@ -72,7 +72,7 @@ namespace AMVCC.Views
    }
    public void SetNewOilAmountText()
    {
-      oilAmountText.text = "Oil: " + totalOilAmount.ToString();
+      oilAmountText.text = "" + totalOilAmount.ToString();
    }
 
    public void SetNewGoldAmount()
@@ -84,7 +84,7 @@ namespace AMVCC.Views
 
    public void SetNewGoldAmountText()
    {
-      goldAmountText.text = "Gold: " + totalGoldAmount.ToString();
+      goldAmountText.text = "" + totalGoldAmount.ToString();
 
    }
 

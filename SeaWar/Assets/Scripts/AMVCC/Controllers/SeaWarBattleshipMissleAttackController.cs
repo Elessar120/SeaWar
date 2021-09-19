@@ -53,8 +53,7 @@ namespace AMVCC.Controllers
                  
              }
              Destroy(transform.parent.gameObject);
-
-            
+           
          }
 
          private void OnDrawGizmos()

@@ -2,15 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57948be8-0927-4994-a554-03ff991ccd6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/1.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/2.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/3.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/4.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/5.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/6.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/7.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/8.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/9.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/UI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/UI.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Artillery.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Artillery.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Battleship.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Battleship.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Radioactive Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Radioactive Tower.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipAttackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipAttackController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipMissleAttackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipMissleAttackController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipMissleMoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipMissleMoveController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHealthView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHealthView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarUIView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarUIView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +58,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarHelicopterController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSeaMineView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarRadioActiveTowerAttackController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHelicopterView.cs" />
@@ -90,6 +108,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipAttackController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipMissleMoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipMissleAttackController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarUIView.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nvkw4CZd3Voqph4zwu9SPctwCa" />
@@ -376,6 +395,8 @@
       <workItem from="1631635572717" duration="9870000" />
       <workItem from="1631702046942" duration="605000" />
       <workItem from="1631709153026" duration="4651000" />
+      <workItem from="1631821961045" duration="2146000" />
+      <workItem from="1631994748988" duration="4466000" />
     </task>
     <task id="LOCAL-00001" summary="wrong spawn position bugs fixed, UI bugs remain, refactor code for removing codes about using layer, working on electric tower">
       <created>1625493955267</created>
