@@ -72,9 +72,9 @@ namespace AMVCC.Views
    }
    public void SetNewOilAmountText()
    {
-      oilAmountText.text = "" + totalOilAmount.ToString();
+      oilAmountText.text = "" + totalOilAmount;
    }
-
+   
    public void SetNewGoldAmount()
    {
       totalGoldAmount += Application.model.oilTankerModel.oilTankerData.earnedMoney;
@@ -84,7 +84,7 @@ namespace AMVCC.Views
 
    public void SetNewGoldAmountText()
    {
-      goldAmountText.text = "" + totalGoldAmount.ToString();
+      goldAmountText.text = "" + totalGoldAmount;
 
    }
 

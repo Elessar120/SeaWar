@@ -13,6 +13,7 @@ namespace AMVCC.Models
         public int upgradeCost;
         public float damage;
         public float speed;
+        public float cost;
 
         private void Awake()
         {
@@ -23,6 +24,7 @@ namespace AMVCC.Models
             sightRange = lenchData.sightRange;
             costWithOil = lenchData.costWithOil;
             upgradeCost = lenchData.upgradeCardsNeed;
+            cost = lenchData.costWithOil;
 
         }
     }

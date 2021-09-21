@@ -13,6 +13,7 @@ namespace AMVCC.Models
         public float damage;
         public float fireRate;
         public float rotateSpeed;
+        public float cost;
         private void Awake()
         {
             missleSpeed = battleshipData.missleSpeed;
@@ -22,6 +23,7 @@ namespace AMVCC.Models
             damage = battleshipData.damage;
             fireRate = battleshipData.fireRate;
             rotateSpeed = battleshipData.rotateSpeed;
+            cost = battleshipData.costWithGold;
         }
     }
 }

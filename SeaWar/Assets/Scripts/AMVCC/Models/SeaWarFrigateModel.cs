@@ -11,6 +11,7 @@ namespace AMVCC.Models
         public float damage;
         public float speed;
         public float rotateSpeed;
+        public float cost;
         private void Awake()
         {
             health = frigateData.health;
@@ -18,6 +19,7 @@ namespace AMVCC.Models
             damage = frigateData.damage;
             speed = frigateData.movmentSpeed;
             rotateSpeed = frigateData.rotateSpeed;
+            cost = frigateData.costWithGold;
         }
     }
 }

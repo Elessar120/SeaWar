@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2527036571434629764}
   m_Layer: 2
   m_Name: Collider
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 5383922453552590514}
   m_Layer: 6
   m_Name: Magnetic Tower
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

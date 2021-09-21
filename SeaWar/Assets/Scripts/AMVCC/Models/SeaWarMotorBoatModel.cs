@@ -17,6 +17,7 @@ namespace AMVCC.Models
         public int upgradeCost;
         public float damage;
         public float speed;
+        public float cost;
         private void Awake()
         {
             damage = motorBoatData.damage;
@@ -26,7 +27,8 @@ namespace AMVCC.Models
             sightRange = motorBoatData.sightRange;
             costWithOil = motorBoatData.costWithOil;
             upgradeCost = motorBoatData.upgradeCardsNeed;
-            
+            cost = motorBoatData.costWithOil;
+
         }
     }   
 }

@@ -10,12 +10,13 @@ namespace AMVCC.Models
         public float health;
         public float fireRate;
         public float rotateSpeed;
-        
+        public float cost;
         private void Awake()
         {
             damage = antiAirCraftData.damage;
             health = antiAirCraftData.health;
             fireRate = antiAirCraftData.fireRate;
+            cost = antiAirCraftData.costWithGold;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace AMVCC.Models
         public float health;
         public float sightRange;
         public float fireRate;
-            
+        public float cost;
 
         private void Awake()
         {
@@ -18,6 +18,7 @@ namespace AMVCC.Models
             health = radioactiveTowerData.health;
             sightRange = radioactiveTowerData.sightRange;
             fireRate = radioactiveTowerData.fireRate;
+            cost = radioactiveTowerData.costWithGold;
         }
     }
 }

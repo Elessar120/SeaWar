@@ -26,15 +26,16 @@ namespace AMVCC.Models
         public int shootableMask;
 
         #endregion
-       
-        
+
+
+        public float cost;
         public Unit submarineData;
 
         private void Awake()
         {
             rotationAngle = submarineData.rotationSpeed;
             speed = submarineData.movmentSpeed;
-
+            cost = submarineData.costWithGold;
         }
 
         private void Start()

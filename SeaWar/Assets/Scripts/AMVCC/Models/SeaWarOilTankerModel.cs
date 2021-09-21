@@ -13,13 +13,14 @@ namespace AMVCC.Models
         public float health;
         public Unit oilTankerData;
         public int middleMaplayerMask;
-
+        public float cost;
         public Action onExitMapAction;
 
         private void Awake()
         {
             movmentSpeed = oilTankerData.movmentSpeed;
             health = oilTankerData.health;
+            cost = oilTankerData.costWithOil;
         }
 
         private void Start()

@@ -2,34 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57948be8-0927-4994-a554-03ff991ccd6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/1.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/2.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/3.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/4.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/5.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/6.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/7.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/8.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/9.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/UI.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/UI/UI/UI.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Anti Air Craft.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Anti Air Craft.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Arrtilery.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Arrtilery.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Battleship.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Battleship.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Bomber.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Bomber.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Destroyer.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Destroyer.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Electric Tower.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Electric Tower.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Frigate.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Frigate.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/GamePlay Menu.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/GamePlay Menu.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Helicopter.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Helicopter.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Magnetic Tower.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Magnetic Tower.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Motor Boat.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Motor Boat.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Oil Tanker.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Oil Tanker.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Radioactive Tower.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Radioactive Tower.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Sea Mine.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Sea Mine.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Submarine.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Submarine.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Trench.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/Trench.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarUIController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarUIController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Anti Air Craft.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Anti Air Craft.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Magnetic Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Magnetic Tower.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Radioactive Tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Radioactive Tower.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Trench.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Trench.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/electronic tower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/electronic tower.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipMissleAttackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipMissleAttackController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarAntiAirCraftModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarAntiAirCraftModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarArtilleryModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarArtilleryModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarBattleshipModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarBattleshipModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarElectricTowerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarElectricTowerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarFrigateModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarFrigateModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarHelicopterModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarHelicopterModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarJetFighterModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarJetFighterModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarLenchModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarLenchModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarMagneticTowerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarMagneticTowerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarMotorBoatModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarMotorBoatModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarOilTankerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarOilTankerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarRadioActiveTowerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarRadioActiveTowerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSeaMineModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSeaMineModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSubmarineModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSubmarineModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarTrenchModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarTrenchModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarUIView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarUIView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/UI/6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/UI/6.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,23 +91,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSeaMineView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarRadioActiveTowerAttackController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHelicopterView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarHelicopterMoveController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarHelicopterModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarHelicopterAttackController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/FrigateModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarFrigateController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarFrigateView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarFrigateModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarFrigateMoveController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarFrigateAttackController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarArtilleryModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarArtilleryView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarAntiAirCraftModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarAntiAirCraftView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarAttackView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/MissleLauncherModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarMissleLauncherView.cs" />
@@ -84,7 +100,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarMissleView.cs" />
       <option value="$PROJECT_DIR$/Assets/ScriptableObjects/Unit.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarMissleModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarBattleshipModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarBattleshipView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarFrigateRotateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarHelicopterRotateController.cs" />
@@ -108,7 +123,25 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipAttackController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipMissleMoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipMissleAttackController.cs" />
+      <option value="$PROJECT_DIR$/Assets/ScriptableObjects/GamePlay Menu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarUIView.cs" />
+      <option value="$PROJECT_DIR$/Assets/ScriptableObjects/gameplat menu/GamePlay Menu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarAntiAirCraftModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarArtilleryModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarBattleshipModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarElectricTowerModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarFrigateModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarHelicopterModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarJetFighterModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarLenchModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarMagneticTowerModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarMotorBoatModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarOilTankerModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarRadioActiveTowerModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSeaMineModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSubmarineModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarTrenchModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarUIController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nvkw4CZd3Voqph4zwu9SPctwCa" />
@@ -397,6 +430,9 @@
       <workItem from="1631709153026" duration="4651000" />
       <workItem from="1631821961045" duration="2146000" />
       <workItem from="1631994748988" duration="4466000" />
+      <workItem from="1632082454793" duration="625000" />
+      <workItem from="1632131650889" duration="4046000" />
+      <workItem from="1632158432436" duration="14271000" />
     </task>
     <task id="LOCAL-00001" summary="wrong spawn position bugs fixed, UI bugs remain, refactor code for removing codes about using layer, working on electric tower">
       <created>1625493955267</created>

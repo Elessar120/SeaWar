@@ -7,9 +7,11 @@ namespace AMVCC.Models
     {
         public float damage;
         public Unit seaMineData;
+        public float cost;
         private void Awake()
         {
             damage = seaMineData.damage;
+            cost = seaMineData.costWithGold;
         }
     }
 }

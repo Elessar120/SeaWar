@@ -13,6 +13,7 @@ namespace AMVCC.Models
         public float cardsForUpgrade;
         public float speed;
         public float health;
+        public float cost;
         private void Awake()
         {
             damage = jetFighterData.damage;
@@ -22,6 +23,7 @@ namespace AMVCC.Models
             cardsForUpgrade = jetFighterData.upgradeCardsNeed;
             speed = jetFighterData.movmentSpeed;
             health = jetFighterData.health;
+            cost = jetFighterData.costWithGold;
         }
     }
 }

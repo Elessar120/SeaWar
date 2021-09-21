@@ -11,6 +11,7 @@ namespace AMVCC.Models
         public float damage;
         public float speed;
         public float rotateSpeed;
+        public float cost;
         private void Awake()
         {
             fireRate = hilicopterData.fireRate;
@@ -18,6 +19,7 @@ namespace AMVCC.Models
             damage = hilicopterData.damage;
             speed = hilicopterData.movmentSpeed;
             rotateSpeed = hilicopterData.rotateSpeed;
+            cost = hilicopterData.costWithGold;
         }
     }
 }
