@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5864398986721592372}
   - component: {fileID: 3733015699271422678}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trench Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 5736779673295193868}
   - component: {fileID: 8397570790256224522}
   - component: {fileID: 8666163580527561690}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trench
   m_TagString: Blue
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 2183777054128085580}
   - component: {fileID: 2183777054128085583}
   - component: {fileID: 2183777054128085582}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trench 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 2183777054234952197}
   - component: {fileID: 2183777054234952196}
   - component: {fileID: 2183777054234952199}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trench 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 2183777054431336833}
   - component: {fileID: 2183777054431336832}
   - component: {fileID: 2183777054431336835}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trench 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 2183777054523009491}
   - component: {fileID: 2183777054523009490}
   - component: {fileID: 2183777054523009493}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trench 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

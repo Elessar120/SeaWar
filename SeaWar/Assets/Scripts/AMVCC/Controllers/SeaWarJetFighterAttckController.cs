@@ -36,7 +36,7 @@ namespace AMVCC.Controllers
             if (!other.CompareTag(transform.parent.tag))
             {
 
-                if (other.gameObject.layer == LayerMask.NameToLayer("Buildings") || other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts") || other.gameObject.layer == LayerMask.NameToLayer("Air Crafts") || other.gameObject.layer == LayerMask.NameToLayer("Refinery"))
+                if (other.gameObject.layer == LayerMask.NameToLayer("Buildings") || other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts") || other.gameObject.layer == LayerMask.NameToLayer("Refinery"))
 
                 {
                     Debug.Log("cumiiiiiiiiiing! to " + other.name + " pussy! it is so good!");
@@ -46,11 +46,11 @@ namespace AMVCC.Controllers
                 }
             }
         }
-        private void OnTriggerStay(Collider other)
+        private void OnTriggerStay(Collider other)    
         {
             if (!other.CompareTag(transform.parent.tag))
             {
-                if (other.gameObject.layer == LayerMask.NameToLayer("Buildings") || other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts") || other.gameObject.layer == LayerMask.NameToLayer("Air Crafts") || other.gameObject.layer == LayerMask.NameToLayer("Refinery"))
+                if (other.gameObject.layer == LayerMask.NameToLayer("Buildings") || other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts") || other.gameObject.layer == LayerMask.NameToLayer("Refinery"))
 
                 {
                     Debug.Log("cumiiiiiiiiiing! to " + other.name + " pussy! it is so good!");

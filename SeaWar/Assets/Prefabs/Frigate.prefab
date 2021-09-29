@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 7307815479806645388}
   m_Layer: 7
   m_Name: Frigate
-  m_TagString: Blue
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 7647491865420790782}
   m_Layer: 0
   m_Name: Weapons
-  m_TagString: Blue
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

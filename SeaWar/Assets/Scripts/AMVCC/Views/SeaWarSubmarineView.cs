@@ -20,7 +20,7 @@ namespace AMVCC.Views
         private void Awake()
         {
 
-            submarineRotationAnimator = gameObject.GetComponent<Animator>();
+            //submarineRotationAnimator = gameObject.GetComponent<Animator>();
             wasInMiddleFirstTime = false;
             submarineIsGoingToMiddleMap = true;
             fireRate = Application.model.submarineModel.submarineData.fireRate;
@@ -31,7 +31,7 @@ namespace AMVCC.Views
         {
            
             startPosition = gameObject.transform.position;
-            if (transform.position.x > 0)
+            /*if (transform.position.x > 0)
             {
                 gameObject.layer = LayerMask.NameToLayer("RedSubmarine");    
             }
@@ -39,7 +39,7 @@ namespace AMVCC.Views
             {
                 gameObject.layer = LayerMask.NameToLayer("BlueSubmarine");    
 
-            }
+            }*/
             
         }
         private void Update()

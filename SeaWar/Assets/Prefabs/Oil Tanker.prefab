@@ -98,6 +98,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Oil Tanker
       objectReference: {fileID: 0}
+    - target: {fileID: 1028459362635390607, guid: bf4f7a732c9ae134d9f26a54c39c2ae1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Blue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf4f7a732c9ae134d9f26a54c39c2ae1, type: 3}
 --- !u!4 &6800802733121958821 stripped

@@ -178,6 +178,7 @@ MonoBehaviour:
   shootableMask: 0
   cost: 0
   submarineData: {fileID: 11400000, guid: 364e105bae99f914283e7130c461a015, type: 2}
+  rotateSpeed: 0
 --- !u!1001 &35511280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11613,8 +11614,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refineryController: {fileID: 0}
-  submarineMoveController: {fileID: 0}
-  submarineFightController: {fileID: 0}
   oilTankerController: {fileID: 0}
   spawnController: {fileID: 0}
 --- !u!1 &618353805
@@ -33781,7 +33780,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -33804,8 +33803,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477342945}
-  m_LocalRotation: {x: -0.3992652, y: 0.00079926854, z: -0.00073220494, w: -0.91683483}
-  m_LocalPosition: {x: 17.106888, y: 10.552938, z: -18.790936}
+  m_LocalRotation: {x: -0.44414, y: -0.0032393336, z: 0.0012647286, w: -0.8959507}
+  m_LocalPosition: {x: 15.880491, y: 12.1037655, z: -17.65534}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 833086527}

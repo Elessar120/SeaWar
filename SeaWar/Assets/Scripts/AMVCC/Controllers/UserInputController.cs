@@ -151,13 +151,17 @@ namespace AMVCC.Controllers
                                 {
                                     // spawn trench
                                     Debug.Log(hit.collider.gameObject.name);
+                                    if (!hit.transform.Find("Trench"))
+                                    {
+                                        FindObjectOfType<SpawnController>().FindProperSpawnPositionTrench(hit.collider.gameObject);
 
-                                    FindObjectOfType<SpawnController>().FindProperSpawnPositionTrench(hit.collider.gameObject);
+                                    }
+                                    else if (hit.transform.Find("Trench"))
+                                    {
+                                        Debug.Log("You can't Build a Trench on Another Trench!");
+                                    }
                                 }
-                                else if (hit.collider.name == "Trench")
-                                {
-                                    Debug.Log("You can't Build a Trench on Another Trench!");
-                                }
+                                
                                 else if (hit.collider.name == "Water 1" || hit.collider.name == "Water 2" || hit.collider.name == "Water 3")
                                 {
                                     //Debug.Log(FindObjectOfType<SpawnController>().prefab.name == "Sea Mine");

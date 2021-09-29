@@ -48,7 +48,7 @@ namespace AMVCC.Views
    private void Awake()
    {
       oilTankerButton.interactable = false;
-      submarineButton.interactable = false;
+      //submarineButton.interactable = false;
       instance = this;
    }
 
