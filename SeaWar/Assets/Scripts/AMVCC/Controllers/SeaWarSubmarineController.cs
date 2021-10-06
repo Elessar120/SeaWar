@@ -1,12 +1,14 @@
 ﻿using System;
 using AMVCC.Views;
 using UnityEngine;
+using  DG.Tweening;
 namespace AMVCC.Controllers
 {
     public class SeaWarSubmarineController : SeaWarElement
     {
         [SerializeField] private GameObject mapCenter;
         private float rotateSpeed;
+        private Rigidbody rigidbody;
         float speed;
         private bool isMoving;
         private bool isRotatingToBase;
@@ -23,6 +25,7 @@ namespace AMVCC.Controllers
             startPostion = GetComponent<SeaWarSubmarineView>().startPosition;
             startRotation = transform.rotation;
             rotationTime = 1;
+            rigidbody = GetComponent<Rigidbody>();
         }
 
         private void OnTriggerEnter(Collider other)
@@ -30,7 +33,17 @@ namespace AMVCC.Controllers
             if (other.name == "Middle Map")
             {
                 isMoving = false;
-                isRotatingToBase = true;
+                if (gameObject.CompareTag("Blue"))
+                {
+                     rigidbody.DORotate(new Vector3(0,270,0), 1f, RotateMode.Fast);
+    
+                }
+                if (gameObject.CompareTag("Red"))
+                {
+                    rigidbody.DORotate(new Vector3(0,90,0), 1f, RotateMode.Fast);
+
+                }
+                //isRotatingToBase = true;
                 //Vector3 targetRotationAngle = transform.eulerAngles + 180f * Vector3.up;
                 //transform.eulerAngles = Vector3.RotateTowards(targetRotationAngle,targetRotationAngle,Time.deltaTime,0f);
                 //Quaternion targetRotationAngle = Quaternion.LookRotation(-transform.forward ,Vector3.up);
@@ -47,7 +60,7 @@ namespace AMVCC.Controllers
                 Move();
             }
 
-            if (isRotatingToBase)
+            /*if (isRotatingToBase)
             {
                 //transform.Rotate(new Vector3(0, -180 * Time.deltaTime, 0));
                 Quaternion targetRotationAngle = Quaternion.LookRotation(-transform.right ,Vector3.up);
@@ -56,11 +69,11 @@ namespace AMVCC.Controllers
                 {
                     isRotatingToBase = false;
                     isMoving = true;
-                }*/
+                }#1#
                 //isRotating = false;
                 //isMoving = true;
 
-            }
+            }*/
             float position = mapCenter.transform.position.x - transform.position.x;
             Debug.Log("Position = " + position);
 
