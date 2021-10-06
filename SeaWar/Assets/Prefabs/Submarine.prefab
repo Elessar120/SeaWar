@@ -683,7 +683,7 @@ GameObject:
   - component: {fileID: 9096983201988802216}
   m_Layer: 0
   m_Name: Submarine
-  m_TagString: Blue
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3963,7 +3963,7 @@ GameObject:
   - component: {fileID: 2552619573052840944}
   m_Layer: 0
   m_Name: Submarine
-  m_TagString: Blue
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
