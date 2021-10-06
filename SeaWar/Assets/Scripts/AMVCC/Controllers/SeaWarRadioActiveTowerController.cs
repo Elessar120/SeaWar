@@ -7,7 +7,7 @@ namespace AMVCC.Controllers
     public class SeaWarRadioActiveTowerController : SeaWarElement
 
     {
-        [SerializeField] 
+
         private void Awake()
         {
         }
@@ -23,7 +23,6 @@ namespace AMVCC.Controllers
 
             if (!other.gameObject.CompareTag(gameObject.tag))
             {
-                //other.GetComponent<SeaWarHealthView>().TakeDamage();
                 Debug.Log("it is working!");
             }
         }
