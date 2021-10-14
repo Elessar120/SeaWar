@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using AMVCC.Views;
 using UnityEngine;
 using  DG.Tweening;
@@ -13,9 +14,10 @@ namespace AMVCC.Controllers
         private bool isMoving;
         private bool isRotatingToBase;
         private bool isRotatingToBattlefield;
-        private Vector3 startPostion;
+        [SerializeField] Vector3 startPostion;
         private Quaternion startRotation;
         private float rotationTime;
+        private float rotateDuration;
         private void Start()
         {
             rotateSpeed = Application.model.submarineModel.rotateSpeed;
@@ -24,34 +26,50 @@ namespace AMVCC.Controllers
             isMoving = true;
             startPostion = GetComponent<SeaWarSubmarineView>().startPosition;
             startRotation = transform.rotation;
-            rotationTime = 1;
             rigidbody = GetComponent<Rigidbody>();
+            rotateDuration = 0.9f;
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.name == "Middle Map")
             {
-                isMoving = false;
-                if (gameObject.CompareTag("Blue"))
+                Debug.Log("in middle map");
+                if (!isRotatingToBase)//for OnTriggerEnter runs one time 
                 {
-                     rigidbody.DORotate(new Vector3(0,270,0), 1f, RotateMode.Fast);
-    
+                    isRotatingToBase = true;
+                    StartCoroutine(Rotate());
                 }
-                if (gameObject.CompareTag("Red"))
-                {
-                    rigidbody.DORotate(new Vector3(0,90,0), 1f, RotateMode.Fast);
+               
+            }
 
-                }
-                //isRotatingToBase = true;
-                //Vector3 targetRotationAngle = transform.eulerAngles + 180f * Vector3.up;
-                //transform.eulerAngles = Vector3.RotateTowards(targetRotationAngle,targetRotationAngle,Time.deltaTime,0f);
-                //Quaternion targetRotationAngle = Quaternion.LookRotation(-transform.forward ,Vector3.up);
-                //transform.rotation = Quaternion.RotateTowards(transform.rotation,targetRotationAngle,180 * Time.deltaTime);
-
-                //isMoving = true;
-            }   
+            if (other.name == "Refinery 1" || other.name == "Refinery 2" || other.name == "Refinery 3" && isRotatingToBase)
+            {
+                StartCoroutine(Rotate());
+                isRotatingToBase = false;
+            }
         }
+
+        private IEnumerator Rotate()
+        {
+            Quaternion targetRotationAngle = Quaternion.LookRotation(-transform.forward ,Vector3.up);
+
+            isMoving = false;
+            if (gameObject.CompareTag("Blue"))
+            {
+                //rigidbody.DORotate(new Vector3(0,-90,0), rotateDuration, RotateMode.Fast);
+                transform.DORotateQuaternion(targetRotationAngle, rotateDuration);
+
+            }
+            if (gameObject.CompareTag("Red"))
+            {
+                transform.DORotateQuaternion(targetRotationAngle, rotateDuration);
+            }
+
+            yield return new WaitForSeconds(rotateDuration + 0.1f);
+            isMoving = true;
+        }
+        
 
         private void Update()
         {
@@ -60,27 +78,6 @@ namespace AMVCC.Controllers
                 Move();
             }
 
-            /*if (isRotatingToBase)
-            {
-                //transform.Rotate(new Vector3(0, -180 * Time.deltaTime, 0));
-                Quaternion targetRotationAngle = Quaternion.LookRotation(-transform.right ,Vector3.up);
-                transform.rotation = Quaternion.RotateTowards(transform.rotation,targetRotationAngle,180 * Time.deltaTime);
-                /*if (Mathf.Abs(transform.rotation.y - startRotation.y) == 0)
-                {
-                    isRotatingToBase = false;
-                    isMoving = true;
-                }#1#
-                //isRotating = false;
-                //isMoving = true;
-
-            }*/
-            float position = mapCenter.transform.position.x - transform.position.x;
-            Debug.Log("Position = " + position);
-
-            if (position < 0.1 && position > -0.1)
-            {
-                
-            }
         }
 
         private void Move()

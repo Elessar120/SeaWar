@@ -54,6 +54,8 @@ namespace AMVCC.Views
 
    private void Start()
    {
+      totalGoldAmount = 20000;
+
       Application.model.refineryModel.onOilProductionAction += SetNewOilAmount;
       Application.model.refineryModel.onOilProductionAction += SetNewOilAmountText;
       Application.model.oilTankerModel.onExitMapAction += SetNewGoldAmount;

@@ -2,55 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57948be8-0927-4994-a554-03ff991ccd6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Models/naftkesh.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/naftkesh.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/zedeHavai.fbx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Models/zedeHavai.fbx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.XML" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.XML.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/DOTween.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenMiniIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/DOTweenMiniIcon.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer_dark.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Header.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Plugins/Demigiant/DOTween/readme.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/zedeHavai 2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Models/zedeHavai 2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Battleship.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Battleship.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Submarine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Submarine.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineBaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineBaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineChasingAndAttackingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineChasingAndAttackingState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineMovingBackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineMovingBackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineMovingForwardState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineMovingForwardState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineTurningState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineTurningState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/SubmarineController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/SubmarineController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarRadioActiveTowerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarRadioActiveTowerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSubmarineModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSubmarineModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarUIView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarUIView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +42,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarOilTankerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/OilTanker/OilTankerMovment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.5.7/Editor/Collaborate/UserInterface/CollaborateWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4D909C80-E34F-4A76-896B-D88597D1591C/1a/c56e4a51/Physics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/98/dc9b5e38/Environment.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSpawnModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/e3/19a2f0b1/NotImplementedException.cs" root0="SKIP_HIGHLIGHTING" />
@@ -79,12 +53,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarMissleLauncherModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarMissleController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarMissleView.cs" />
-      <option value="$PROJECT_DIR$/Assets/ScriptableObjects/Unit.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarMissleModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarBattleshipView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarFrigateRotateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarHelicopterRotateController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipMissleController.cs" />
@@ -120,16 +88,22 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarRadioActiveTowerModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSeaMineModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarTrenchModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarUIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/UserInputController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarJetFighterAttckController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineCOntroller.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSubmarineModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarUIView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarRadioActiveTowerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSubmarineModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineBaseState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarUIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/SubmarineController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarSubmarineView.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSubmarineController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineTurningState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineChasingAndAttackingState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarUIView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineMovingBackState.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineMovingForwardState.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nvkw4CZd3Voqph4zwu9SPctwCa" />
@@ -434,6 +408,20 @@
       <workItem from="1633346525663" duration="661000" />
       <workItem from="1633368092954" duration="5791000" />
       <workItem from="1633514980459" duration="3280000" />
+      <workItem from="1633544644733" duration="9648000" />
+      <workItem from="1633603282082" duration="598000" />
+      <workItem from="1633625227914" duration="1169000" />
+      <workItem from="1633802218507" duration="593000" />
+      <workItem from="1633816016888" duration="3220000" />
+      <workItem from="1633870022008" duration="8023000" />
+      <workItem from="1634040482355" duration="1665000" />
+      <workItem from="1634042956929" duration="42000" />
+      <workItem from="1634043092645" duration="5691000" />
+      <workItem from="1634053920371" duration="2823000" />
+      <workItem from="1634132058397" duration="3456000" />
+      <workItem from="1634155324958" duration="3035000" />
+      <workItem from="1634207180587" duration="5958000" />
+      <workItem from="1634215741688" duration="11588000" />
     </task>
     <task id="LOCAL-00001" summary="wrong spawn position bugs fixed, UI bugs remain, refactor code for removing codes about using layer, working on electric tower">
       <created>1625493955267</created>

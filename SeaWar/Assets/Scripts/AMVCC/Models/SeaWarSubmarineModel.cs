@@ -31,12 +31,14 @@ namespace AMVCC.Models
         public float cost;
         public Unit submarineData;
         public float rotateSpeed;
+        public float sightRange;
         private void Awake()
         {
             rotationAngle = submarineData.rotationSpeed;
             speed = submarineData.movmentSpeed;
             cost = submarineData.costWithGold;
             rotateSpeed = submarineData.rotateSpeed;
+            sightRange = sightRange;
         }
 
         private void Start()

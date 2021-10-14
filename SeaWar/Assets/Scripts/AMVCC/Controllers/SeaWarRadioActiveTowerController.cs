@@ -19,6 +19,7 @@ namespace AMVCC.Controllers
 
         private void OnTriggerEnter(Collider other)
         {
+            
             Debug.Log("it is working!");
 
             if (!other.gameObject.CompareTag(gameObject.tag))

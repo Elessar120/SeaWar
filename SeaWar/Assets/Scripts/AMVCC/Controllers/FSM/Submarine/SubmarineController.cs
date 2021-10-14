@@ -1,44 +1,64 @@
-﻿using System;
+﻿    using System;
 using AMVCC.Controllers.FSM.Submarine.Submarine_States;
 using AMVCC.Views;
 using UnityEditor.Build.Player;
+using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.Jobs;
 
 namespace AMVCC.Controllers.FSM.Submarine
 {
     public class SubmarineController : SeaWarElement
     {
+        private float radarRange;
+        private float submarineLength;
+        private Collider target;
         private SubmarineBaseState currentState;
         private SubmarineBaseState previousState;
         public SubmarineBaseState CurrentState => currentState;
         public SubmarineBaseState PreviousState => previousState;
-        public readonly SubmarineMovingForwardState movingForwardState = new SubmarineMovingForwardState();
-        public readonly SubmarineMovingBackState movingBackState = new SubmarineMovingBackState();
-        public readonly SubmarineTurningState turningState = new SubmarineTurningState();
-        public readonly SubmarineChasingAndAttackingState chasingAndAttackingState =
+        public readonly SubmarineMovingForwardState movingForwardState = 
+            new SubmarineMovingForwardState();
+        public readonly SubmarineMovingBackState movingBackState = 
+            new SubmarineMovingBackState();
+        public readonly SubmarineTurningState turningState = 
+            new SubmarineTurningState();
+        public readonly SubmarineChasingAndAttackingState chasingAndAttackingState = 
             new SubmarineChasingAndAttackingState();
 
         private void Start()
         {
-            TransitionToState(movingForwardState);
-        }
+            submarineLength = 2;
 
+            radarRange = GetComponent<SeaWarSubmarineView>().sightRange + submarineLength/2;
+
+            TransitionToState(movingForwardState);
+    
+            //InvokeRepeating("EnemyDetector",0,1);
+        }
+        
         public void TransitionToState(SubmarineBaseState state)
         {
             previousState = currentState;
             currentState = state;
+            
             currentState.EnterState(this);
         }
 
         public void Update()
         {
             currentState.Update(this);
-            
         }
-
+        
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireCube(transform.position,new Vector3(8,2,4));
+        }
+        
         public void OnTriggerEnter(Collider other)
         {
-         
+            
+            
             /*
             if (!other.CompareTag(gameObject.tag) &&
                 (other.name == "Submarine(Clone)" || other.name == "OilTanker(Clone)" ||
@@ -53,10 +73,15 @@ namespace AMVCC.Controllers.FSM.Submarine
             currentState.OnTriggerEnter(this, other);   
 
         }
-        
+        private void EnemyDetector()
+        {
+
+            
+           
+        }
         public void SetSubmarineTurnAnimationStateToTrue()
         {
-            gameObject.GetComponent<SeaWarSubmarineView>().submarineRotationAnimator.SetBool("isInRotateMod", true);
+//            gameObject.GetComponent<SeaWarSubmarineView>().submarineRotationAnimator.SetBool("isInRotateMod", true);
         }
 
         public void OnTriggerStay(Collider other)
@@ -120,8 +145,9 @@ namespace AMVCC.Controllers.FSM.Submarine
             currentState.OnTriggerExit(this, other);
 
         }
+
        
-  }
+    }
     
     
 }

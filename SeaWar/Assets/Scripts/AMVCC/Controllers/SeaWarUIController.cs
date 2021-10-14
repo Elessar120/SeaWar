@@ -1,8 +1,8 @@
 ﻿using System;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-namespace AMVCC.Controllers
+using TMPro;
+namespace AMVCC.collider
 {
     public class SeaWarUIController : SeaWarElement
     {
@@ -117,4 +117,6 @@ namespace AMVCC.Controllers
         }
         
     }
+
 }
+    

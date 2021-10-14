@@ -681,9 +681,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9096983201988802216}
-  m_Layer: 0
+  - component: {fileID: 4290379046658391511}
+  - component: {fileID: 7778106774260299699}
+  m_Layer: 7
   m_Name: Submarine
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -713,6 +715,36 @@ Transform:
   m_Father: {fileID: 6061543761849950419}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!54 &4290379046658391511
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094083574865855789}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &7778106774260299699
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094083574865855789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.04
+  m_Height: 0.2
+  m_Direction: 0
+  m_Center: {x: -0.02, y: 0.025, z: 0}
 --- !u!1 &1193641351351404453
 GameObject:
   m_ObjectHideFlags: 0
@@ -3960,10 +3992,10 @@ GameObject:
   - component: {fileID: 2356883207968242314}
   - component: {fileID: 184384626761691984}
   - component: {fileID: 3089152691775576372}
-  - component: {fileID: 2552619573052840944}
-  m_Layer: 0
+  - component: {fileID: 4456906767704898895}
+  m_Layer: 7
   m_Name: Submarine
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3976,7 +4008,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6869464164616469097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.5}
+  m_LocalPosition: {x: 0.5, y: 0, z: 1.15}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 9096983201988802216}
@@ -4009,10 +4041,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.11
-  m_Height: 0.1
-  m_Direction: 1
-  m_Center: {x: -0.02, y: 0, z: 0}
+  m_Radius: 0.15
+  m_Height: 0.8
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.025, z: -0.015}
 --- !u!114 &3089152691775576372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4026,6 +4058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startPosition: {x: 0, y: 0, z: 0}
+  sightRange: 0
   submarineRotationAnimator: {fileID: 0}
   wasInMiddleFirstTime: 0
   submarineIsGoingToMiddleMap: 0
@@ -4036,8 +4069,9 @@ MonoBehaviour:
   isAttackTime: 0
   fireRate: 0
   rayCastingPoint: {fileID: 0}
-  nextDestination: {x: 0, y: 0, z: 0}
---- !u!114 &2552619573052840944
+  nextDestination: {fileID: 0}
+  speed: 0
+--- !u!114 &4456906767704898895
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4046,10 +4080,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6869464164616469097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f219584235e74be5b25251f688d4bd2c, type: 3}
+  m_Script: {fileID: 11500000, guid: b5ec9df9653dd65499824d3d7da29c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapCenter: {fileID: 0}
 --- !u!1 &6951926583550302711
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ namespace AMVCC.Views
     public class SeaWarSubmarineView : SeaWarElement
     {
         public Vector3 startPosition;
+        public float sightRange;
 
         public Animator submarineRotationAnimator;
         public bool wasInMiddleFirstTime;
@@ -16,7 +17,8 @@ namespace AMVCC.Views
         public bool isAttackTime;
         public float fireRate;
         public GameObject rayCastingPoint;
-        public Vector3 nextDestination;
+        public Transform nextDestination;
+        public float speed;
         private void Awake()
         {
 
@@ -25,11 +27,13 @@ namespace AMVCC.Views
             submarineIsGoingToMiddleMap = true;
             fireRate = Application.model.submarineModel.submarineData.fireRate;
             health = Application.model.submarineModel.submarineData.health;
+            speed = Application.model.submarineModel.speed;
         }
     
         private void Start()
         {
-           
+            sightRange = Application.model.submarineModel.sightRange;
+
             startPosition = gameObject.transform.position;
             /*if (transform.position.x > 0)
             {

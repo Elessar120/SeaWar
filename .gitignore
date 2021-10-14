@@ -9,7 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
-
+/[Mm]dels
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
 

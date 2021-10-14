@@ -1,6 +1,6 @@
 ﻿using AMVCC.Views;
 using UnityEngine;
-
+using DG.Tweening;
 namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
 {
     public class SubmarineChasingAndAttackingState : SubmarineBaseState
@@ -8,12 +8,13 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
         public void EnterState(SubmarineController submarine)
         {
             //submarine.GetComponent<SeaWarSubmarineView>().isChasing = true;
-//            Debug.Log(submarine.CurrentState);
+            
+            Debug.Log(submarine.CurrentState);
         }
 
         public void Update(SubmarineController submarine)
         {
-            RaycastHit hit;
+            /*RaycastHit hit;
             Ray ray = new Ray(submarine.GetComponent<SeaWarSubmarineView>().rayCastingPoint.transform.position, submarine.transform.right);
             Debug.DrawRay(submarine.GetComponent<SeaWarSubmarineView>().rayCastingPoint.transform.position,submarine.transform.right * 3, Color.green);
             if (Physics.Raycast(ray,out hit, 3f))
@@ -46,7 +47,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
 
                  }
 
-            }
+            }*/
             
            
             
@@ -86,14 +87,14 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
                 }
             }*/
         }
-        private void Chase(SubmarineController submarine, Collider enemyCollider)
+        /*private void Chase(SubmarineController submarine, Collider enemyCollider)
         {
             Debug.Log(submarine.tag+" is chasing");
            submarine.transform.position = Vector3.MoveTowards(submarine.transform.position,
                 new Vector3(enemyCollider.transform.position.x,
                     enemyCollider.transform.position.y, enemyCollider.transform.position.z),
                 Time.deltaTime * submarine.Application.model.submarineModel.submarineData.movmentSpeed);
-        }
+        }*/
         private void SetFireRate(SubmarineController submarine, Collider enemyCollider)
         {
             SeaWarSubmarineView instance = submarine.GetComponent<SeaWarSubmarineView>();
@@ -122,5 +123,15 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
             
 
         }
+
+       public void Start(SubmarineController submarine)
+       {
+           throw new System.NotImplementedException();
+       }
+
+       public void Enable(SubmarineController submarine)
+       {
+           throw new System.NotImplementedException();
+       }
     }
 }
