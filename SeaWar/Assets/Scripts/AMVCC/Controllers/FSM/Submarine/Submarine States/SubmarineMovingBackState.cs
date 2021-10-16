@@ -11,7 +11,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
         private Ease moveEase = Ease.Linear;
         private float distance;
         private SubmarineController submarine;
-        public void EnterState(SubmarineController submarine)
+        public void EnterState(SubmarineController submarine, Collider other)
         {
             this.submarine = submarine;
             Debug.Log(submarine.CurrentState);

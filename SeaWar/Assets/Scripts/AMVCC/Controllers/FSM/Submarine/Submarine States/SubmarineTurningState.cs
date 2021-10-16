@@ -10,7 +10,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
         public void Start(SubmarineController submarine)
         {
         }
-        public void EnterState(SubmarineController submarine)
+        public void EnterState(SubmarineController submarine, Collider other)
         {
             rotateDuration = .9f;
             Debug.Log(submarine.CurrentState);

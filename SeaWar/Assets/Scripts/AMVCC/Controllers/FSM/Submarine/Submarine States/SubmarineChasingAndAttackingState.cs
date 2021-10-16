@@ -5,7 +5,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
 {
     public class SubmarineChasingAndAttackingState : SubmarineBaseState
     {
-        public void EnterState(SubmarineController submarine)
+        public void EnterState(SubmarineController submarine, Collider other)
         {
             //submarine.GetComponent<SeaWarSubmarineView>().isChasing = true;
             
@@ -55,7 +55,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
 
         public void OnTriggerEnter(SubmarineController submarine, Collider other)
         {
-           
+            
         }
 
         public void OnTriggerStay(SubmarineController submarine, Collider other)

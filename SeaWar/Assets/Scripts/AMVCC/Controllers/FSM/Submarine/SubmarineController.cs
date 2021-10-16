@@ -42,7 +42,7 @@ namespace AMVCC.Controllers.FSM.Submarine
             previousState = currentState;
             currentState = state;
             
-            currentState.EnterState(this);
+            currentState.EnterState(this,target);
         }
 
         public void Update()
@@ -70,6 +70,7 @@ namespace AMVCC.Controllers.FSM.Submarine
                 //Chase(submarine,hit.collider);
                 //SetFireRate(submarine,hit.collider);
             }*/
+            target = other;
             currentState.OnTriggerEnter(this, other);   
 
         }
