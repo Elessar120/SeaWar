@@ -683,9 +683,10 @@ GameObject:
   - component: {fileID: 9096983201988802216}
   - component: {fileID: 4290379046658391511}
   - component: {fileID: 7778106774260299699}
+  - component: {fileID: 1941327837114370778}
   m_Layer: 7
   m_Name: Submarine
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -730,7 +731,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &7778106774260299699
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -742,9 +743,23 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.04
-  m_Height: 0.2
+  m_Height: 0.18
   m_Direction: 0
-  m_Center: {x: -0.02, y: 0.025, z: 0}
+  m_Center: {x: 0, y: 0.025, z: 0}
+--- !u!114 &1941327837114370778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094083574865855789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c642adb7f9c84b7899fa63bf6155b055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  attackers: []
 --- !u!1 &1193641351351404453
 GameObject:
   m_ObjectHideFlags: 0
@@ -3993,9 +4008,9 @@ GameObject:
   - component: {fileID: 184384626761691984}
   - component: {fileID: 3089152691775576372}
   - component: {fileID: 4456906767704898895}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Submarine
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4071,6 +4086,7 @@ MonoBehaviour:
   rayCastingPoint: {fileID: 0}
   nextDestination: {fileID: 0}
   speed: 0
+  damage: 0
 --- !u!114 &4456906767704898895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4083,6 +4099,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5ec9df9653dd65499824d3d7da29c2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  submarineModel: {fileID: 0}
+  submarineView: {fileID: 3089152691775576372}
+  submarineCollider: {fileID: 7778106774260299699}
 --- !u!1 &6951926583550302711
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,6 +19,7 @@ namespace AMVCC.Views
         public GameObject rayCastingPoint;
         public Transform nextDestination;
         public float speed;
+        public float damage;
         private void Awake()
         {
 
@@ -28,12 +29,13 @@ namespace AMVCC.Views
             fireRate = Application.model.submarineModel.submarineData.fireRate;
             health = Application.model.submarineModel.submarineData.health;
             speed = Application.model.submarineModel.speed;
+            
         }
     
         private void Start()
         {
             sightRange = Application.model.submarineModel.sightRange;
-
+            damage = Application.model.submarineModel.damage;
             startPosition = gameObject.transform.position;
             /*if (transform.position.x > 0)
             {

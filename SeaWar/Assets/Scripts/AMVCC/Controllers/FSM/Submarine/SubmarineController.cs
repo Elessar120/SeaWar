@@ -1,6 +1,7 @@
 ﻿    using System;
 using AMVCC.Controllers.FSM.Submarine.Submarine_States;
-using AMVCC.Views;
+    using AMVCC.Models;
+    using AMVCC.Views;
 using UnityEditor.Build.Player;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -10,6 +11,8 @@ namespace AMVCC.Controllers.FSM.Submarine
 {
     public class SubmarineController : SeaWarElement
     {
+        public SeaWarSubmarineModel submarineModel;
+        public SeaWarSubmarineView submarineView;
         private float radarRange;
         private float submarineLength;
         private Collider target;
@@ -26,8 +29,10 @@ namespace AMVCC.Controllers.FSM.Submarine
         public readonly SubmarineChasingAndAttackingState chasingAndAttackingState = 
             new SubmarineChasingAndAttackingState();
 
+        [SerializeField] private Collider submarineCollider;
         private void Start()
         {
+            submarineModel = FindObjectOfType<SeaWarSubmarineModel>();
             submarineLength = 2;
 
             radarRange = GetComponent<SeaWarSubmarineView>().sightRange + submarineLength/2;
@@ -70,7 +75,11 @@ namespace AMVCC.Controllers.FSM.Submarine
                 //Chase(submarine,hit.collider);
                 //SetFireRate(submarine,hit.collider);
             }*/
-            target = other;
+            if (other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts") && !other.CompareTag(gameObject.tag))
+            {
+                target = other;
+
+            }
             currentState.OnTriggerEnter(this, other);   
 
         }

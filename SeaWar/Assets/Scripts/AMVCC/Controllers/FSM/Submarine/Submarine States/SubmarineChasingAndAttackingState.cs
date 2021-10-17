@@ -1,127 +1,224 @@
-﻿using AMVCC.Views;
+﻿using System;
+using System.Collections;
+using AMVCC.Views;
 using UnityEngine;
 using DG.Tweening;
+using System.Linq;
+using UnityEditor.VersionControl;
+using UnityEngine.EventSystems;
+
 namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
 {
     public class SubmarineChasingAndAttackingState : SubmarineBaseState
     {
+        private Transform targetTransform;
+        private Collider target;
+        private float distance;
+        private Ease moveEase = Ease.Linear;
+        private float damage;
+        private float fireRate;
+        private bool isInRange;
         public void EnterState(SubmarineController submarine, Collider other)
         {
+            isInRange = true;
+            submarine.submarineView.isAttackTime = true;
+            damage = submarine.submarineView.damage;
+            fireRate = submarine.submarineView.fireRate;
+            if (target == null)
+            {
+                target = other;
+                targetTransform = other.transform;
+            }
+            //todo spawn a missile
+            /*if (target != null)
+            {
+                SetFireRate(submarine,target);
+
+            }*/
+            /*else if (other == null)
+            {
+                
+            }*/
+            //submarine.StartCoroutine(Move(submarine));
+            
             //submarine.GetComponent<SeaWarSubmarineView>().isChasing = true;
             
             Debug.Log(submarine.CurrentState);
         }
 
-        public void Update(SubmarineController submarine)
+        private void SetNextState(SubmarineController submarine)
         {
-            /*RaycastHit hit;
-            Ray ray = new Ray(submarine.GetComponent<SeaWarSubmarineView>().rayCastingPoint.transform.position, submarine.transform.right);
-            Debug.DrawRay(submarine.GetComponent<SeaWarSubmarineView>().rayCastingPoint.transform.position,submarine.transform.right * 3, Color.green);
-            if (Physics.Raycast(ray,out hit, 3f))
+            float distance = submarine.transform.position.x - submarine.submarineModel.middleMap.transform.position.x;
+            if (distance <= 0)
             {
-                
-//                Debug.Log(submarine.tag+" enemy in sight! :" + hit.collider.name);
-                if (!hit.collider.CompareTag(submarine.GetComponent<SeaWarSubmarineView>().tag) &&
-                    (hit.collider.name == "Submarine(Clone)" || hit.collider.name == "OilTanker(Clone)" ||
-                     hit.collider.name == "BattleShip(Clone)" || hit.collider.name == "SmallBattleship(Clone)" ||
-                     hit.collider.name == "MotorBoat(Clone)" ))
+                if (submarine.tag == "Blue")
                 {
-                    submarine.GetComponent<SeaWarSubmarineView>().enemyCollider = hit.collider; 
-                    Chase(submarine,hit.collider);
-                    //SetFireRate(submarine,hit.collider);
+                    if (submarine.PreviousState == submarine.movingForwardState)
+                    {
+                        Debug.Log("b1");
+                        submarine.TransitionToState(submarine.movingForwardState);
+                    }
+                    else if (submarine.PreviousState == submarine.movingBackState)
+                    {
+                        Debug.Log("b2");
+
+                        submarine.TransitionToState(submarine.movingBackState);
+                    }
                 }
-                //submarine.currentState.Update(this);
-               
+                else if (submarine.tag == "Red")
+                {
+                    if (submarine.PreviousState == submarine.movingForwardState)
+                    {
+                        Debug.Log("r1");
+                        submarine.TransitionToState(submarine.turningState);
+                    }
+                    else if (submarine.PreviousState == submarine.movingBackState)
+                    {
+                        Debug.Log("r2");
+
+                        submarine.TransitionToState(submarine.movingBackState);
+                    }
+                }
+                
             }
             else
             {
-                submarine.GetComponent<SeaWarSubmarineView>().enemyCollider = null;
+                if (submarine.tag == "Blue")
+                {
+                    if (submarine.PreviousState == submarine.movingForwardState)
+                    {
+                        Debug.Log("b3");
 
-                 if (!submarine.GetComponent<SeaWarSubmarineView>().middleMapPassed)
-                 {
-                    submarine.TransitionToState(submarine.movingForwardState);
-                 }
-                 else
-                 {
-                     submarine.TransitionToState(submarine.turningState);
+                        submarine.TransitionToState(submarine.turningState);
+                    }
+                    else if (submarine.PreviousState == submarine.movingBackState)
+                    {
+                        Debug.Log("b4");
 
-                 }
+                        submarine.TransitionToState(submarine.movingBackState);
+                    }
+                }
+                else if (submarine.tag == "Red")
+                {
+                    if (submarine.PreviousState == submarine.movingForwardState)
+                    {
+                        Debug.Log("r3");
 
-            }*/
+                        submarine.TransitionToState(submarine.movingForwardState);
+                    }
+                    else if (submarine.PreviousState == submarine.movingBackState)
+                    {
+                        Debug.Log("r4");
+
+                        submarine.TransitionToState(submarine.movingBackState);
+                    }
+                }
+                if (submarine.PreviousState == submarine.movingForwardState)
+                {
+                    Debug.Log("3");
+
+                    submarine.TransitionToState(submarine.turningState);
+                }
+                else if (submarine.PreviousState == submarine.movingBackState)
+                {
+                    Debug.Log("4");
+
+                    submarine.TransitionToState(submarine.movingBackState);
+                }
+            }
             
-           
-            
+        }
+
+        private IEnumerator Move(SubmarineController submarine)
+        {
+            float speed = submarine.GetComponent<SeaWarSubmarineView>().speed;
+
+            Tween moveTween = submarine.transform.DOMoveX(targetTransform.position.x,
+                Vector3.Distance(submarine.transform.position, targetTransform.position) / speed).SetEase(moveEase);
+            yield return moveTween.WaitForCompletion();
+        }
+
+        public void Update(SubmarineController submarine)
+        {
+            if (target != null)
+            {
+                if (isInRange)
+                {
+                    if (submarine.submarineView.isAttackTime)
+                    {
+                        Attack(submarine,submarine.submarineView.damage, target); 
+                        submarine.submarineView.isAttackTime = false;
+                    }
+//                    Debug.Log("firerate 1 : " + fireRate);
+
+                    fireRate -= Time.deltaTime;
+                    //Debug.Log("firerate 2 : " + fireRate);
+
+                    if (fireRate < 0)
+                    {
+                        //Debug.Log("firerate 2 : " + fireRate);
+
+                        fireRate = submarine.submarineView.fireRate;
+                        submarine.submarineView.isAttackTime = true;
+                    }
+                }
+         
+            } 
+            if (target != null && !isInRange)
+            {
+                Chase(submarine, target);
+            } 
+            if (target == null)
+            {
+                SetNextState(submarine);            
+            }
         }
 
         public void OnTriggerEnter(SubmarineController submarine, Collider other)
         {
-            
+            if (other == target)
+            {
+                isInRange = true;
+            }   
         }
 
         public void OnTriggerStay(SubmarineController submarine, Collider other)
         {
-            /*if (other != null)
-            {
-                if (!other.CompareTag(submarine.tag) &&
-                    (other.name == "Submarine(Clone)" || other.name == "OilTanker(Clone)" ||
-                     other.name == "BattleShip(Clone)" || other.name == "SmallBattleship(Clone)" ||
-                     other.name == "MotorBoat(Clone)" ))
-                {
-                    Debug.Log(other.name + other.tag);
-
-                    //Chase(submarine,hit.collider);
-                    //SetFireRate(submarine,hit.collider);
-                }
-            }
            
+        }
+        
+        private void Chase(SubmarineController submarine, Collider enemyCollider)
+        {
+            //Debug.Log(submarine.tag+" is chasing");
+           submarine.transform.position = Vector3.MoveTowards(submarine.transform.position,
+                enemyCollider.transform.position,
+                Time.deltaTime * submarine.submarineModel.submarineData.movmentSpeed);
+        }
+
+        private void Attack(SubmarineController submarine, float damage, Collider other)
+        {
+            if (other)
+            {
+                other.GetComponent<SeaWarHealthView>().TakeDamage(damage);
+
+            }
             else
             {
-                if (Vector3.Distance(submarine.transform.position, submarine.Application.model.submarineModel.middleMap.transform.position) < 6.6)
-                {
-                    submarine.TransitionToState(submarine.turningState);
-
-                }
-                else
-                {
-                    submarine.TransitionToState(submarine.movingForwardState);
-                }
-            }*/
-        }
-        /*private void Chase(SubmarineController submarine, Collider enemyCollider)
-        {
-            Debug.Log(submarine.tag+" is chasing");
-           submarine.transform.position = Vector3.MoveTowards(submarine.transform.position,
-                new Vector3(enemyCollider.transform.position.x,
-                    enemyCollider.transform.position.y, enemyCollider.transform.position.z),
-                Time.deltaTime * submarine.Application.model.submarineModel.submarineData.movmentSpeed);
-        }*/
-        private void SetFireRate(SubmarineController submarine, Collider enemyCollider)
-        {
-            SeaWarSubmarineView instance = submarine.GetComponent<SeaWarSubmarineView>();
-            if (instance.isAttackTime)
-            {
-                Attack(submarine.Application.model.submarineModel.submarineData.damage, enemyCollider); 
-                instance.isAttackTime = false;
+                SetNextState(submarine);
             }
-                
-            instance.fireRate -= Time.deltaTime;
-                
-            if (instance.fireRate < 0)
-            {
-                instance.fireRate = submarine.Application.model.submarineModel.submarineData.fireRate;
-                instance.isAttackTime = true;
-            }
-        }
-        public void Attack(float damage, Collider enemyCollider)
-        {
-            enemyCollider.GetComponent<SubmarineController>().TakeDamage(damage);
         }
       
 
        public void OnTriggerExit(SubmarineController submarine, Collider other)
         {
             
-
+            if (other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts") && !other.CompareTag(submarine.tag))
+            {
+                if (other == target)
+                {
+                    isInRange = false;
+                }
+            }
         }
 
        public void Start(SubmarineController submarine)

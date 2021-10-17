@@ -26,7 +26,7 @@ namespace AMVCC.Views
                 case "Refinery 3":
                    SetHealthRefinery();
                     break;
-                case "Submarin":
+                case "Submarine":
                     SetHealthSubmarine();
                     break;
                 case "Oil Tanker":
@@ -108,7 +108,7 @@ namespace AMVCC.Views
 
         private void SetHealthMagneticTower()
         {
-            health = Application.model.submarineModel.health;
+            health = Application.model.magneticTowerModel.health;
         }
 
         private void SetHealthElectronicTower()

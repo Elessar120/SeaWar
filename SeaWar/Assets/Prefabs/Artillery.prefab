@@ -1832,7 +1832,7 @@ GameObject:
   - component: {fileID: 2035445508306280833}
   m_Layer: 6
   m_Name: Artillery
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3192,7 +3192,7 @@ GameObject:
   - component: {fileID: 8056349109636395002}
   m_Layer: 6
   m_Name: Artillery
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

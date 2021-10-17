@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 6692371984502445795}
   m_Layer: 0
   m_Name: antiAirCraft:pCube1
-  m_TagString: Blue
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 4010275171876717726}
   m_Layer: 6
   m_Name: Anti Air Craft
-  m_TagString: Blue
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647

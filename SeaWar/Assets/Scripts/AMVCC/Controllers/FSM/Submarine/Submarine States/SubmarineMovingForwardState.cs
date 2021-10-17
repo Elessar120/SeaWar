@@ -37,7 +37,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
         {
             float speed = submarine.GetComponent<SeaWarSubmarineView>().speed;
             Vector3 nextDestination = submarine.Application.model.submarineModel.middleMap.transform.position;
-            Tween myTween = submarine.transform.DOMoveX(nextDestination.x,(Vector3.Distance(submarine.transform.position,nextDestination))/speed).SetEase(moveEase).OnKill(SetNextState).OnComplete(Turning);
+            Tween myTween = submarine.transform.DOMoveX(nextDestination.x,Vector3.Distance(submarine.transform.position,nextDestination)/speed).SetEase(moveEase).OnKill(SetNextState).OnComplete(Turning);
             //yield return new WaitForSeconds((Vector3.Distance(submarine.transform.position,nextDestination))/speed);
             yield return myTween.WaitForCompletion();
 
