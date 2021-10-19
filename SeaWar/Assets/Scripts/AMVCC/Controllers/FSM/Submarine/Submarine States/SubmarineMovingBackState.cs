@@ -14,7 +14,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
         public void EnterState(SubmarineController submarine, Collider other)
         {
             this.submarine = submarine;
-            Debug.Log(submarine.CurrentState);
+            Debug.Log(submarine.CurrentState + " " + submarine.tag);
             submarine.StartCoroutine(Move(submarine));
         }
 
@@ -82,7 +82,10 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
 
         public void OnTriggerStay(SubmarineController submarine, Collider other)
         {
-            
+            if (other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts") && !other.CompareTag(submarine.tag))
+            {
+             //   submarine.transform.DOKill();
+            }
         }
 
         public void OnTriggerExit(SubmarineController submarine, Collider other)

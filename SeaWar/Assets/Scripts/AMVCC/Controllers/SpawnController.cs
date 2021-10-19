@@ -32,7 +32,7 @@ namespace AMVCC.Controllers
             Blue,Red
         }
 
-       
+        public Queue spawnedSeaCrafts = new Queue();
         private Button[] gamePlayButtons;
         private void Start()
         {
@@ -139,7 +139,7 @@ namespace AMVCC.Controllers
             }
             if (hit.gameObject.CompareTag("Red"))
             {
-                prefab.tag = "Red";
+                prefab.tag = "Red"; 
                 if (prefab.transform.parent)
                 {
                     prefab.transform.parent.tag = "Red";
@@ -306,14 +306,20 @@ namespace AMVCC.Controllers
 
         public void Spawner(Vector3 spawnPosition, Quaternion spawnRotation, Collider hit)
         {
+            
 //            Debug.Log("spawner");
-            if (prefab.name != "Radioactive Tower" && prefab.name != "Magnetic Tower" && prefab.name != "Electric Tower" && prefab.name != "Sea Mine" && prefab.name != "Artillery" && prefab.name != "Trench" && prefab.name != "Anti Air Craft")
+            if (prefab.layer != LayerMask.NameToLayer("Buildings"))
             {
                 if (FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
                 {
-                     var unit = Instantiate(prefab, spawnPosition,spawnRotation);
-                     unit.name = prefab.name;
-                    FindObjectOfType<SeaWarUIView>().DisableRoads();
+                    
+                        if (prefab.layer == LayerMask.NameToLayer("Sea Crafts"))
+                        {
+                            spawnedSeaCrafts.Enqueue(prefab);
+                        }
+                        var unit = Instantiate(prefab, spawnPosition,spawnRotation);
+                        unit.name = prefab.name;
+                        FindObjectOfType<SeaWarUIView>().DisableRoads();
                 }
             }
             else if (prefab.name == "Radioactive Tower" || prefab.name == "Magnetic Tower" || prefab.name == "Electronic Tower" || prefab.name != "Sea Mine" || prefab.name != "Artillery" || prefab.name != "Trench" || prefab.name != "Anti Air Craft")

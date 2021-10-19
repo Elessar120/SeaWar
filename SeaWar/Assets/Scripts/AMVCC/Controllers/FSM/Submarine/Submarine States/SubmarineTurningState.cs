@@ -8,6 +8,8 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
     {
         private float rotateDuration;
         private bool isInRange;
+        private float distance;
+        private Collider target;
         private SubmarineController submarine;
         public void Start(SubmarineController submarine)
         {
@@ -16,7 +18,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
         {
             this.submarine = submarine;
             rotateDuration = .9f;
-            Debug.Log(submarine.CurrentState);
+            Debug.Log(submarine.CurrentState + " " + submarine.tag);
 
            submarine.StartCoroutine(Rotate(submarine));
 
@@ -31,32 +33,72 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
 
             if (submarine.PreviousState == submarine.movingForwardState || submarine.PreviousState == submarine.chasingAndAttackingState)
             {
-                Tweener rotateBack = submarine.transform.DORotateQuaternion(targetRotationAngle, rotateDuration).OnComplete(SetStateToAttack);
-                yield return new WaitForSeconds(rotateDuration + 0.1f);
-                submarine.TransitionToState(submarine.movingBackState);
+                Tweener rotateBack = submarine.transform.DORotateQuaternion(targetRotationAngle, rotateDuration);
+                yield return rotateBack.WaitForCompletion();                
+                if (isInRange)
+                {
+                    Debug.Log("is in range");
+                    if (distance < 0)
+                    {
+                        submarine.TransitionToState(submarine.chasingAndAttackingState);
 
+                    }
+                    else if (distance > 0)
+                    {
+                        submarine.TransitionToState(submarine.turningState);
+
+                    }
+                }
+                else
+                {
+                    submarine.TransitionToState(submarine.movingBackState);
+
+                }
             }
 
             else if (submarine.PreviousState == submarine.movingBackState)
             {
-                Tweener rotateForward = submarine.transform.DORotateQuaternion(targetRotationAngle, rotateDuration).OnComplete(SetStateToAttack);
-                yield return new WaitForSeconds(rotateDuration + 0.1f);
-                submarine.TransitionToState(submarine.movingForwardState);
+                Tweener rotateForward = submarine.transform.DORotateQuaternion(targetRotationAngle, rotateDuration);
+                yield return rotateForward.WaitForCompletion();
+                if (isInRange)
+                {
+                    Debug.Log("is in range");
+
+                    if (distance < 0)
+                    {
+                        submarine.TransitionToState(submarine.turningState);
+
+                    }
+                    else if (distance > 0)
+                    {
+                        submarine.TransitionToState(submarine.chasingAndAttackingState);
 
 
-
+                    }
+                }
+                else
+                {
+                    submarine.TransitionToState(submarine.movingForwardState);
+                }
             }
-
-        }
-
-        private void SetStateToAttack()
-        {
-            if (isInRange)
+            else if (submarine.PreviousState == submarine.turningState)
             {
-                submarine.TransitionToState(submarine.chasingAndAttackingState);
+                Tweener rotateBack = submarine.transform.DORotateQuaternion(targetRotationAngle, rotateDuration);
+                yield return rotateBack.WaitForCompletion();
+                if (target == null)
+                {
+                    if (submarine.PreviousPreviousState == submarine.movingForwardState)
+                    {
+                        submarine.TransitionToState(submarine.movingForwardState);
+                    }
+                    else if (submarine.PreviousPreviousState == submarine.movingBackState)
+                    {
+                        submarine.TransitionToState(submarine.movingBackState);  
+                    }
+                }
             }
-        }
 
+        }
         public void Update(SubmarineController submarine)
         {
            
@@ -67,6 +109,12 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
         {
             if (other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts") && !other.CompareTag(submarine.tag))
             {
+                distance = Vector3.Distance(submarine.transform.position ,other.transform.position);
+                if (target == null)
+                {
+                    target = other;
+
+                }
                 isInRange = true;
             }
         }
@@ -78,7 +126,13 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
 
         public void OnTriggerExit(SubmarineController submarine, Collider other)
         {
-            
+            if (submarine.gameObject.layer == LayerMask.NameToLayer("Sea Crafts") && !other.CompareTag(submarine.tag))
+            {
+                if (other == target)
+                {
+                    target = null;
+                }
+            }
         }
 
         

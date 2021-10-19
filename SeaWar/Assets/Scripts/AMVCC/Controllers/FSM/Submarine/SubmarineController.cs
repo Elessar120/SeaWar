@@ -16,10 +16,15 @@ namespace AMVCC.Controllers.FSM.Submarine
         private float radarRange;
         private float submarineLength;
         private Collider target;
+        [SerializeField] private GameObject selfMesh;
+        [SerializeField] private GameObject forwardRayCastingPoint;
+        [SerializeField] private GameObject backwardRayCastingPoint;
         private SubmarineBaseState currentState;
         private SubmarineBaseState previousState;
+        private SubmarineBaseState previousPreviousState;
         public SubmarineBaseState CurrentState => currentState;
         public SubmarineBaseState PreviousState => previousState;
+        public SubmarineBaseState PreviousPreviousState => previousPreviousState;
         public readonly SubmarineMovingForwardState movingForwardState = 
             new SubmarineMovingForwardState();
         public readonly SubmarineMovingBackState movingBackState = 
@@ -38,12 +43,16 @@ namespace AMVCC.Controllers.FSM.Submarine
             radarRange = GetComponent<SeaWarSubmarineView>().sightRange + submarineLength/2;
 
             TransitionToState(movingForwardState);
-    
+            forwardRayCastingPoint.transform.localPosition +=
+                new Vector3(0, 0, selfMesh.GetComponent<MeshRenderer>().bounds.extents.z *3/8.25f);
+            backwardRayCastingPoint.transform.localPosition -= new Vector3(0, 0,
+                selfMesh.GetComponent<MeshRenderer>().bounds.extents.z * 3 / 7f);
             //InvokeRepeating("EnemyDetector",0,1);
         }
         
         public void TransitionToState(SubmarineBaseState state)
         {
+            previousPreviousState = previousState;
             previousState = currentState;
             currentState = state;
             
@@ -53,6 +62,41 @@ namespace AMVCC.Controllers.FSM.Submarine
         public void Update()
         {
             currentState.Update(this);
+            RaycastHit hit;
+            Ray forwardRay = new Ray(forwardRayCastingPoint.transform.position , transform.forward);
+            Ray backwardRay = new Ray(backwardRayCastingPoint.transform.position , transform.forward * -1);
+            Debug.DrawRay(forwardRayCastingPoint.transform.position,transform.forward * 3, Color.red);
+            Debug.DrawRay(backwardRayCastingPoint.transform.position,transform.forward * -3, Color.red);
+            Debug.Log("update");
+            if (Physics.Raycast(forwardRay,out hit, 3f))
+            {
+                if (!hit.collider.CompareTag(GetComponent<SeaWarSubmarineView>().tag) &&
+                    (hit.collider.name == "Submarine(Clone)" || hit.collider.name == "OilTanker(Clone)" ||
+                     hit.collider.name == "BattleShip(Clone)" || hit.collider.name == "SmallBattleship(Clone)" ||
+                     hit.collider.name == "MotorBoat(Clone)" ))
+                {
+                    Debug.Log(hit.collider.name + hit.collider.tag);
+                    TransitionToState(chasingAndAttackingState);
+                    //Chase(submarine,hit.collider);
+                    //SetFireRate(submarine,hit.collider);
+                }
+
+               
+            } if (Physics.Raycast(backwardRay,out hit, 3f))
+            {
+                if (!hit.collider.CompareTag(GetComponent<SeaWarSubmarineView>().tag) &&
+                    (hit.collider.name == "Submarine(Clone)" || hit.collider.name == "OilTanker(Clone)" ||
+                     hit.collider.name == "BattleShip(Clone)" || hit.collider.name == "SmallBattleship(Clone)" ||
+                     hit.collider.name == "MotorBoat(Clone)" ))
+                {
+                    Debug.Log(hit.collider.name + hit.collider.tag);
+                    TransitionToState(chasingAndAttackingState);
+                    //Chase(submarine,hit.collider);
+                    //SetFireRate(submarine,hit.collider);
+                }
+
+               
+            } 
         }
         
         private void OnDrawGizmos()

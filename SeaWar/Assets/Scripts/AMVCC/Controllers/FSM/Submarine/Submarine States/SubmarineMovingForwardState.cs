@@ -27,7 +27,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
         public void EnterState(SubmarineController submarine, Collider other)
         {
             this.submarine = submarine;
-            Debug.Log(submarine.CurrentState);
+            Debug.Log(submarine.CurrentState + " " + submarine.tag);
             submarine.StartCoroutine(Move(submarine));
             //submarine.TransitionToState(submarine.turningState);
 
@@ -84,25 +84,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
               //  submarine.TransitionToState(submarine.turningState);
                 
            // }
-            //RaycastHit hit;
-            //Ray ray = new Ray(submarine.GetComponent<SeaWarSubmarineView>().rayCastingPoint.transform.position , submarine.transform.right);
-           // Debug.DrawRay(submarine.GetComponent<SeaWarSubmarineView>().rayCastingPoint.transform.position,submarine.transform.right * 3, Color.red);
-//            Debug.Log("update");
-            /*if (Physics.Raycast(ray,out hit, 3f))
-            {
-                if (!hit.collider.CompareTag(submarine.GetComponent<SeaWarSubmarineView>().tag) &&
-                    (hit.collider.name == "Submarine(Clone)" || hit.collider.name == "OilTanker(Clone)" ||
-                     hit.collider.name == "BattleShip(Clone)" || hit.collider.name == "SmallBattleship(Clone)" ||
-                     hit.collider.name == "MotorBoat(Clone)" ))
-                {
-                    Debug.Log(hit.collider.name + hit.collider.tag);
-                    submarine.TransitionToState(submarine.chasingAndAttackingState);
-                    //Chase(submarine,hit.collider);
-                    //SetFireRate(submarine,hit.collider);
-                }
-
-               
-            } */
+           
             /*else 
             {
                 if (submarine.GetComponent<SeaWarSubmarineView>().isChasing)
@@ -120,6 +102,8 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
         {
             if (other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts") && !other.gameObject.CompareTag(submarine.tag))
             {
+                Debug.Log("on trigger enter " + submarine.tag);
+
                //submarine.TransitionToState(submarine.chasingAndAttackingState);
                distance = Vector3.Distance(submarine.transform.position ,other.transform.position);
                 Debug.Log(distance);
@@ -155,8 +139,11 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
 
         public void OnTriggerStay(SubmarineController submarine, Collider other)
         {
-            
-           // submarine.TransitionToState(submarine.chasingAndAttackingState);
+            if (other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts") && !other.CompareTag(submarine.tag))
+            {
+                //submarine.transform.DOKill();
+            }
+            // submarine.TransitionToState(submarine.chasingAndAttackingState);
         }
 
         public void OnTriggerExit(SubmarineController submarine, Collider other)

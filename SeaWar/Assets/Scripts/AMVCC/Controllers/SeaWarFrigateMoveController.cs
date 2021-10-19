@@ -18,7 +18,7 @@ namespace AMVCC.Controllers
         
         private void Update()
         {
-            Debug.Log(isStopTime);
+//            Debug.Log(isStopTime);
 
             if (!isStopTime)
             {

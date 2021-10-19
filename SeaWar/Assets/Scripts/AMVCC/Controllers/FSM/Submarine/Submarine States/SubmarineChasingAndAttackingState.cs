@@ -43,7 +43,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
             
             //submarine.GetComponent<SeaWarSubmarineView>().isChasing = true;
             
-            Debug.Log(submarine.CurrentState);
+            Debug.Log(submarine.CurrentState + " " + submarine.tag);
         }
 
         private void SetNextState(SubmarineController submarine)
