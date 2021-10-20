@@ -24,7 +24,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
         }
 
         
-        public void EnterState(SubmarineController submarine, Collider other)
+        public void EnterState(SubmarineController submarine, GameObject other)
         {
             this.submarine = submarine;
             Debug.Log(submarine.CurrentState + " " + submarine.tag);

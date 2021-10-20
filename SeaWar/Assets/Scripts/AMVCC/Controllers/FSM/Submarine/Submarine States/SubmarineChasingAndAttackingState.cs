@@ -12,13 +12,13 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
     public class SubmarineChasingAndAttackingState : SubmarineBaseState
     {
         private Transform targetTransform;
-        private Collider target;
+        private GameObject target;
         private float distance;
         private Ease moveEase = Ease.Linear;
         private float damage;
         private float fireRate;
         private bool isInRange;
-        public void EnterState(SubmarineController submarine, Collider other)
+        public void EnterState(SubmarineController submarine, GameObject other)
         {
             isInRange = true;
             submarine.submarineView.isAttackTime = true;
@@ -146,7 +146,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
                 {
                     if (submarine.submarineView.isAttackTime)
                     {
-                        Attack(submarine,submarine.submarineView.damage, target); 
+                        //Attack(submarine,submarine.submarineView.damage, target); 
                         submarine.submarineView.isAttackTime = false;
                     }
 //                    Debug.Log("firerate 1 : " + fireRate);
@@ -166,7 +166,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
             } 
             if (target != null && !isInRange)
             {
-                Chase(submarine, target);
+               // Chase(submarine, target);
             } 
             if (target == null)
             {

@@ -32,10 +32,13 @@ namespace AMVCC.Controllers
             Blue,Red
         }
 
-        public Queue spawnedSeaCrafts = new Queue();
+        public Queue spawnedSeaCraftsBlue;
+        public Queue spawnedSeaCraftsRed;
         private Button[] gamePlayButtons;
         private void Start()
         {
+            spawnedSeaCraftsBlue = new Queue();
+            spawnedSeaCraftsRed = new Queue();
             gamePlayButtons = SeaWarUIView.Instance.gamePlayButtons;
             SeaWarUIView.Instance.onCheckButtonIsInteractableAction += SetButtonInteractableState;
         }
@@ -313,11 +316,25 @@ namespace AMVCC.Controllers
                 if (FindObjectOfType<SeaWarUIView>().isRoadsEnabled)
                 {
                     
-                        if (prefab.layer == LayerMask.NameToLayer("Sea Crafts"))
-                        {
-                            spawnedSeaCrafts.Enqueue(prefab);
-                        }
+                    
+                        
                         var unit = Instantiate(prefab, spawnPosition,spawnRotation);
+                        if (unit.layer == LayerMask.NameToLayer("Sea Crafts")) 
+                        {
+                            if (unit.CompareTag("Blue"))
+                            {
+                                spawnedSeaCraftsBlue.Enqueue(unit);
+                                Debug.Log(spawnedSeaCraftsBlue.Count + "in spawn controller Blue");
+
+                            }
+                            else if (unit.CompareTag("Red"))
+                            {
+                                spawnedSeaCraftsRed.Enqueue(unit);
+                                Debug.Log(spawnedSeaCraftsRed.Count + "in spawn controller Red");
+
+                                //todo if count of each queue had been more than a huge number, null objects must dequeue with foreach loop and a dequue
+                            }
+                        }
                         unit.name = prefab.name;
                         FindObjectOfType<SeaWarUIView>().DisableRoads();
                 }

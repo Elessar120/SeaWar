@@ -1,5 +1,6 @@
 ﻿    using System;
-using AMVCC.Controllers.FSM.Submarine.Submarine_States;
+    using System.Linq.Expressions;
+    using AMVCC.Controllers.FSM.Submarine.Submarine_States;
     using AMVCC.Models;
     using AMVCC.Views;
 using UnityEditor.Build.Player;
@@ -15,7 +16,8 @@ namespace AMVCC.Controllers.FSM.Submarine
         public SeaWarSubmarineView submarineView;
         private float radarRange;
         private float submarineLength;
-        private Collider target;
+        private GameObject target;
+        [SerializeField] SpawnController spawnController;
         [SerializeField] private GameObject selfMesh;
         [SerializeField] private GameObject forwardRayCastingPoint;
         [SerializeField] private GameObject backwardRayCastingPoint;
@@ -35,6 +37,17 @@ namespace AMVCC.Controllers.FSM.Submarine
             new SubmarineChasingAndAttackingState();
 
         [SerializeField] private Collider submarineCollider;
+
+        private void Awake()
+        {
+            spawnController = FindObjectOfType<SpawnController>().gameObject.GetComponent<SpawnController>();
+            
+        }
+
+        private void SetSeaCraftsToQueue()
+        {
+            
+        }
         private void Start()
         {
             submarineModel = FindObjectOfType<SeaWarSubmarineModel>();
@@ -49,7 +62,53 @@ namespace AMVCC.Controllers.FSM.Submarine
                 selfMesh.GetComponent<MeshRenderer>().bounds.extents.z * 3 / 7f);
             //InvokeRepeating("EnemyDetector",0,1);
         }
-        
+
+        private void OnEnable()
+        {
+            SetTarget();
+        }
+
+        private void SetTarget()
+        {
+            if (gameObject.CompareTag("Blue"))
+            {
+                if (target == null)
+                {
+                    
+                    if (spawnController.spawnedSeaCraftsRed.Peek() != null)
+                    {
+                        target = (GameObject)spawnController.spawnedSeaCraftsRed.Peek();
+                        Debug.Log(spawnController.spawnedSeaCraftsRed.Count + "in submarine controller Red");
+
+
+                    }
+                    else if (spawnController.spawnedSeaCraftsRed.Peek() == null)
+                    {
+                        throw new Exception("Red queue peek is null");
+                    }
+
+                }
+            }
+            else if (gameObject.CompareTag("Red"))
+            {
+                if (target == null)
+                {
+                    if (spawnController.spawnedSeaCraftsBlue.Peek() != null)
+                    {
+                        target = (GameObject)spawnController.spawnedSeaCraftsBlue.Peek();
+                        Debug.Log(spawnController.spawnedSeaCraftsBlue.Count + "in spawn controller Blue");
+
+
+                    }
+                    else if (spawnController.spawnedSeaCraftsBlue == null)
+                    {
+                        throw new Exception("Blue queue peek is null");
+                    }
+
+                }
+            }
+        }
+
         public void TransitionToState(SubmarineBaseState state)
         {
             previousPreviousState = previousState;
@@ -62,7 +121,7 @@ namespace AMVCC.Controllers.FSM.Submarine
         public void Update()
         {
             currentState.Update(this);
-            RaycastHit hit;
+            /*RaycastHit hit;
             Ray forwardRay = new Ray(forwardRayCastingPoint.transform.position , transform.forward);
             Ray backwardRay = new Ray(backwardRayCastingPoint.transform.position , transform.forward * -1);
             Debug.DrawRay(forwardRayCastingPoint.transform.position,transform.forward * 3, Color.red);
@@ -96,7 +155,7 @@ namespace AMVCC.Controllers.FSM.Submarine
                 }
 
                
-            } 
+            }*/ 
         }
         
         private void OnDrawGizmos()
@@ -121,7 +180,7 @@ namespace AMVCC.Controllers.FSM.Submarine
             }*/
             if (other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts") && !other.CompareTag(gameObject.tag))
             {
-                target = other;
+                //target = other;
 
             }
             currentState.OnTriggerEnter(this, other);   

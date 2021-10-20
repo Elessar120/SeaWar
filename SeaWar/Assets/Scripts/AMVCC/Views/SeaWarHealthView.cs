@@ -160,22 +160,50 @@ namespace AMVCC.Views
         }
         public void TakeDamage(float damage)
         {
-                //     Debug.Log(damage);
+                //Debug.Log(damage);
             if (health > 0)
             {
                 isDead = false;
                 health -= damage;
-//                    Debug.Log( gameObject.name + health);
+                //Debug.Log( gameObject.name + health);
             }
             if (health <= 0)
             {
                 health = 0f;
                 isDead = true;
+                //ReSizeSpawnedSeaCraftsQueue();
                 OnRegister();
                 Death();
             }
-            //return isDead;
+               //return isDead;
             }
+
+        private void ReSizeSpawnedSeaCraftsQueue()
+        {
+            var spawnedSeaCraftsBlue = FindObjectOfType<SpawnController>().GetComponent<SpawnController>().spawnedSeaCraftsBlue;
+            var spawnedSeaCraftsRed = FindObjectOfType<SpawnController>().GetComponent<SpawnController>().spawnedSeaCraftsRed;
+            if (spawnedSeaCraftsBlue.Count >= 50)
+            {
+                foreach (var seaCraft in spawnedSeaCraftsBlue)
+                {
+                    if (seaCraft == null)
+                    {
+                        spawnedSeaCraftsBlue.Dequeue();
+                    }
+                }
+            }
+            if (spawnedSeaCraftsRed.Count >= 50)
+            {
+                foreach (var seaCraft in spawnedSeaCraftsRed)
+                {
+                    if (seaCraft == null)
+                    {
+                        spawnedSeaCraftsRed.Dequeue();
+                    }
+                }
+            }
+            
+        }
 
         private void OnRegister()
         {

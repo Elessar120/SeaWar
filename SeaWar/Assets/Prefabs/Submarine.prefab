@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: 1941327837114370778}
   m_Layer: 7
   m_Name: Submarine
-  m_TagString: Blue
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4068,9 +4068,9 @@ GameObject:
   - component: {fileID: 184384626761691984}
   - component: {fileID: 3089152691775576372}
   - component: {fileID: 4456906767704898895}
-  m_Layer: 2
+  m_Layer: 7
   m_Name: Submarine
-  m_TagString: Blue
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4163,6 +4163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   submarineModel: {fileID: 0}
   submarineView: {fileID: 3089152691775576372}
+  spawnController: {fileID: 0}
   selfMesh: {fileID: 8082361171388222357}
   forwardRayCastingPoint: {fileID: 4139197356002792739}
   backwardRayCastingPoint: {fileID: 4742551984524932505}
