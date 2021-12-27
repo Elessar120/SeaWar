@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcbb73636c4482a877766f44931fad5, type: 3}
+  m_Name: Motorboat
+  m_EditorClassIdentifier: 
+  unitName: Motor Boat
+  prefab: {fileID: 8444730129603090327, guid: 1275147a33b164a40867376f07e370c8, type: 3}
+  level: 1
+  movmentSpeed: 2.4
+  damage: 50
+  health: 350
+  fireRate: 1
+  sightRange: 2
+  rotationSpeed: 0
+  costWithGold: 0
+  costWithOil: 1000
+  upgradeCardsNeed: 2
+  upgradeGoldsNeed: 0
+  supportDamageRate: 0
+  productionRate: 0
+  earnedMoney: 0
+  spawnButton: {fileID: 0}
+  AttackTargets:
+  - Refinery

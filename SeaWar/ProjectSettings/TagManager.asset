@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - BattleGround
+  - Unit
+  - StartPoint
+  - BattleShip
+  - SmallBattleShip
+  - Lench
+  - RoadBlue1
+  - RoadBlue2
+  - RoadBlue3
+  - RoadRed1
+  - RoadRed2
+  - RefineryBlue1
+  - RefineryBlue2
+  - RefineryBlue3
+  - RefineryRed1
+  - RefineryRed2
+  - RefineryRed3
+  - RoadRed3
+  - BlueSubmarine
+  - RedSubmarine
+  - Red
+  - Blue
+  - BlueRefinery
+  - RedRefinery
+  - Tower
+  - Platform
+  - Refinery
+  - Submarine
+  - Motor Boat
+  - Oil Tanker
+  - Radioactive Tower
+  - Electronic Tower
+  - Magnetic Tower
+  - Sea Mine
+  - Anti Air Craft
+  - Artillery
+  - Road
+  - Trench
+  - Middle Map
+  - Exit Point
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Buildings
+  - Sea Crafts
+  - Air Crafts
+  - Motorboat
+  - BlueOilTanker
+  - Blue
+  - Red
+  - 
+  - Enviroment
+  - MiddleMap
+  - StartPoint
+  - ExitPoint
+  - Refinery
+  - Road
+  - RedOilTanker
+  - RedSubmarine
+  - Bridge
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Text Space/Gold
+    uniqueID: 3282201
+    locked: 0
+  - name: Text Space/Oil
+    uniqueID: 1013604865
+    locked: 0

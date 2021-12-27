@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcbb73636c4482a877766f44931fad5, type: 3}
+  m_Name: SeaMine
+  m_EditorClassIdentifier: 
+  unitName: Sea Mine
+  prefab: {fileID: 4788461917057374936, guid: 6d1ff1b53b3617d40a0c187c763244d4, type: 3}
+  level: 1
+  movmentSpeed: 0
+  enemySlowDownCoefficient: 0
+  damage: 600
+  increasedDamageCoefficient: 0
+  health: 0
+  fireRate: 0
+  sightRange: 2.5
+  rotationSpeed: 0
+  costWithGold: 400
+  costWithOil: 0
+  upgradeCardsNeed: 2
+  upgradeGoldsNeed: 0
+  supportDamageRate: 0
+  productionRate: 0
+  earnedMoney: 0
+  spawnButton: {fileID: 0}
+  AttackTargets: []

@@ -1,0 +1,4 @@
+if git index not work. add this lines of codes to git bash and press enter.
+if doent work delete other .git folders in other folders with same name or other foledrs all.
+rm -f .git/index
+git reset

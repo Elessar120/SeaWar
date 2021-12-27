@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcbb73636c4482a877766f44931fad5, type: 3}
+  m_Name: RadioactiveTower
+  m_EditorClassIdentifier: 
+  unitName: Radioactive Tower
+  prefab: {fileID: 7742894662856617420, guid: 8233529f4bb5a5a44a55fe855d990092, type: 3}
+  level: 1
+  movmentSpeed: 0
+  damage: 30
+  health: 400
+  fireRate: 1
+  sightRange: 4
+  rotationSpeed: 0
+  costWithGold: 1200
+  costWithOil: 0
+  upgradeCardsNeed: 4
+  upgradeGoldsNeed: 0
+  supportDamageRate: 0
+  productionRate: 0
+  earnedMoney: 0
+  spawnButton: {fileID: 0}
+  AttackTargets: []

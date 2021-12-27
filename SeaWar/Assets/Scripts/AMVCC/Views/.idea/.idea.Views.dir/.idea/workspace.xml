@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="54743560-9fcc-4221-a7b8-5581d892841b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../ScriptableObjects.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ScriptableObjects/Motorboat.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ScriptableObjects/Motorboat.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ScriptableObjects/OilTanker.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ScriptableObjects/OilTanker.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ScriptableObjects/Refinery.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ScriptableObjects/Refinery.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ScriptableObjects/Unit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ScriptableObjects/Unit.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ScriptableObjects/submarine.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ScriptableObjects/submarine.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SeaWarMotorBoatView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Scenes/GamePlay.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Scenes/GamePlay.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeaWarOilTankerView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/SeaWarOilTankerView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeaWarRefineryView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/SeaWarRefineryView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeaWarSubmarineFightView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/SeaWarSubmarineFightView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeaWarSubmarineView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/SeaWarSubmarineView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeaWarUIView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/SeaWarUIView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ScriptableObjects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ScriptableObjects/Motorboat.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ScriptableObjects/Motorboat.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ScriptableObjects/OilTanker.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ScriptableObjects/OilTanker.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ScriptableObjects/Refinery.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ScriptableObjects/Refinery.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ScriptableObjects/Unit.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ScriptableObjects/Unit.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ScriptableObjects/submarine.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ScriptableObjects/submarine.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../ProjectSettings/ProjectVersion.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../Models/SeaWarMotorBoatModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Application/SeaWarElement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SeaWarMotorBoatView.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Models/SeaWarRefineryModel.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/SeaWarMotorBoatView.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="1sG3AMOMOG2Nc6h6j0PFCDbKbu2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="showLigatures" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="54743560-9fcc-4221-a7b8-5581d892841b" name="Default Changelist" comment="" />
+      <created>1620484963791</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620484963791</updated>
+      <workItem from="1620484980942" duration="2119000" />
+      <workItem from="1620502897494" duration="8185000" />
+      <workItem from="1620732504190" duration="3380000" />
+      <workItem from="1620765214165" duration="928000" />
+      <workItem from="1620847441443" duration="593000" />
+      <workItem from="1620905935639" duration="1320000" />
+      <workItem from="1620934044354" duration="520000" />
+      <workItem from="1621287506972" duration="2025000" />
+      <workItem from="1621341791874" duration="1815000" />
+      <workItem from="1621343918360" duration="1862000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
