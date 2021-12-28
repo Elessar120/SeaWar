@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57948be8-0927-4994-a554-03ff991ccd6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Pol.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Pol.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Symbolic Bridges- Connections.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Symbolic Bridges- Connections.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SeaWar/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bridge Blue 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bridge Blue 1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bridge Blue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bridge Blue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Submarine.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Submarine.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GamePlay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineChasingAndAttackingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineChasingAndAttackingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineMovingBackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineMovingBackState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Unity_lic.alf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineAttackingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineAttackingState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineMovingForwardState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineMovingForwardState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineTurningState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineTurningState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/SubmarineController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/SubmarineController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SpawnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SpawnController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHealthView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHealthView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/UserInputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/UserInputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,40 +28,39 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineTurningState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/SubmarineController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/38/ed9c4c25/Exception.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarMotorBoatController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSpeedController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FD824CFB-5500-4855-B9E6-D51B008C90E4/a5/5d9668c3/Queue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/98/dc9b5e38/Environment.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarOilTankerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarMotorBoatModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/SubmarineRotationController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSpawnModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarApplication.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/OilTanker/OilTankerMovment.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineAttackingState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ADFA4B62-4008-4918-9388-DF71C9E26E89/12/f55243e2/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHealthView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarArtilleryRotationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarMotorBoatView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IMovementSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ADFA4B62-4008-4918-9388-DF71C9E26E89/e0/dae764f0/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineMovingForwardState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.5.7/Editor/Collaborate/UserInterface/CollaborateWindow.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarHealthView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarMotorBoatController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Views/SeaWarMotorBoatView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/e3/19a2f0b1/NotImplementedException.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ADFA4B62-4008-4918-9388-DF71C9E26E89/70/ec80a724/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interface/IMovementSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarArtilleryRotationController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/OilTanker/OilTankerMovment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/UserInputController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ADFA4B62-4008-4918-9388-DF71C9E26E89/bb/63d8a236/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../SeaWarBackup3/SeaWar/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/SubmarineController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Application/SeaWarApplication.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/SubmarineController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineMovingBackState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineAttackingState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F37459E-F130-4442-BA19-EE268C49D074/e3/19a2f0b1/NotImplementedException.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarSpawnModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ADFA4B62-4008-4918-9388-DF71C9E26E89/70/ec80a724/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Models/SeaWarMotorBoatModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineChasingState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineTurningState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineMovingBackState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ADFA4B62-4008-4918-9388-DF71C9E26E89/bb/63d8a236/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarOilTankerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/SubmarineRotationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../SeaWarBackup3/SeaWar/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/SubmarineController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4D909C80-E34F-4A76-896B-D88597D1591C/1a/c56e4a51/Physics.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarSpeedController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarHelicopterAttackController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineAttackingState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineBaseState.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/FSM/Submarine/Submarine States/SubmarineTurningState.cs" />
@@ -123,6 +111,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipAttackController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipMoveController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/SeaWarBattleshipMissleMoveController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/AMVCC/Controllers/UserInputController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1nvkw4CZd3Voqph4zwu9SPctwCa" />
@@ -519,6 +508,7 @@
       <workItem from="1640434831121" duration="3615000" />
       <workItem from="1640441436449" duration="11855000" />
       <workItem from="1640470703111" duration="24864000" />
+      <workItem from="1640689892339" duration="988000" />
     </task>
     <task id="LOCAL-00001" summary="wrong spawn position bugs fixed, UI bugs remain, refactor code for removing codes about using layer, working on electric tower">
       <created>1625493955267</created>

@@ -4,8 +4,6 @@ using UnityEngine;
 using AMVCC.Views;
 using AMVCC.Models;
 using DG.Tweening;
-using UnityEditor.VersionControl;
-
 namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
 {
     public class SubmarineMovingForwardState :SubmarineBaseState

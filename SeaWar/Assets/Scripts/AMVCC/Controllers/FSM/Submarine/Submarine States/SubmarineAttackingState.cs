@@ -4,7 +4,6 @@ using AMVCC.Views;
 using UnityEngine;
 using DG.Tweening;
 using System.Linq;
-using UnityEditor.VersionControl;
 using UnityEngine.EventSystems;
 
 namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
