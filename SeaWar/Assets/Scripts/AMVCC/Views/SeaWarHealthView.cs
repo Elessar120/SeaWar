@@ -8,11 +8,18 @@ using UnityEngine;
 namespace AMVCC.Views
 {
     public class SeaWarHealthView : SeaWarElement
-    { 
+    {
+        [SerializeField] private HealthBarController healthBar;
         public float health;
         private bool isDead;
         public List<GameObject> attackers = new List<GameObject>();
+
+        private void Awake()
+        {
             
+
+        }
+
         private void Start()
         {
             switch(gameObject.name)
@@ -74,6 +81,16 @@ namespace AMVCC.Views
                 case "Battleship Missle(Clone)":
                     SetBattleshipMissleHealth();
                     break;
+            }
+            
+        }
+
+        private void OnEnable()
+        {
+            if (healthBar)
+            {
+                healthBar.gameObject.SetActive(false);
+
             }
             
         }
@@ -160,11 +177,27 @@ namespace AMVCC.Views
         }
         public bool TakeDamage(float damage, GameObject attacker)
         {
+            if (healthBar)
+            {
+                if (!healthBar.gameObject.activeSelf)
+                {
+                    healthBar.gameObject.SetActive(true);
+                    healthBar.onStart(health);
+                }
+                
+            }
+            //healthBar.onStart(health);
+
                 //Debug.Log(damage);
             if (health > 0)
             {
                 isDead = false;
                 health -= damage;
+                if (healthBar)
+                {
+                    healthBar.onHealthChange(health);
+
+                }
                 //Debug.Log( gameObject.name + health);
             }
             if (health <= 0)
@@ -178,7 +211,7 @@ namespace AMVCC.Views
             }
         private void OnRegister()
         {
-//            Debug.Log("list has : " + attackers.Count + "objects");
+            //            Debug.Log("list has : " + attackers.Count + "objects");
             foreach (GameObject attacker in attackers)
             {
                 if (attacker != null)
@@ -215,6 +248,37 @@ namespace AMVCC.Views
 
         private void Death(GameObject attacker)
         {
+            if (gameObject.layer == LayerMask.NameToLayer("Refinery"))
+            {
+                if (name == "Refinery 1")
+                {
+                    GameObject destroyedLane1 = GameObject.Find("Blue Road Arrow 1"); 
+                    Destroy(destroyedLane1);
+                    Application.model.uiModel.arrowForBlue1 = null;
+                    GameObject destroyedLane2 = GameObject.Find("Red Road Arrow 1"); 
+                    Destroy(destroyedLane2);
+                    Application.model.uiModel.arrowForRed1 = null;
+                }
+                else if (name == "Refinery 2")
+                {
+                    GameObject destroyedLane1 = GameObject.Find("Blue Road Arrow 2"); 
+                    Destroy(destroyedLane1);
+                    Application.model.uiModel.arrowForBlue2 = null;
+                    GameObject destroyedLane2 = GameObject.Find("Red Road Arrow 2"); 
+                    Destroy(destroyedLane2);
+                    Application.model.uiModel.arrowForRed2 = null;
+                }
+                else if (name == "Refinery 3")
+                {
+                    GameObject destroyedLane1 = GameObject.Find("Blue Road Arrow 3"); 
+                    Destroy(destroyedLane1);
+                    Application.model.uiModel.arrowForBlue3 = null;
+                    GameObject destroyedLane2 = GameObject.Find("Red Road Arrow 3"); 
+                    Destroy(destroyedLane2);
+                    Application.model.uiModel.arrowForRed3 = null;
+                }
+
+            }
             if (gameObject.layer == LayerMask.NameToLayer("Buildings"))
             {
 

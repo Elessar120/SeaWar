@@ -17,12 +17,13 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
                 private float distance;
                 private Tween rotationTween;
                 private int delay;
-
+                private Transform transform;
                 private bool isRotating;
                 //private bool isInFireRange;
                 //private bool isInFront;
                 public void EnterState(SubmarineController submarine, GameObject other)
                 {
+                        transform = submarine.transform;
                         delay = 0;
                         Debug.Log(submarine.CurrentState + " " + submarine.tag);
 
@@ -36,7 +37,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
                                 }
                         }
 
-                        distance = target.transform.position.x - submarine.transform.position.x;
+                        distance = target.transform.position.x - transform.position.x;
                         //submarine.StartCoroutine(RotationCheck(submarine));
                                 
                         //ChooseProperState(submarine, distance);
@@ -109,8 +110,19 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
                 private IEnumerator RotationCheck(SubmarineController submarine)
                 {
                         isRotating = true;
-                        rotationTween = submarine.transform.DODynamicLookAt(target.transform.position, submarine.submarineView.speed / submarine.CalculateCurrentSpeed());
-                        yield return new DOTweenCYInstruction.WaitForCompletion(rotationTween);
+                        if (transform.forward == Vector3.right)
+                        {
+                                rotationTween = submarine.transform.DORotate(new Vector3(0,-90,0), submarine.submarineView.speed / submarine.CalculateCurrentSpeed(),RotateMode.FastBeyond360);
+                                yield return new DOTweenCYInstruction.WaitForCompletion(rotationTween);
+
+                        }
+                        else if (transform.forward == Vector3.left)
+                        {
+                                rotationTween = submarine.transform.DORotate(new Vector3(0,90,0), submarine.submarineView.speed / submarine.CalculateCurrentSpeed(),RotateMode.FastBeyond360);
+                                yield return new DOTweenCYInstruction.WaitForCompletion(rotationTween);
+
+                        }
+                        Debug.Log("rotating!!!");
                         isRotating = false;
                 }
 
@@ -120,7 +132,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
                         if (target)
                         {
                                 delay = 0; 
-                                float distance = target.transform.position.x - submarine.transform.position.x;
+                                float distance = target.transform.position.x - transform.position.x;
                                 if (target.name != "Oil Tanker")
                                 {
                                         ChooseProperState(submarine, distance);
@@ -206,36 +218,55 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
                 {
                         if (submarine.CompareTag("Blue"))
                         {
-                                if (submarine.transform.forward == Vector3.right)
+                                if (transform.forward == Vector3.right)
                                 {
                                         if (distance < 0 )
                                         {
-                                                submarine.StartCoroutine(RotationCheck(submarine));
+                                                if (!isRotating)
+                                                {
+                                                        submarine.StartCoroutine(RotationCheck(submarine));
+
+                                                }
                                         }
                                 } 
-                                else if (submarine.transform.forward == Vector3.left)
+                                else if (transform.forward == Vector3.left)
                                 {
                                         if (distance > 0)
                                         {
-                                                submarine.StartCoroutine(RotationCheck(submarine));
+                                                if (!isRotating)
+                                                {
+                                                        submarine.StartCoroutine(RotationCheck(submarine));
+
+                                                }
+                                                
                                         }
                                 }
                         }
                         else if (submarine.CompareTag("Red"))
                         {
-                                if (submarine.transform.forward == Vector3.right)
+                                if (transform.forward == Vector3.right)
                                 {
                                         if (distance < 0)
                                         {
-                                                submarine.StartCoroutine(RotationCheck(submarine));
+                                                if (!isRotating)
+                                                {
+                                                        submarine.StartCoroutine(RotationCheck(submarine));
+
+                                                }
+                                                
                                         }
                                 }
 
-                                if (submarine.transform.forward == Vector3.left)
+                                if (transform.forward == Vector3.left)
                                 {
                                         if (distance > 0)
                                         {
-                                                submarine.StartCoroutine(RotationCheck(submarine));
+                                                if (!isRotating)
+                                                {
+                                                        submarine.StartCoroutine(RotationCheck(submarine));
+
+                                                }
+                                                
                                         }
                                 }
                         }
@@ -548,8 +579,8 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
                        // {
                        if (Mathf.Abs(distanceToEnemy) > 4)
                        {
-                               submarine.transform.position = Vector3.MoveTowards(submarine.transform.position,
-                                       target.transform.position,
+                               transform.position = Vector3.MoveTowards(transform.position,
+                                       new Vector3(target.transform.position.x,transform.position.y,transform.position.z),
                                        Time.deltaTime * submarine.CalculateCurrentSpeed());
                        }
                                

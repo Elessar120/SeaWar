@@ -19,25 +19,25 @@ namespace AMVCC.Controllers
              explosionRadius = Application.model.battleshipModel.battleshipData.explosionArea;
              damage = Application.model.battleshipModel.damage;
              onMissleHit += ExplosionDamage;
-             Destroy(transform.parent.gameObject,15);
+             Destroy(transform.parent.gameObject,20);
          }
 
          private void ExplosionDamage()
          {
-             
+              
              Collider[] hitColliders = Physics.OverlapSphere(transform.position, explosionRadius);
              
-             foreach (Collider hitCollider in hitColliders)
+             for(int i = 0; i < hitColliders.Length; i++)
              {
-                 if (hitCollider.gameObject.layer == LayerMask.NameToLayer("Buildings") && !hitCollider.CompareTag(tag))
+                 if (hitColliders[i].gameObject.layer == LayerMask.NameToLayer("Buildings") && !hitColliders[i].CompareTag(tag))
                  {
-                     if (hitCollider.transform.Find("Trench"))
+                     if (hitColliders[i].transform.Find("Trench"))
                      {
                          /*if (!hitCollider.GetComponent<SeaWarHealthView>().attackers.Contains(gameObject))
                          {
                              hitCollider.GetComponent<SeaWarHealthView>().attackers.Add(gameObject);     
                          }*/
-                         var trench = hitCollider.transform.Find("Trench");
+                         var trench = hitColliders[i].transform.Find("Trench");
                          trench.GetComponent<SeaWarHealthView>().TakeDamage(damage, gameObject);
                      }
                      else 
@@ -46,7 +46,7 @@ namespace AMVCC.Controllers
                          {
                              hitCollider.GetComponent<SeaWarHealthView>().attackers.Add(gameObject);     
                          }*/
-                         hitCollider.GetComponent<SeaWarHealthView>().TakeDamage(damage, gameObject);
+                         hitColliders[i].GetComponent<SeaWarHealthView>().TakeDamage(damage, gameObject);
                          //Debug.Log(gameObject.transform.parent + "aaaaaaa");
                      } 
                  }

@@ -20,6 +20,12 @@ namespace AMVCC.Models
         public GameObject airSpawnPointsForRed1;
         public GameObject airSpawnPointsForRed2;
         public GameObject airSpawnPointsForRed3;
+        public GameObject submarineSpawnPointsForBlue1;
+        public GameObject submarineSpawnPointsForBlue2;
+        public GameObject submarineSpawnPointsForBlue3; 
+        public GameObject submarineSpawnPointsForRed1;
+        public GameObject submarineSpawnPointsForRed2;
+        public GameObject submarineSpawnPointsForRed3;
         public GameObject prefab;
 
     }

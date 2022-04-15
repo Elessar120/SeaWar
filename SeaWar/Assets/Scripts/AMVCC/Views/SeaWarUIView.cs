@@ -94,24 +94,82 @@ namespace AMVCC.Views
 
    public void EnableRoads()
    {
-      Application.model.uiModel.arrowForBlue1.gameObject.SetActive(true);
-      Application.model.uiModel.arrowForBlue2.gameObject.SetActive(true);
-      Application.model.uiModel.arrowForBlue3.gameObject.SetActive(true);
-      Application.model.uiModel.arrowForRed1.gameObject.SetActive(true);
-      Application.model.uiModel.arrowForRed2.gameObject.SetActive(true);
-      Application.model.uiModel.arrowForRed3.gameObject.SetActive(true);
+      if (Application.model.uiModel.arrowForBlue1 != null)
+      {
+         Application.model.uiModel.arrowForBlue1.gameObject.SetActive(true);
+
+      }
+
+      if (Application.model.uiModel.arrowForBlue2 != null)
+      {
+         Application.model.uiModel.arrowForBlue2.gameObject.SetActive(true);
+
+      }
+
+      if (Application.model.uiModel.arrowForBlue3 != null)
+      {
+         Application.model.uiModel.arrowForBlue3.gameObject.SetActive(true);
+
+      }
+
+      if (Application.model.uiModel.arrowForRed1 != null)
+      {
+         Application.model.uiModel.arrowForRed1.gameObject.SetActive(true);
+
+      }
+
+      if (Application.model.uiModel.arrowForRed2 != null)
+      {
+         Application.model.uiModel.arrowForRed2.gameObject.SetActive(true);
+
+      }
+
+      if (Application.model.uiModel.arrowForRed3 != null)
+      {
+         Application.model.uiModel.arrowForRed3.gameObject.SetActive(true);
+
+      }
       SetIsRoadsEnabledToTrue();
 
    }
 
    public void DisableRoads()
    {
-      Application.model.uiModel.arrowForBlue1.gameObject.SetActive(false);
-      Application.model.uiModel.arrowForBlue2.gameObject.SetActive(false);
-      Application.model.uiModel.arrowForBlue3.gameObject.SetActive(false);
-      Application.model.uiModel.arrowForRed1.gameObject.SetActive(false);
-      Application.model.uiModel.arrowForRed2.gameObject.SetActive(false);
-      Application.model.uiModel.arrowForRed3.gameObject.SetActive(false);
+      if (Application.model.uiModel.arrowForBlue1 != null)
+      {
+         Application.model.uiModel.arrowForBlue1.gameObject.SetActive(false);
+
+      }
+
+      if (Application.model.uiModel.arrowForBlue2 != null)
+      {
+         Application.model.uiModel.arrowForBlue2.gameObject.SetActive(false);
+
+      }
+
+      if (Application.model.uiModel.arrowForBlue3 != null)
+      {
+         Application.model.uiModel.arrowForBlue3.gameObject.SetActive(false);
+
+      }
+
+      if (Application.model.uiModel.arrowForRed1 != null)
+      {
+         Application.model.uiModel.arrowForRed1.gameObject.SetActive(false);
+
+      }
+
+      if (Application.model.uiModel.arrowForRed2 != null)
+      {
+         Application.model.uiModel.arrowForRed2.gameObject.SetActive(false);
+
+      }
+
+      if (Application.model.uiModel.arrowForRed3 != null)
+      {
+         Application.model.uiModel.arrowForRed3.gameObject.SetActive(false);
+
+      }
       SetIsRoadsEnabledToFalse();
 
    }

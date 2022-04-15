@@ -44,6 +44,7 @@ TagManager:
   - Trench
   - Middle Map
   - Exit Point
+  - AnimatedButton
   layers:
   - Default
   - TransparentFX

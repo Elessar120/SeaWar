@@ -16,12 +16,14 @@ namespace AMVCC.Controllers.FSM.Submarine
             speed = Application.model.submarineModel.speed;
             /*moveTween = transform.DOMove(target.transform.position,
                 Vector3.Distance(target.transform.position, transform.position) / fireRate).SetEase(moveEase);*/
-
-
         }
 
         private void Update()
         {
+            if (!target)
+            {
+                Destroy(gameObject);
+            }
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position,(speed + fireRate) * Time.deltaTime);
         }
     }

@@ -188,6 +188,25 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
     
         public void FixedUpdate(SubmarineController submarine)
         {
+            RaycastHit[] hits;
+            hits = Physics.RaycastAll(submarine.frontRayCastingPoint.transform.position, submarine.transform.forward,
+                30f);
+            for (int i = 0; i < hits.Length; i++)
+            {
+                RaycastHit hit = hits[i];
+                if (!hit.collider.CompareTag(submarine.tag))
+                {
+                    if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Sea Crafts"))
+                    {
+                        if (!target)
+                        {
+                            target = hit.collider.gameObject;
+                            break;
+                        }
+                    }
+                }
+            }
+            
             if (target)
             {
                 distance = submarine.transform.position.x - target.transform.position.x;
@@ -202,7 +221,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
 
         public void OnTriggerEnter(SubmarineController submarine, Collider other)
         {
-            if (other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts"))
+            /*if (other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts"))
             {
                 if (!other.CompareTag(submarine.tag))
                 {
@@ -212,12 +231,12 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
                         
                     }
                 }
-            }
+            }*/
         }
 
         public void OnTriggerStay(SubmarineController submarine, Collider other)
         {
-            if (other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts"))
+            /*if (other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts"))
             {
                 if (!other.CompareTag(submarine.tag))
                 {
@@ -227,7 +246,7 @@ namespace AMVCC.Controllers.FSM.Submarine.Submarine_States
                         
                     }
                 }
-            }
+            }*/
         }
         public void OnTriggerExit(SubmarineController submarine, Collider other)
         {

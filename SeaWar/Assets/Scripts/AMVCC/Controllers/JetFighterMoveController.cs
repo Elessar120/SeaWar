@@ -10,7 +10,7 @@ namespace AMVCC.Controllers
     public class JetFighterMoveController : SeaWarElement
     
     {
-        private List<GameObject> effectiveMagneticTowers;
+        public List<GameObject> effectiveMagneticTowers;
         public Action <GameObject> onEffectedByMagneticTower;
         [SerializeField] float currentSpeed;
         [SerializeField] private SeaWarJetFighterView jetFighterView;

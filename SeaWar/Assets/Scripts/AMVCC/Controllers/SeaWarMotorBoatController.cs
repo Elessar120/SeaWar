@@ -8,7 +8,7 @@ namespace AMVCC.Controllers
     public class 
     SeaWarMotorBoatController : SeaWarElement
     {
-        private List<GameObject> effectiveMagneticTowers;
+        public List<GameObject> effectiveMagneticTowers;
         public Action <GameObject> onEffectedByMagneticTower;
         private float damage;
         [SerializeField] private SeaWarMotorBoatView motorBoatView;
@@ -48,7 +48,7 @@ namespace AMVCC.Controllers
         {
 
             currentSpeed = motorBoatView.speed;
-            Debug.Log(effectiveMagneticTowers.Count);
+//            Debug.Log(effectiveMagneticTowers.Count);
             for (int i = 0; i < effectiveMagneticTowers.Count; i++)
             {
                 if (!effectiveMagneticTowers[i])
@@ -64,7 +64,7 @@ namespace AMVCC.Controllers
 
 
             }
-
+            Debug.Log(effectiveMagneticTowers.Count);
             return currentSpeed;
         }
         private void Update()
@@ -127,7 +127,7 @@ namespace AMVCC.Controllers
         }
         private void Move()
         {
-            Debug.Log(CalculateCurrentSpeed());
+//            Debug.Log(CalculateCurrentSpeed());
             myTransform.position += (myTransform.forward) * (CalculateCurrentSpeed()) * (Time.deltaTime);
         }
 

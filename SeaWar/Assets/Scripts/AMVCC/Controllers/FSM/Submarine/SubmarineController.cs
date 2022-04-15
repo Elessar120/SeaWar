@@ -23,7 +23,8 @@ namespace AMVCC.Controllers.FSM.Submarine
         private Vector3 targetPosition;
         public SpawnController spawnController;
         [SerializeField] private GameObject selfMesh;
-        public GameObject rayCastingPoint;
+        public GameObject backRayCastingPoint;  
+        public GameObject frontRayCastingPoint;  
         private SubmarineBaseState currentState;
         private SubmarineBaseState previousState;
         private SubmarineBaseState lastStateBeforeChase;
@@ -88,7 +89,7 @@ namespace AMVCC.Controllers.FSM.Submarine
         {
             
             currentSpeed = submarineView.speed;
-            Debug.Log(effectiveMagneticTowers.Count);
+//            Debug.Log(effectiveMagneticTowers.Count);
             for (int i = 0; i < effectiveMagneticTowers.Count; i++)
             {
                 if (!effectiveMagneticTowers[i])
@@ -211,8 +212,9 @@ namespace AMVCC.Controllers.FSM.Submarine
             }
         private void OnDrawGizmos()
         {
-Gizmos.color = Color.red;
-Gizmos.DrawRay(rayCastingPoint.transform.position, transform.forward * -3);
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(backRayCastingPoint.transform.position, transform.forward * -3);
+            Gizmos.DrawRay(frontRayCastingPoint.transform.position, transform.forward * 30);
         }
         
         public void OnTriggerEnter(Collider other)

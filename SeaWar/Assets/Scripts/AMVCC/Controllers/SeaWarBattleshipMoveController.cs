@@ -11,7 +11,7 @@ namespace AMVCC.Controllers
     public class SeaWarBattleshipMoveController : SeaWarElement
     {
         private bool isUnderBridge;
-        private List<GameObject> effectiveMagneticTowers;
+        public List<GameObject> effectiveMagneticTowers;
         public Action <GameObject> onEffectedByMagneticTower;
         [SerializeField] float currentSpeed;
         public bool isStopTime;

@@ -8,7 +8,7 @@ namespace AMVCC.Controllers
 {
     public class SeaWarFrigateMoveController : SeaWarElement
     {
-        private List<GameObject> effectiveMagneticTowers;
+        public List<GameObject> effectiveMagneticTowers;
         public Action <GameObject> onEffectedByMagneticTower;
         [SerializeField] float currentSpeed;
         [SerializeField] private SeaWarFrigateView frigateView;
@@ -38,7 +38,7 @@ namespace AMVCC.Controllers
         {
 
             currentSpeed = frigateView.speed;
-            Debug.Log(effectiveMagneticTowers.Count);
+//            Debug.Log(effectiveMagneticTowers.Count);
             for (int i = 0; i < effectiveMagneticTowers.Count; i++)
             {
                 if (!effectiveMagneticTowers[i])

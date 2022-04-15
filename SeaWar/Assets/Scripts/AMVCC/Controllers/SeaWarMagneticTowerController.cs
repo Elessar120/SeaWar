@@ -18,62 +18,78 @@ namespace AMVCC.Controllers
                 {
                     if (other.name == "Oil Tanker")
                     {
-                        other.GetComponent<SeaWarOilTankerController>().onEffectedByMagneticTower(parentGameObject);
-
+                        //other.GetComponent<SeaWarOilTankerController>().onEffectedByMagneticTower(parentGameObject);
                     }
                     else if (other.name == "Motor Boat")
                     {
                         other.GetComponent<SeaWarMotorBoatController>().onEffectedByMagneticTower(parentGameObject);
-
                     }
                     else if (other.name == "Lench")
                     {
                         other.GetComponent<SeaWarLenchController>().onEffectedByMagneticTower(parentGameObject);
-
                     }
                     else if (other.name == "Frigate")
                     {
                         other.GetComponent<SeaWarFrigateMoveController>().onEffectedByMagneticTower(parentGameObject);
-
                     }
                     else if (other.name == "Battleship")
                     {
                         other.GetComponent<SeaWarBattleshipMoveController>().onEffectedByMagneticTower(parentGameObject);
-
                     }
                     else if (other.name == "Submarine")
                     {
-                        other.GetComponentInParent<SubmarineController>().onEffectedByMagneticTower(parentGameObject);
+                        //other.GetComponentInParent<SubmarineController>().onEffectedByMagneticTower(parentGameObject);
                     }
                     else if (other.name == "Jet Fighter")
                     {
                         other.GetComponent<JetFighterMoveController>().onEffectedByMagneticTower(parentGameObject);
-
                     }
                     else if (other.name == "Helicopter")
                     {
                         other.GetComponent<SeaWarHelicopterMoveController>().onEffectedByMagneticTower(parentGameObject);
+                    }
+                }
+            }
+        }
+        private void OnTriggerExit(Collider other)
+        {
+            if (!other.CompareTag(tag))
+            {
+                if (other.gameObject.layer == LayerMask.NameToLayer("Sea Crafts") ||
+                    other.gameObject.layer == LayerMask.NameToLayer("Air Crafts"))
+                {
+                    if (other.name == "Motor Boat")
+                    {
+                        other.GetComponent<SeaWarMotorBoatController>().effectiveMagneticTowers.Remove(parentGameObject);
+
+                    }
+                    else if (other.name == "Lench")
+                    {
+                        other.GetComponent<SeaWarLenchController>().effectiveMagneticTowers.Remove(parentGameObject);
+
+                    }
+                    else if (other.name == "Frigate")
+                    {
+                        other.GetComponent<SeaWarFrigateMoveController>().effectiveMagneticTowers.Remove(parentGameObject);
+
+                    }
+                    else if (other.name == "Battleship")
+                    {
+                        other.GetComponent<SeaWarBattleshipMoveController>().effectiveMagneticTowers.Remove(parentGameObject);
+
+                    }
+                    else if (other.name == "Jet Fighter")
+                    {
+                        other.GetComponent<JetFighterMoveController>().effectiveMagneticTowers.Remove(parentGameObject);
+
+                    }
+                    else if (other.name == "Helicopter")
+                    {
+                        other.GetComponent<SeaWarHelicopterMoveController>().effectiveMagneticTowers.Remove(parentGameObject);
 
                     }
                 }
             }
-
-           
-                
-            
-                     
-        }
-
-       
-
-        private void OnTriggerExit(Collider other)
-        {
-            if (other.GetComponent<SeaWarSpeedController>())
-            {
-                other.gameObject.GetComponent<SeaWarSpeedController>().speed
-                    = other.gameObject.GetComponent<SeaWarSpeedController>().speedHolder;
-            }
-           
         }
     }
 }

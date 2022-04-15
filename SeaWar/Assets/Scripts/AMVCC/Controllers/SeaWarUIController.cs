@@ -8,6 +8,9 @@ namespace AMVCC.collider
     {
         [SerializeField] GameObject vehiclesPanel;
         [SerializeField] GameObject buildingsPanel;
+        [SerializeField] private Image settingUserInfo;
+        [SerializeField] private Image settingPanel;
+        [SerializeField] private Image mainMenuPanel;
         private bool vehiclesPanelIsEnable;
         private bool buildingsPanelIsEnable;
 
@@ -115,6 +118,18 @@ namespace AMVCC.collider
             Debug.Log("BuildingsPanelShow");
 
         }
+
+        #region Main Menu UI
+
+        public void SettingPanelShow()
+        {
+            mainMenuPanel.gameObject.SetActive(false);
+            settingPanel.gameObject.SetActive(true);
+            settingUserInfo.gameObject.SetActive(true);
+        }
+        
+
+        #endregion
         
     }
 

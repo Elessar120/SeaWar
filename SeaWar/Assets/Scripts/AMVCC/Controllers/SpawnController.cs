@@ -68,6 +68,7 @@ namespace AMVCC.Controllers
             }       
             if (prefab.name != "Radioactive Tower" && prefab.name != "Magnetic Tower" && prefab.name != "Electric Tower" && prefab.name != "Sea Mine" && prefab.name != "Artillery" && prefab.name != "Trench" && prefab.name !="Anti Air Craft")
             {
+               
                 FindObjectOfType<SeaWarUIView>().EnableRoads();
 
             } 
@@ -86,7 +87,6 @@ namespace AMVCC.Controllers
                 {
                     SeaWarUIView.Instance.totalOilAmount -= costWithOil;
                     SeaWarUIView.Instance.SetNewOilAmountText();
-                    
                     
                     /*if (prefab.name == "Radioactive Tower" || prefab.name == "Magnetic Tower" || prefab.name == "Electric Tower" || prefab.name == "Sea Mine" || prefab.name == "Artillery" || prefab.name == "Trench")
                     {
@@ -210,108 +210,7 @@ namespace AMVCC.Controllers
             }
             
         }
-        /*
-        public void FindProperSpawnPosition(Collider hit)
-        {
-         // todo 
-         // refinery 1,2,3
-         // road 1,2,3
-         //must be backed
-                if (hit.CompareTag("Blue"))
-                {
-                    //prefab.tag = "Blue";
-                    prefab.tag = "Blue";
-               
-                
-                    /*if (prefab.name == "SubmarineClone")
-                         {
-                            Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,transform.rotation);
-
-                         }#1#
-                    Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Application.model.spawnModel.spawnPointsForBlue1.transform.rotation);
-
-                }
-                
-                else if ((hit.name == "Refinery" || hit.name == "Road") && hit.CompareTag("Blue"))
-                {
-                     //prefab.tag = "Blue";
-                      prefab.tag = "Blue";
-
-                      /*if (prefab.name == "SubmarineClone")
-                      {
-                          Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.identity);
-
-                      }#1#
-                      Spawner(Application.model.spawnModel.spawnPointsForBlue2.transform.position,Application.model.spawnModel.spawnPointsForBlue2.transform.rotation);
-
-                }
-                else if ((hit.name == "Refinery" || hit.name == "Road") && hit.CompareTag("Blue"))
-                {
-                    //prefab.tag = "Blue";
-                    prefab.tag = "Blue";
-
-                    /*if (prefab.name == "SubmarineClone")
-                    {
-                          Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.identity);
-
-                     }#1#
-                    Spawner(Application.model.spawnModel.spawnPointsForBlue3.transform.position,Application.model.spawnModel.spawnPointsForBlue3.transform.rotation);
-                
-                }
-                if ((hit.name == "Refinery" || hit.name == "Road") && hit.CompareTag("Red"))
-                {
-                    //prefab.tag = "Red";
-                    prefab.tag = "Red";
-
-                    /*if (prefab.name == "SubmarineClone")
-                    {
-                        Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.Euler(0,180,0));
-    
-                    }#1#
-                    Spawner(Application.model.spawnModel.spawnPointsForRed1.transform.position,Application.model.spawnModel.spawnPointsForRed1.transform.rotation);
-
-                }
-                else if ((hit.name == "Refinery" || hit.name == "Road") && hit.CompareTag("Red"))
-                {
-                    //prefab.tag = "Red";
-                    prefab.tag = "Red";
-
-                    /*if (prefab.name == "SubmarineClone")
-                    {
-                        Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.Euler(0,180,0));
-    
-                    }#1#
-                    Spawner(Application.model.spawnModel.spawnPointsForRed2.transform.position,Application.model.spawnModel.spawnPointsForRed2.transform.rotation);
-
-                }
-                else if ((hit.name == "Refinery" || hit.name == "Road") && hit.CompareTag("Red"))
-                {
-                    //prefab.tag = "Red";
-                    prefab.tag = "Red";
-
-                    /*if (prefab.name == "SubmarineClone")
-                    {
-                        Spawner(Application.model.spawnModel.spawnPointsForBlue1.transform.position,Quaternion.Euler(0,180,0));
-    
-                    }#1#
-                    Spawner(Application.model.spawnModel.spawnPointsForRed3.transform.position,Application.model.spawnModel.spawnPointsForRed3.transform.rotation);
-                
-                }
-            
-                /*if (hit.gameObject.CompareTag("Blue"))
-                {
-                    prefab.tag = "Blue";
-                    Spawner(hit.transform.position,hit.transform.rotation);
-                }
-            
-                else if (hit.gameObject.CompareTag("Red"))
-                {
-                    prefab.tag = "Red";
-                } #1#
-            
-        }
-        */
-
+      
         public void Spawner(Vector3 spawnPosition, Quaternion spawnRotation, Collider hit)
         {
             CheckBuildingsCurrencyTypes(currentUnit);

@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3837661605154957170}
   m_Layer: 2
   m_Name: steelMine
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 1623574087974167067}
   m_Layer: 0
   m_Name: Sea Mine
-  m_TagString: Red
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
